@@ -115,7 +115,7 @@ function glorify_widgets_init() {
 	register_sidebar(
 		array(
 			'name'          => esc_html__( 'Sidebar', 'glorify' ),
-			'id'            => 'sidebar-1',
+			'id'            => 'sidebar-primary',
 			'description'   => esc_html__( 'Add widgets here.', 'glorify' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
