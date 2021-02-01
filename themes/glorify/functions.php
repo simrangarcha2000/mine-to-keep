@@ -50,7 +50,7 @@ if ( ! function_exists( 'glorify_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus(
 			array(
-				'menu-1' => esc_html__( 'Primary', 'glorify' ),
+				'menu-primary' => esc_html__( 'Primary', 'glorify' ),
 			)
 		);
 
@@ -71,17 +71,7 @@ if ( ! function_exists( 'glorify_setup' ) ) :
 			)
 		);
 
-		// Set up the WordPress core custom background feature.
-		add_theme_support(
-			'custom-background',
-			apply_filters(
-				'glorify_custom_background_args',
-				array(
-					'default-color' => 'ffffff',
-					'default-image' => '',
-				)
-			)
-		);
+
 
 		// Add theme support for selective refresh for widgets.
 		add_theme_support( 'customize-selective-refresh-widgets' );
