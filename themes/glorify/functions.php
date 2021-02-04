@@ -132,6 +132,9 @@ add_action( 'widgets_init', 'glorify_widgets_init' );
 function glorify_scripts() {
 	wp_enqueue_style( 'glorify-style', get_stylesheet_uri(), array(), _S_VERSION );
 
+	//Foundation (should always be below main style sheet and custom  style sheet after)
+	wp_enqueue_style('foundation-style', get_template_directory_uri().'/assets/css/vendor/foundation.css');
+	wp_enqueue_script('foundation-script', get_template_directory_uri().'/assets/js/vendor/foundation.js');
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
