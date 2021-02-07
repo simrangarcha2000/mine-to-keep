@@ -90,6 +90,39 @@ if ( ! function_exists( 'glorify_setup' ) ) :
 				'flex-height' => true,
 			)
 		);
+
+
+		/**      ADDING THEME SUPPORT  for Default Block Styles       */
+		//Edit color palette, font sizes, block patterns
+
+
+	add_theme_support('wp-block-styles');
+
+	/**
+	 * Add support for wide alignment
+	 */
+
+	add_theme_support('align-wide');
+
+		/**
+	 * Add support for color palette
+	 */
+	add_theme_support('editor-color-palette',array(
+	array(
+		'name' => esc_attr__('Magenta','glorify'),
+		'slug' => 'magenta',
+		'color' => '#a156b4',
+	),
+	array(
+		'name' => esc_attr__('Blue','glorify'),
+		'slug' => 'blue',
+		'color' => '#a156b4',
+	),
+    ));
+
+	/**Add support for custom gradients  - no option for user to select*/
+	add_theme_support('editor-gradient-presets',array());
+
 	}
 endif;
 add_action( 'after_setup_theme', 'glorify_setup' );
@@ -164,6 +197,9 @@ require get_template_directory() . '/inc/customizer.php';
  * Enqueuing block editor assets
  * Only Loads for the admin editor of wordpress
  */
+
+
+/**                           BLOCK ASSETS                   */
 
 function glorify_enqueue_block_editor_assets() {
     wp_enqueue_script(

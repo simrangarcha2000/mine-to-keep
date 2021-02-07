@@ -1,0 +1,28 @@
+.wp-block-quote.is-style-fancy-quote {
+    color: red;
+}
+
+.wp-block-buttons, .wp-block-button .wp-block-button__link,
+.wp-block-buttons.is-style-fill, .wp-block-button .wp-block-button__link {
+    color: blue;
+    background-color: black;
+}
+
+
+.alignwide{
+    width: 75%;
+    margin: 0 auto
+}
+
+.alignfull{
+    width: 90%;
+    margin: 0 auto
+}
+
+.has-strong-magenta-background-color {
+    background-color: brown;
+}
+
+.has-strong-magenta-color {
+    color: brown;
+}
