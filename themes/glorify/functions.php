@@ -156,9 +156,22 @@ require get_template_directory() . '/inc/template-tags.php';
 require get_template_directory() . '/inc/template-functions.php';
 
 /**
- * Customizer additions.
+ * Customizer additions. 
  */
 require get_template_directory() . '/inc/customizer.php';
 
+/***
+ * Enqueuing block editor assets
+ */
+
+function glorify_enqueue_block_editor_assets() {
+    wp_enqueue_script(
+        'editor-script',
+        get_template_directory_uri() . '/assets/js/editor.js'
+    );
+}
+
+//Action running then refering the func created above 
+add_action( 'enqueue_block_editor_assets', 'glorify_enqueue_block_editor_assets' );
 
 
