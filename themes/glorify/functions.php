@@ -162,6 +162,7 @@ require get_template_directory() . '/inc/customizer.php';
 
 /***
  * Enqueuing block editor assets
+ * Only Loads for the admin editor of wordpress
  */
 
 function glorify_enqueue_block_editor_assets() {
@@ -175,4 +176,17 @@ function glorify_enqueue_block_editor_assets() {
 //Action running then refering the func created above 
 add_action( 'enqueue_block_editor_assets', 'glorify_enqueue_block_editor_assets' );
 
+
+/***
+ * Enqueuing block assets
+ * Loads on both admin and front end - utilize one css that works both sides
+ */
+
+function glorify_enqueue_block_assets() {
+    wp_enqueue_style( 
+		'blocks-style',
+		get_template_directory_uri() . '/assets/css/blocks.css',
+	);
+}
+add_action( 'enqueue_block_assets', 'glorify_enqueue_block_assets' );
 
