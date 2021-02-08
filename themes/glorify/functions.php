@@ -91,6 +91,7 @@ if ( ! function_exists( 'glorify_setup' ) ) :
 			)
 		);
 
+<<<<<<< HEAD
 
 		/**      ADDING THEME SUPPORT  for Default Block Styles       */
 		//Edit color palette, font sizes, block patterns
@@ -122,6 +123,43 @@ if ( ! function_exists( 'glorify_setup' ) ) :
 
 	/**Add support for custom gradients  - no option for user to select*/
 	add_theme_support('editor-gradient-presets',array());
+=======
+		/**
+		 * Add support for the color palette
+		 */
+
+		add_theme_support( 'editor-color-palette', array(
+			array(
+				'name' => esc_attr__( 'Cherry Pink', 'glorify' ),
+				'slug' => 'cherry-pink',
+				'color' => '#D8A1A2',
+			),
+			array(
+				'name' => esc_attr__( 'Light Cherry Pink', 'glorify' ),
+				'slug' => 'light-cherry-pink',
+				'color' => '#F0DBDB',
+			),
+			array(
+				'name' => esc_attr__( 'Black', 'glorify' ),
+				'slug' => 'black',
+				'color' => '#000000',
+			),
+			array(
+				'name' => esc_attr__( 'White', 'glorify' ),
+				'slug' => 'white',
+				'color' => '#FFFFFF',
+			),
+		)
+	);
+
+	/**
+	 * Disabling custom color setting 
+	 * 
+	 */
+	add_theme_support( 'disable-custom-colors' );
+
+
+>>>>>>> staging
 
 	}
 endif;

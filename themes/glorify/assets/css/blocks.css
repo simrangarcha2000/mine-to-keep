@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .wp-block-quote.is-style-fancy-quote {
     color: red;
 }
@@ -25,4 +26,55 @@
 
 .has-strong-magenta-color {
     color: brown;
+=======
+/*Add Color Palette*/
+
+.has-cherry-pink-background-color {
+    background-color: #D8A1A2;
+}
+
+.has-cherry-pink-color {
+    color: #D8A1A2;
+}
+
+.has-light-cherry-pink-background-color {
+    background-color: #F0DBDB;
+}
+
+.has-light-cherry-pink-color {
+    color: #F0DBDB;
+}
+
+.has-black-background-color {
+    background-color: #000000;
+}
+
+.has-black-color {
+    color: #000000;
+}
+
+.has-white-background-color {
+    background-color: #ffffff;
+}
+
+.has-white-color {
+    color: #ffffff;
+}
+
+/*    Creating a Block Quote */
+.wp-block-quote.is-style-pink-quote{
+    color: #D8A1A2;
+    background-color: black;
+    padding: 0px;
+    font-size: 20px;
+    font-family: 'Tangerine', cursive;
+    text-align: center;
+    font-size: 30px;
+    padding-top: 10px;
+}
+
+.wp-block-quote__citation, .wp-block-quote cite, .wp-block-quote footer{
+    color: rgb(197, 197, 197);
+    font-family: 'Montserrat', sans-serif;
+>>>>>>> staging
 }
