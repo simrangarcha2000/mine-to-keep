@@ -118,6 +118,15 @@ if ( ! function_exists( 'glorify_setup' ) ) :
 			),
 		)
 	);
+
+	/**
+	 * Disabling custom color setting 
+	 * 
+	 */
+	add_theme_support( 'disable-custom-colors' );
+
+
+
 	}
 endif;
 add_action( 'after_setup_theme', 'glorify_setup' );
