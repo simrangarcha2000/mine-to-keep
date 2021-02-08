@@ -90,6 +90,34 @@ if ( ! function_exists( 'glorify_setup' ) ) :
 				'flex-height' => true,
 			)
 		);
+
+		/**
+		 * Add support for the color palette
+		 */
+
+		add_theme_support( 'editor-color-palette', array(
+			array(
+				'name' => esc_attr__( 'Cherry Pink', 'glorify' ),
+				'slug' => 'cherry-pink',
+				'color' => '#D8A1A2',
+			),
+			array(
+				'name' => esc_attr__( 'Light Cherry Pink', 'glorify' ),
+				'slug' => 'light-cherry-pink',
+				'color' => '#F0DBDB',
+			),
+			array(
+				'name' => esc_attr__( 'Black', 'glorify' ),
+				'slug' => 'black',
+				'color' => '#000000',
+			),
+			array(
+				'name' => esc_attr__( 'White', 'glorify' ),
+				'slug' => 'white',
+				'color' => '#FFFFFF',
+			),
+		)
+	);
 	}
 endif;
 add_action( 'after_setup_theme', 'glorify_setup' );

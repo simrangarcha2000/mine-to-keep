@@ -1,0 +1,33 @@
+/*Add Color Palette*/
+
+.has-cherry-pink-background-color {
+    background-color: #D8A1A2;
+}
+
+.has-cherry-pink-color {
+    color: #D8A1A2;
+}
+
+.has-light-cherry-pink-background-color {
+    background-color: #F0DBDB;
+}
+
+.has-light-cherry-pink-color {
+    color: #F0DBDB;
+}
+
+.has-black-background-color {
+    background-color: #000000;
+}
+
+.has-black-color {
+    color: #000000;
+}
+
+.has-white-background-color {
+    background-color: #ffffff;
+}
+
+.has-white-color {
+    color: #ffffff;
+}
