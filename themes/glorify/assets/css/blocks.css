@@ -44,10 +44,45 @@
     font-size: 30px;
     padding-top: 10px;
     width: 70%;
-    margin: 0px 15px;
+    margin: 0px 35%;
 }
+
 
 .wp-block-quote__citation, .wp-block-quote cite, .wp-block-quote footer{
     color: rgb(197, 197, 197);
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.wp-block-paragraph.is-style-paragraph-glorify, .is-style-paragraph-glorify .is-style-default{
+    font-family: 'Open Sans', sans-serif;
+    background-color: black;
+    color: #F0DBDB;
+    padding: 20px;
+}
+
+/*   Registering an Image  */
+.wp-block-image.is-style-image-glorify{
+    margin: 0px;
+    margin: 0px;
+    max-width: 100%;
+    margin-left: 10%;
+
+}
+
+.wp-block-image.is-style-image-background{
+    margin: 0px;
+    margin: 0px;
+    max-width: 100%;
+    margin-left: 10%;
+    background-color: black;
+
+}
+
+.wp-block-column.is-style-background-color{
+    background-color: black;
+    padding: 10%;
+}
+.wp-block-heading.is-style-pink-heading{
+    font-family: 'Tangerine', cursive;
+    color: #D8A1A2;
 }

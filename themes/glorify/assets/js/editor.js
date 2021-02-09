@@ -13,3 +13,30 @@ wp.domReady(function(){
     //If there is no other option left i.e just the default
     wp.blocks.unregisterBlockStyle( 'core/quote', 'default' );
 });
+
+
+
+//Registering another Text block style - Paragraph
+wp.blocks.registerBlockStyle( 'core/paragraph', {
+    name: 'paragraph-glorify',
+    label: 'Glorify Paragraph'
+} );
+
+//Registering another Text block style - Paragraph
+wp.blocks.registerBlockStyle( 'core/image', {
+    name: 'image-glorify',
+    label: 'Glorify Image'
+} );
+
+wp.blocks.registerBlockStyle( 'core/column', {
+    name: 'background-color',
+    label: 'Background Color'
+} );
+
+wp.blocks.registerBlockStyle( 'core/heading', {
+    name: 'pink-heading',
+    label: 'Pink Heading'
+} );
+
+
+
