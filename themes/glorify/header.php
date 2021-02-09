@@ -42,7 +42,7 @@
 			<div class="cell small-8 large-3">
                 <ul class="grid-x">
 					<li>Log In</li>
-					<li>Create An Account</li>
+					<li>Create Account</li>
 				</ul>
 			</div>
 			</div>
@@ -55,7 +55,7 @@
 			the_custom_logo();
 			if ( is_front_page() && is_home() ) :
 				?>
-				<h1 class="site-title"><img src="assets/images/logo.png" alt="mine to keep"></h1>
+				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img id="topL" src="/assets/images/logo.png"/></a></h1>
 				<?php
 			else :
 				?>
@@ -79,6 +79,9 @@
 				)
 			);
 			?>
+			<ul>
+				<li>My Account
+			</ul>
 		</nav><!-- #site-navigation -->
 				</div>
             </div>

@@ -18,3 +18,19 @@ li{
     list-style: none;
     margin-left: 1.5rem;
 }
+
+/*    Customize the nav */
+div#primary-menu ul {
+    margin:20px 0px 20px 0px;
+    list-style-type: none;
+    list-style: none;
+    list-style-image: none;
+    text-align:right;
+}
+div#primary-menu li {
+    padding: 0px 20px 0px 0px;
+    display: inline;
+} 
+div#primary-menu a { 
+    color:#000000;
+}
