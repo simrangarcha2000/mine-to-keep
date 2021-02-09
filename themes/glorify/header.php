@@ -49,26 +49,26 @@
 			</div>
 			<div class="grid-container" id="bottom-header">
             <div class="grid-x grid-margin-x">
-                <div class="cell small-8">
+                <div class="cell small-9 large-5">
 					<div class="site-branding">
 			<?php
 			the_custom_logo();
 			if ( is_front_page() && is_home() ) :
 				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img id="topL" src="/assets/images/logo.png"/></a></h1>
+				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"></a></h1>
 				<?php
 			else :
 				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"></a></p>
 				<?php
 			endif;
 			if ( $glorify_description || is_customize_preview() ) :
 				?>
-				<p class="site-description"><?php echo $glorify_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
+				<p class="site-description"> </p>
 			<?php endif; ?>
 			</div><!-- .site-branding -->
 				</div>
-                <div class="cell small-6">
+                <div class="cell small-3 large-7">
 				<nav id="site-navigation" class="main-navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'glorify' ); ?></button>
 			<?php
@@ -79,12 +79,10 @@
 				)
 			);
 			?>
-			<ul>
-				<li>My Account
-			</ul>
 		</nav><!-- #site-navigation -->
 				</div>
             </div>
+		</div>
 
 
 

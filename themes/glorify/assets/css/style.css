@@ -30,7 +30,22 @@ div#primary-menu ul {
 div#primary-menu li {
     padding: 0px 20px 0px 0px;
     display: inline;
+    font-family: 'Kaushan Script', cursive;
+    font-size: 20px;
 } 
 div#primary-menu a { 
     color:#000000;
+}
+
+/* LOGO */
+
+.custom-logo{
+    width: 70%;
+}
+
+@media only screen and (max-width: 600px) {
+    .custom-logo{
+        width: 100%;
+    }
+
 }
