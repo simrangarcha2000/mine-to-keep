@@ -1,0 +1,20 @@
+
+
+/*       HEADER      */
+
+#top-header{
+    background-color: #D8A1A2;
+    font-family: 'Kaushan Script', cursive;
+    font-size: 15px;
+    width: 100%;
+}
+
+.grid-container {
+    max-width: 120rem;
+}
+
+li{
+    margin: 2px;
+    list-style: none;
+    margin-left: 1.5rem;
+}
