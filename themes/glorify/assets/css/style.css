@@ -43,6 +43,9 @@ div#primary-menu a {
     width: 70%;
 }
 
+
+/*  FOOTER */
+
 @media only screen and (max-width: 600px) {
     .custom-logo{
         width: 100%;
