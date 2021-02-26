@@ -7,12 +7,7 @@ wp.blocks.registerBlockStyle( 'core/quote', {
 } );
 
 
-//Unregister Large Size
-wp.domReady(function(){
-    wp.blocks.unregisterBlockStyle( 'core/quote', 'large' );
-    //If there is no other option left i.e just the default
-    wp.blocks.unregisterBlockStyle( 'core/quote', 'default' );
-});
+
 
 
 
@@ -28,15 +23,27 @@ wp.blocks.registerBlockStyle( 'core/image', {
     label: 'Glorify Image'
 } );
 
-wp.blocks.registerBlockStyle( 'core/column', {
-    name: 'background-color',
-    label: 'Background Color'
-} );
 
 wp.blocks.registerBlockStyle( 'core/heading', {
     name: 'pink-heading',
     label: 'Pink Heading'
 } );
+
+
+//Registering a column 
+wp.blocks.registerBlockStyle('core/column',{
+    name: 'black-column',
+    label: 'Black Column'
+});
+
+
+//Unregister Large Size
+wp.domReady(function(){
+    wp.blocks.unregisterBlockStyle( 'core/quote', 'large' );
+    //If there is no other option left i.e just the default
+    wp.blocks.unregisterBlockStyle( 'core/quote', 'default' );
+    wp.blocks.unregisterBlockStyle( 'core/paragraph', 'default' );
+});
 
 
 

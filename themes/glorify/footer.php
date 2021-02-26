@@ -84,6 +84,8 @@
                 <div class="cell small-12 large-4 large-offset-2">
 				<div class="site-info">
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'glorify' ) ); ?>">
+
+			<!--Change according ly-->
 				<?php
 				/* translators: %s: CMS name, i.e. WordPress. */
 				printf( esc_html__( 'Proudly powered by %s', 'glorify' ), 'WordPress' );

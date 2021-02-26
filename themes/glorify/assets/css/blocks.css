@@ -53,15 +53,18 @@
     font-family: 'Open Sans', sans-serif;
 }
 
-.wp-block-paragraph.is-style-paragraph-glorify, .is-style-paragraph-glorify .is-style-default{
-    font-family: 'Open Sans', sans-serif;
+
+/* Creating Block paragraph*/
+.is-style-paragraph-glorify,.is-style-default{
+    color: #FFD1D1;
     background-color: black;
-    color: #F0DBDB;
-    padding: 20px;
+    padding: 30px;
+    text-align: center;
+    font-size: 1.5rem;
 }
 
 /*   Registering an Image  */
-.wp-block-image.is-style-image-glorify{
+.wp-block-image.is-style-image-glorify, .wp-block-image.is-style-default {
     margin: 0px;
     margin: 0px;
     max-width: 100%;
@@ -78,9 +81,10 @@
 
 }
 
-.wp-block-column.is-style-background-color{
+.wp-block-column.is-style-black-column, .is-style-default{
     background-color: black;
-    padding: 10%;
+    height: auto;
+    
 }
 .wp-block-heading.is-style-pink-heading{
     font-family: 'Tangerine', cursive;
