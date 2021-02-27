@@ -1,4 +1,4 @@
-*{
+body{
     overflow-x: hidden;
 }
 
@@ -83,7 +83,7 @@ div#primary-menu a {
 
 
 .wp-block-columns{
-    margin-right: 14rem;
+    margin: 3rem 15%;
 }
 
 

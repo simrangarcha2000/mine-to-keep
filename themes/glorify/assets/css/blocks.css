@@ -55,7 +55,7 @@
 
 
 /* Creating Block paragraph*/
-.is-style-paragraph-glorify,.is-style-default{
+.is-style-paragraph-glorify,.wp-block-paragraph.is-style-default{
     color: #FFD1D1;
     background-color: black;
     padding: 30px;
@@ -83,10 +83,12 @@
 
 
 /* Creating Columns */
-.wp-block-column.is-style-black-column, .is-style-default{
+.wp-block-column.is-style-black-column, .wp-block-column.is-style-default{
     background-color: black;
     height: auto; 
-    margin-left: 15%;
+    padding: 3% 3% 3% 1%;
+    margin-right: 20px;
+    text-align: center;
 }
 
 .wp-block-column.is-style-pink-column{
@@ -96,7 +98,30 @@
 
 /* Setting Heading */
 .is-style-pink-heading{
-    font-family: 'Tangerine', cursive;
+    font-family: 'Just Another Hand', cursive;
     color: #D8A1A2;
+}
+
+.is-style-main-heading{
+    color: black;
+    border-left: #D8A1A2 solid 20px;
+    padding: 0px;
+    font-family: 'Just Another Hand', cursive;
+    padding-left: 1rem;
+    margin-left: 15%;
+
+}
+
+
+
+/*Mobile View*/
+
+
+@media only screen and (max-width: 600px) {
     
+    .is-style-paragraph-glorify,.is-style-default{
+        font-size: 0.85rem;
+    }
+
+
 }

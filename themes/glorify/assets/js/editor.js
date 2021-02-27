@@ -29,12 +29,21 @@ wp.blocks.registerBlockStyle( 'core/heading', {
     label: 'Pink Heading'
 } );
 
+wp.blocks.registerBlockStyle( 'core/heading', {
+    name: 'main-heading',
+    label: 'Main Heading'
+} );
+
+
+
 
 //Registering a column 
 wp.blocks.registerBlockStyle('core/column',{
     name: 'pink-column',
     label: 'Pink Column'
 });
+
+
 
 
 //Unregister Large Size
