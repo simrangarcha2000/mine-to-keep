@@ -81,12 +81,22 @@
 
 }
 
+
+/* Creating Columns */
 .wp-block-column.is-style-black-column, .is-style-default{
     background-color: black;
-    height: auto;
-    
+    height: auto; 
+    margin-left: 15%;
 }
-.wp-block-heading.is-style-pink-heading{
+
+.wp-block-column.is-style-pink-column{
+    background-color: #D8A1A2;
+    height: auto; 
+}
+
+/* Setting Heading */
+.is-style-pink-heading{
     font-family: 'Tangerine', cursive;
     color: #D8A1A2;
+    
 }

@@ -32,8 +32,8 @@ wp.blocks.registerBlockStyle( 'core/heading', {
 
 //Registering a column 
 wp.blocks.registerBlockStyle('core/column',{
-    name: 'black-column',
-    label: 'Black Column'
+    name: 'pink-column',
+    label: 'Pink Column'
 });
 
 
