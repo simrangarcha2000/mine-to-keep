@@ -133,6 +133,8 @@ if ( ! function_exists( 'glorify_setup' ) ) :
 	/**Add support for custom gradients  - no option for user to select*/
 	add_theme_support('editor-gradient-presets',array());
 
+
+
 	}
 endif;
 add_action( 'after_setup_theme', 'glorify_setup' );

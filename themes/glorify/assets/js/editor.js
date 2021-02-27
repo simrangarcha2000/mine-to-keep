@@ -18,6 +18,12 @@ wp.blocks.registerBlockStyle( 'core/paragraph', {
 } );
 
 //Registering another Text block style - Paragraph
+wp.blocks.registerBlockStyle( 'core/paragraph', {
+    name: 'no-margin-para',
+    label: 'No Margin Para'
+} );
+
+//Registering another Text block style - Paragraph
 wp.blocks.registerBlockStyle( 'core/image', {
     name: 'image-glorify',
     label: 'Glorify Image'
@@ -41,6 +47,11 @@ wp.blocks.registerBlockStyle( 'core/heading', {
 wp.blocks.registerBlockStyle('core/column',{
     name: 'pink-column',
     label: 'Pink Column'
+});
+
+wp.blocks.registerBlockStyle('core/column',{
+    name: 'no-margin-column',
+    label: 'No Margin Column'
 });
 
 

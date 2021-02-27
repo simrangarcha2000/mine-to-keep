@@ -34,17 +34,18 @@
 }
 
 /*    Creating a Block Quote */
-.wp-block-quote.is-style-pink-quote{
+.is-style-pink-quote.rich-text.block-editor-rich-text__editable.wp-block-quote, .is-style-pink-quote, .is-style-pink-quote{
     color: #D8A1A2;
     background-color: black;
     padding: 0px;
+    padding-top: 0px;
     font-size: 20px;
     font-family: 'Tangerine', cursive;
     text-align: center;
-    font-size: 30px;
+    font-size: 40px;
     padding-top: 10px;
-    width: 70%;
-    margin: 0px 35%;
+    width: 50%;
+    margin: 20px 25%;
 }
 
 
@@ -55,12 +56,13 @@
 
 
 /* Creating Block paragraph*/
-.is-style-paragraph-glorify,.wp-block-paragraph.is-style-default{
+.is-style-paragraph-glorify.rich-text.block-editor-rich-text__editable, .is-style-paragraph-glorify{
     color: #FFD1D1;
     background-color: black;
     padding: 30px;
     text-align: center;
     font-size: 1.5rem;
+    font-family: 'Open Sans', sans-serif;
 }
 
 /*   Registering an Image  */
@@ -82,6 +84,8 @@
 }
 
 
+
+
 /* Creating Columns */
 .wp-block-column.is-style-black-column, .wp-block-column.is-style-default{
     background-color: black;
@@ -89,6 +93,7 @@
     padding: 3% 3% 3% 1%;
     margin-right: 20px;
     text-align: center;
+    
 }
 
 .wp-block-column.is-style-pink-column{
@@ -97,7 +102,7 @@
 }
 
 /* Setting Heading */
-.is-style-pink-heading{
+.is-style-pink-heading.rich-text.block-editor-rich-text__editable,.wp-block-heading ,.is-style-pink-heading{
     font-family: 'Just Another Hand', cursive;
     color: #D8A1A2;
 }
@@ -109,8 +114,17 @@
     font-family: 'Just Another Hand', cursive;
     padding-left: 1rem;
     margin-left: 15%;
-
 }
+
+.wp-block-paragraph.is-style-default, .is-style-default{
+    margin: 2% 13%;
+}
+
+.wp-block-paragraph.is-style-no-margin-para, .is-style-no-margin-para{
+    margin: 0% 0% 0% 6%;
+}
+
+
 
 
 
@@ -119,7 +133,7 @@
 
 @media only screen and (max-width: 600px) {
     
-    .is-style-paragraph-glorify,.is-style-default{
+    .is-style-paragraph-glorify.rich-text.block-editor-rich-text__editable,.wp-block-paragraph.is-style-default, .is-style-paragraph-glorify{
         font-size: 0.85rem;
     }
 
