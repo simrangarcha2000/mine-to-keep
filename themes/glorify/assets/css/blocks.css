@@ -40,7 +40,7 @@
     padding: 0px;
     padding-top: 0px;
     font-size: 20px;
-    font-family: 'Tangerine', cursive;
+    font-family: 'Permanent Marker', cursive;
     text-align: center;
     font-size: 40px;
     padding-top: 10px;
@@ -74,6 +74,11 @@
 
 }
 
+.wp-block-image.is-style-image-glorify, .wp-block-image.is-style-default .aligncenter{
+    margin-left: 9%;
+}
+
+
 .wp-block-image.is-style-image-background{
     margin: 0px;
     margin: 0px;
@@ -103,7 +108,7 @@
 
 /* Setting Heading */
 .is-style-pink-heading.rich-text.block-editor-rich-text__editable,.wp-block-heading ,.is-style-pink-heading{
-    font-family: 'Just Another Hand', cursive;
+    font-family: 'Permanent Marker', cursive;
     color: #D8A1A2;
 }
 
@@ -111,7 +116,7 @@
     color: black;
     border-left: #D8A1A2 solid 20px;
     padding: 0px;
-    font-family: 'Just Another Hand', cursive;
+    font-family: 'Permanent Marker', cursive;
     padding-left: 1rem;
     margin-left: 15%;
 }
@@ -124,6 +129,62 @@
     margin: 0% 0% 0% 6%;
 }
 
+.wp-block-paragraph.is-style-no-margin-para, .is-style-no-marginleft-para {
+    margin: 0% 15% 0% 2%;
+}
+
+.wp-block-separator.has-background:not(.is-style-dots) {
+    border-bottom: none;
+    height: 10px;
+}
+
+/*  Styling Gallery */
+.wp-block-gallery.is-style-gallery-select{
+    margin: 0px 13%;
+    padding: 0% 13%;
+    color: black;
+    font-size: 30px;
+}
+
+
+.wp-block-gallery.is-style-gallery-select .blocks-gallery-item figcaption{
+    color: black;
+    background: none;
+    background-color: #F0DBDB;
+    padding: 0rem;
+    margin-top: 1rem;
+    font-family: 'Permanent Marker', cursive;
+}
+
+
+/*  Styling the table */
+
+.wp-block-table.is-style-glorify-table{
+    text-align: center;
+    margin-left: 19%;
+}
+
+.is-style-glorify-table.wp-block-table td{
+    border: #F0DBDB solid 3px;
+    background: white;
+
+}
+
+.is-style-glorify-table tr{
+    border: #F0DBDB solid 3px;
+
+}
+
+
+/* Styling the list */
+.is-style-glorify-list {
+    list-style-type: armenian;
+    margin-top: -65px;
+font-size: 20px;
+margin-left: -30px;
+    
+}
+
 
 
 
@@ -131,11 +192,38 @@
 /*Mobile View*/
 
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 900px) {
     
     .is-style-paragraph-glorify.rich-text.block-editor-rich-text__editable,.wp-block-paragraph.is-style-default, .is-style-paragraph-glorify{
         font-size: 0.85rem;
     }
+
+
+
+    text__editable.wp-block-quote, .is-style-pink-quote, .is-style-pink-quote {
+        margin: 0;
+        width: 100%;
+        margin-top: -20px;
+    }
+
+    .wp-block-paragraph.is-style-default, .is-style-default, .is-style-no-margin-para {
+        margin: 2% 5%;
+    }
+
+    .wp-block-table.is-style-glorify-table{
+        text-align: center;
+        margin-left: 0%;
+        width: 90%;
+        float: left;
+    }
+    
+    .is-style-glorify-list ul{
+        list-style-type: armenian;
+        margin-top: -65px;
+    font-size: 20px;
+    float: left;
+    }
+
 
 
 }

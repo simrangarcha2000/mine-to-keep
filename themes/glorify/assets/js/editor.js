@@ -23,6 +23,13 @@ wp.blocks.registerBlockStyle( 'core/paragraph', {
     label: 'No Margin Para'
 } );
 
+
+wp.blocks.registerBlockStyle( 'core/paragraph', {
+    name: 'no-marginleft-para',
+    label: 'No Margin Left Para'
+} );
+
+
 //Registering another Text block style - Paragraph
 wp.blocks.registerBlockStyle( 'core/image', {
     name: 'image-glorify',
@@ -53,6 +60,28 @@ wp.blocks.registerBlockStyle('core/column',{
     name: 'no-margin-column',
     label: 'No Margin Column'
 });
+
+//REgISTERING Gallery
+wp.blocks.registerBlockStyle('core/gallery',{
+    name: 'gallery-select',
+    label: 'Gallery Select'
+});
+
+//Registering Table
+wp.blocks.registerBlockStyle('core/table',{
+    name: 'glorify-table',
+    label: 'Glorify Table'
+});
+
+//Registering List 
+wp.blocks.registerBlockStyle('core/list',{
+    name: 'glorify-list',
+    label: 'Glorify List'
+});
+
+
+
+
 
 
 
