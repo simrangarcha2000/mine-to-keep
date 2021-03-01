@@ -53,7 +53,17 @@ if ( ! function_exists( 'glorify_setup' ) ) :
 				'menu-primary' => esc_html__( 'Primary', 'glorify' ),
 			)
 		);
-
+        
+		function register_my_menus() {
+			register_nav_menus(
+			array(
+				'footer-menu' => __( 'Footer Menu' ),
+				'another-menu' => __( 'Another Menu' ),
+				'an-extra-menu' => __( 'An Extra Menu' )
+			)
+			);
+		}
+		add_action( 'init', 'register_my_menus' );
 		/*
 		 * Switch default core markup for search form, comment form, and comments
 		 * to output valid HTML5.

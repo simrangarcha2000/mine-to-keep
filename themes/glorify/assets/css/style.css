@@ -158,6 +158,21 @@ a:visited{
 
 
 
+/* POST ARCHIEVE*/
+
+.cat-links a{
+    text-align: center;
+    margin-left: 40%;
+    text-transform: uppercase;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 30px;
+    color: #000000;
+
+
+}
+
+
+
 /*  Tablet View    */
 
 

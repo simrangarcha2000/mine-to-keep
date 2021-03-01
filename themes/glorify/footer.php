@@ -12,6 +12,7 @@
 ?>
 
 	<footer id="colophon" class="site-footer">
+	<?php wp_nav_menu( array( 'theme_location' => 'footer-menu', 'container_class' => 'footer_menu_class' ) ); ?>
 		<div class="grid-container">
             <div class="grid-x grid-margin-x">
                 <div class="cell small-12 large-4 large-offset-2">
@@ -77,6 +78,8 @@
 						<li>Blogs</li>
                     </ul>
 				</div>
+
+
             </div>
         </div>
 		<div class="grid-container final-footer">
