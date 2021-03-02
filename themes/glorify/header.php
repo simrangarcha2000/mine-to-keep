@@ -44,14 +44,12 @@
 	<header id="masthead" class="site-header">
 		<div class="grid-container" id="top-header">
 			<div class="grid-x grid-margin-x">
-			<div class="cell small-3 large-9">
+			<div class="cell small-2 large-9">
 			
 			</div>
-			<div class="cell small-8 large-3">
-                <ul class="grid-x">
-					<li>Log In</li>
-					<li>Create Account</li>
-				</ul>
+			<div class="cell small-10 large-3">
+			<?php wp_nav_menu( array
+	( 'theme_location' => 'header-menu-top', 'container_class' => 'header_menu_class' )) ?>
 			</div>
 			</div>
 			</div>

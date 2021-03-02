@@ -26,6 +26,7 @@ li{
     margin-left: 1.5rem;
 }
 
+
 /*    Customize the nav */
 div#primary-menu ul {
     margin:20px 0px 20px 0px;
@@ -72,6 +73,22 @@ div#primary-menu a {
 #colophon h1{
     font-family: 'Permanent Marker', cursive;
     font-size: 40px;
+}
+
+.menuPlaceOne .menu a{
+    line-height: 1;
+    text-decoration: none;
+    display: block;
+    padding: 0.2rem 1rem;
+    color: #F5E6E6;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+.menuPlaceOne .menu a:hover{
+    transform: scale(0.95);
+    color: #F5E6E6;
+    opacity: 0.8;
 }
 
 .fillform{

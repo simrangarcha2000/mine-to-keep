@@ -12,7 +12,8 @@
 ?>
 
 	<footer id="colophon" class="site-footer">
-	<?php wp_nav_menu( array( 'theme_location' => 'footer-menu', 'container_class' => 'footer_menu_class' ) ); ?>
+
+
 		<div class="grid-container">
             <div class="grid-x grid-margin-x">
                 <div class="cell small-12 large-4 large-offset-2">
@@ -42,41 +43,29 @@
         </div>
 		<div class="grid-container">
             <div class="grid-x grid-margin-x large-offset-1">
-                <div class="cell small-6 large-2 large-offset-0">
+                <div class="cell small-6 large-2 large-offset-0 menuPlaceOne">
 					<h2>ABOUT</h2>
-					<ul>
-						<li>About</li>
-						<li>Careers</li>
-						<li>Gift Cards</li>
-						<li>Blogs</li>
-                    </ul>
+					<?php wp_nav_menu( array
+	( 'theme_location' => 'footer-menu-about', 'container_class' => 'footer_menu_class' )
+	); ?>
 				</div>
-				<div class="cell small-6 large-2 large-offset-1">
+				<div class="cell small-6 large-2 large-offset-1 menuPlaceOne">
 					<h2>HELP</h2>
-					<ul>
-						<li>Help</li>
-						<li>Careers</li>
-						<li>Gift Cards</li>
-						<li>Blogs</li>
-                    </ul>
+					<?php wp_nav_menu( array
+	( 'theme_location' => 'footer-menu-help', 'container_class' => 'footer_menu_class' )
+	); ?>
 				</div>
-				<div class="cell small-6 large-2 large-offset-1">
+				<div class="cell small-6 large-2 large-offset-1 menuPlaceOne">
 					<h2>SHOP</h2>
-					<ul>
-						<li>Shop</li>
-						<li>Careers</li>
-						<li>Gift Cards</li>
-						<li>Blogs</li>
-                    </ul>
+					<?php wp_nav_menu( array
+	( 'theme_location' => 'footer-menu-shop', 'container_class' => 'footer_menu_class' )
+	); ?>
 				</div>
-				<div class="cell small-6 large-2 large-offset-1">
+				<div class="cell small-6 large-2 large-offset-1 menuPlaceOne">
 					<h2>CONTACT</h2>
-					<ul>
-						<li>Contact</li>
-						<li>Careers</li>
-						<li>Gift Cards</li>
-						<li>Blogs</li>
-                    </ul>
+					<?php wp_nav_menu( array
+	( 'theme_location' => 'footer-menu-contact', 'container_class' => 'footer_menu_class' )
+	); ?>
 				</div>
 
 

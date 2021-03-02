@@ -57,9 +57,11 @@ if ( ! function_exists( 'glorify_setup' ) ) :
 		function register_my_menus() {
 			register_nav_menus(
 			array(
-				'footer-menu' => __( 'Footer Menu' ),
-				'another-menu' => __( 'Another Menu' ),
-				'an-extra-menu' => __( 'An Extra Menu' )
+				'header-menu-top' => __( 'Header Top Menu ' ),
+				'footer-menu-about' => __( 'Footer About Menu ' ),
+				'footer-menu-help' => __( 'Footer Help Menu' ),
+				'footer-menu-shop' => __( 'Footer Shop Menu' ),
+				'footer-menu-contact' => __( 'Footer Contact Menu' )
 			)
 			);
 		}
