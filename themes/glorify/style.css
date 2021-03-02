@@ -986,7 +986,8 @@ textarea {
     margin-left: 0;
 	border: solid 0.5px black;
     padding: 1.5rem;
-	transform: translateX(85%)
+	transform: translateX(85%);
+	height: 26.5rem;
 }
 
 .woocommerce ul.products li.product .woocommerce-loop-category__title, .woocommerce ul.products li.product .woocommerce-loop-product__title, .woocommerce ul.products li.product h3 , .woocommerce ul.products li.product .price del, .woocommerce ul.products li.product .price{
@@ -1005,3 +1006,75 @@ textarea {
     background-color: #000000;
     color: #F5E6E6;
 }
+
+/* Cart Page*/
+
+.woocommerce-cart-form {
+    margin-left: 20%;
+    margin: 0% 10%;
+}
+
+.woocommerce-cart-form thead {
+    background: #000000;
+    color: #D8A1A2;
+	font-family: 'Permanent Marker', cursive;
+}
+
+.woocommerce table.shop_table td {
+    border-top: none
+}
+
+#add_payment_method table.cart img, .woocommerce-cart table.cart img, .woocommerce-checkout table.cart img {
+    width: 120px;
+    box-shadow: none;
+}
+
+tbody tr:nth-child(2n) {
+    background-color: #F5E6E6!important;
+}
+
+
+.woocommerce-error, .woocommerce-info, .woocommerce-message {
+    background-color: #F5E6E6;
+    color: #515151;
+    border-top: 1px solid #D8A1A2;
+	border-top-color: #D8A1A2;
+}
+
+.woocommerce-message::before {
+    content: "\e015";
+    color: #D8A1A2;
+}
+
+.woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button {
+    color: #D8A1A2;
+    background-color: #000000;
+	font-family: 'Permanent Marker', cursive;
+}
+
+#add_payment_method table.cart td.actions .coupon .input-text, .woocommerce-cart table.cart td.actions .coupon .input-text, .woocommerce-checkout table.cart td.actions .coupon .input-text {
+    border: 1px solid #D8A1A2;
+}
+
+#coupon_code::placeholder {
+    color: #D8A1A2;
+}
+
+.woocommerce .cart-collaterals .cart_totals, .woocommerce-page .cart-collaterals .cart_totals {
+    width: 40%;
+    margin: 0% 10%;
+}
+
+.cart_totals h2{
+	color: #111;
+}
+
+.woocommerce table.shop_table {
+    border: 1px solid #F5E6E6;
+}
+
+.wc-proceed-to-checkout .checkout-button button {
+	background-color: #111;
+}
+
+/* Checkout Page*/
