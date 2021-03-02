@@ -1077,4 +1077,133 @@ tbody tr:nth-child(2n) {
 	background-color: #111;
 }
 
+.woocommerce-info::before,  .woocommerce-info::after{
+    color: #D8A1A2;
+}
+
+.showcoupon{
+	color: #D8A1A2;
+}
+
+.showcoupon:hover{
+	color: black;
+	transform: scale(0.9);
+}
+
+
+
 /* Checkout Page*/
+
+.woocommerce .col2-set .col-1, .woocommerce-page .col2-set .col-1 {
+    float: none;
+    width: 48%;
+    margin: 0% 25%;
+}
+.woocommerce-billing-fields h3, .woocommerce-additional-fields h3{
+	font-family: 'Permanent Marker', cursive;
+
+}
+
+#order_review_heading{
+	font-family: 'Permanent Marker', cursive;
+	margin: 0% 25% 1% 25%;
+
+}
+
+#order_review {
+    margin: 0% 25%;
+}
+
+.woocommerce-account .woocommerce-MyAccount-navigation {
+    float: left;
+    width: 20%;
+    margin: 0% 5%;
+	font-family: 'Permanent Marker', cursive;
+}
+
+.woocommerce h2{
+    color: black;
+	font-family: 'Permanent Marker', cursive;
+	margin-left: 32%;
+}
+
+.woocommerce form.checkout_coupon, .woocommerce form.login, .woocommerce form.register {
+    border: 1px solid #d3ced2;
+    padding: 20px;
+    margin: 2em 35rem;
+    text-align: left;
+    border-radius: 5px;
+}
+
+.woocommerce-account .woocommerce-MyAccount-content {
+    float: right;
+    width: 62%;
+    margin-right: 8%;
+}
+
+.woocommerce-Address-title .title{
+	margin: 0%;
+
+}
+
+/* Product Page*/
+
+.woocommerce div.product div.images .woocommerce-product-gallery__wrapper {
+    -webkit-transition: all cubic-bezier(.795,-.035,0,1) .5s;
+    transition: all cubic-bezier(.795,-.035,0,1) .5s;
+    margin: 0% 0% 0% 26.5%;
+    width: 50%;
+}
+
+.woocommerce-product-details__short-description p {
+    margin-right: 20%;
+	margin-left: -25%;
+}
+
+.woocommerce div.product div.images .woocommerce-product-gallery__trigger {
+	right: 0em;
+    left: 19.3em;
+}
+
+.woocommerce span.onsale {
+
+    left: 15em;
+}
+
+.woocommerce div.product p.price, .woocommerce div.product span.price {
+    color: #D8A1A2;
+}
+
+.woocommerce #respond input#submit.alt:hover, .woocommerce a.button.alt:hover, .woocommerce button.button.alt:hover, .woocommerce input.button.alt:hover {
+    background-color: #000000  !important;
+    color: #D8A1A2 !important;
+}
+
+.woocommerce-additional-fields {
+    margin-left: -57%;
+    margin-top: 5%;
+    width: 105%;
+}
+
+#add_payment_method #payment, .woocommerce-cart #payment, .woocommerce-checkout #payment {
+    background: none;
+    border-radius: 5px;
+}
+
+/* Contact Form*/
+div.wpforms-container-full {
+    margin-bottom: 24px;
+    margin: 0% 20%;
+}
+
+div.wpforms-container-full .wpforms-form .wpforms-field-label {
+	font-family: 'Permanent Marker', cursive;
+	color: #000000;
+
+}
+
+#wpforms-submit-462 {
+    color:  #D8A1A2;
+    background-color:  #000000;
+	font-family: 'Permanent Marker', cursive;
+}
