@@ -194,6 +194,8 @@ function glorify_scripts() {
 
 	wp_enqueue_style('custom-style', get_template_directory_uri().'/assets/css/style.css');
 
+	wp_enqueue_style('woocommerce-style', get_template_directory_uri().'/assets/css/woocommerce.css');
+
 	//To put the script to the footer following the syntax and putting footer as true
 	wp_enqueue_script('foundation-script', get_template_directory_uri().'/assets/js/vendor/foundation.js', array(), false, true);
 
