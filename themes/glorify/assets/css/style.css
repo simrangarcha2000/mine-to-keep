@@ -27,6 +27,14 @@ li{
 }
 
 
+#primary-menu a{
+    color: black;
+    font-family: 'Permanent Marker', cursive;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+
 /*    Customize the nav */
 div#primary-menu ul {
     margin:20px 0px 20px 0px;
