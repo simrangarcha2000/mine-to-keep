@@ -34,14 +34,11 @@
 							$salon_query -> the_post();
 						}
 						?>
+						<!-- Displaying the title of the post  -->
 						<li><?php the_title(); ?></li>
-                    </ul>
-				</div>
-				<div class="cell small-6 small-offset-2  large-offset-2 large-4">
-				<h1 class="cat">Categories</h1>
-					<ul>
-						<li class="small-offset-3 large-offset-0">Cosmetics</li>
-						<li class="small-offset-3 large-offset-0">Makeup</li>
+						<!-- Displaying the  featured image of the post  -->
+						<li><?php the_title(); ?></li>
+						<!-- Displaying the image of the post  -->
                     </ul>
 				</div>
             </div>

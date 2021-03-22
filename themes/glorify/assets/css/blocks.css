@@ -96,7 +96,6 @@
     background-color: black;
     height: auto; 
     padding: 3% 3% 3% 1%;
-    margin-right: 20px;
     text-align: center;
     
 }
@@ -118,12 +117,9 @@
     padding: 0px;
     font-family: 'Permanent Marker', cursive;
     padding-left: 1rem;
-    margin-left: 15%;
+    margin-left: 9%;
 }
 
-.wp-block-paragraph.is-style-default, .is-style-default{
-    margin: 2% 13%;
-}
 
 .wp-block-paragraph.is-style-no-margin-para, .is-style-no-margin-para{
     margin: 0% 0% 0% 6%;

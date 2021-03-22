@@ -195,8 +195,10 @@ function glorify_scripts() {
 	//To put the script to the footer following the syntax and putting footer as true
 	wp_enqueue_script('foundation-script', get_template_directory_uri().'/assets/js/vendor/foundation.js', array(), false, true);
 
+	//Custom Style sheet referred
 	wp_enqueue_style('custom-style', get_template_directory_uri().'/assets/css/custom.css');
 
+	//Custom WooCommerce Stylesheet Referred
 	wp_enqueue_style('woocommerce-style', get_template_directory_uri().'/assets/css/woocommerce.css');
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -222,7 +224,7 @@ require get_template_directory() . '/inc/template-functions.php';
 require get_template_directory() . '/inc/customizer.php';
 
 /**
- * Customizer post type . 
+ * Customizing post type . 
  */
 require get_template_directory() . '/inc/post-types.php';
 
@@ -242,7 +244,7 @@ function glorify_enqueue_block_editor_assets() {
     );
 }
 
-//Action running then refering the func created above 
+//Action running then refering the function created above 
 add_action( 'enqueue_block_editor_assets', 'glorify_enqueue_block_editor_assets' );
 
 
