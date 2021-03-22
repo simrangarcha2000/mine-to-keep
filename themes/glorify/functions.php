@@ -53,7 +53,19 @@ if ( ! function_exists( 'glorify_setup' ) ) :
 				'menu-primary' => esc_html__( 'Primary', 'glorify' ),
 			)
 		);
-
+        
+		function register_my_menus() {
+			register_nav_menus(
+			array(
+				'header-menu-top' => __( 'Header Top Menu ' ),
+				'footer-menu-about' => __( 'Footer About Menu ' ),
+				'footer-menu-help' => __( 'Footer Help Menu' ),
+				'footer-menu-shop' => __( 'Footer Shop Menu' ),
+				'footer-menu-contact' => __( 'Footer Contact Menu' )
+			)
+			);
+		}
+		add_action( 'init', 'register_my_menus' );
 		/*
 		 * Switch default core markup for search form, comment form, and comments
 		 * to output valid HTML5.
@@ -91,39 +103,47 @@ if ( ! function_exists( 'glorify_setup' ) ) :
 			)
 		);
 
-		/**
-		 * Add support for the color palette
-		 */
 
-		add_theme_support( 'editor-color-palette', array(
-			array(
-				'name' => esc_attr__( 'Cherry Pink', 'glorify' ),
-				'slug' => 'cherry-pink',
-				'color' => '#D8A1A2',
-			),
-			array(
-				'name' => esc_attr__( 'Light Cherry Pink', 'glorify' ),
-				'slug' => 'light-cherry-pink',
-				'color' => '#F0DBDB',
-			),
-			array(
-				'name' => esc_attr__( 'Black', 'glorify' ),
-				'slug' => 'black',
-				'color' => '#000000',
-			),
-			array(
-				'name' => esc_attr__( 'White', 'glorify' ),
-				'slug' => 'white',
-				'color' => '#FFFFFF',
-			),
-		)
-	);
+		/**      ADDING THEME SUPPORT  for Default Block Styles       */
+		//Edit color palette, font sizes, block patterns
+
+
+	add_theme_support('wp-block-styles');
 
 	/**
-	 * Disabling custom color setting 
-	 * 
+	 * Add support for wide alignment
 	 */
-	add_theme_support( 'disable-custom-colors' );
+
+	add_theme_support('align-wide');
+
+		/**
+	 * Add support for color palette
+	 */
+	add_theme_support('editor-color-palette',array(
+	array(
+		'name' => esc_attr__('Cherry Pink','glorify'),
+		'slug' => 'cherry-pink',
+		'color' => '#D8A1A2',
+	),
+	array(
+		'name' => esc_attr__('Light Cherry Pink','glorify'),
+		'slug' => 'light-cherry-pink',
+		'color' => '#F0DBDB',
+	),
+	array(
+		'name' => esc_attr__('Black','glorify'),
+		'slug' => 'black',
+		'color' => '#000000',
+	),
+	array(
+		'name' => esc_attr__('White','glorify'),
+		'slug' => 'white',
+		'color' => '#ffffff',
+	),
+    ));
+
+	/**Add support for custom gradients  - no option for user to select*/
+	add_theme_support('editor-gradient-presets',array());
 
 
 
@@ -172,6 +192,10 @@ function glorify_scripts() {
 	//Foundation (should always be below main style sheet and custom  style sheet after)
 	wp_enqueue_style('foundation-style', get_template_directory_uri().'/assets/css/vendor/foundation.css');
 
+	wp_enqueue_style('custom-style', get_template_directory_uri().'/assets/css/style.css');
+
+	wp_enqueue_style('woocommerce-style', get_template_directory_uri().'/assets/css/woocommerce.css');
+
 	//To put the script to the footer following the syntax and putting footer as true
 	wp_enqueue_script('foundation-script', get_template_directory_uri().'/assets/js/vendor/foundation.js', array(), false, true);
 
@@ -202,6 +226,9 @@ require get_template_directory() . '/inc/customizer.php';
  * Only Loads for the admin editor of wordpress
  */
 
+
+/**                           BLOCK ASSETS                   */
+
 function glorify_enqueue_block_editor_assets() {
     wp_enqueue_script(
         'editor-script',
@@ -226,4 +253,3 @@ function glorify_enqueue_block_assets() {
 	);
 }
 add_action( 'enqueue_block_assets', 'glorify_enqueue_block_assets' );
-

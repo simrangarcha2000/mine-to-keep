@@ -20,16 +20,20 @@
 
 		if ( 'post' === get_post_type() ) :
 			?>
-			<div class="entry-meta">
+			<h2 class="">
+
+		<div class="featuredImage"><?php glorify_post_thumbnail(); ?></div>
+		<div class="entry-meta">
 				<?php
-				glorify_posted_on();
 				glorify_posted_by();
+				glorify_posted_on();
+				
 				?>
+						<?php endif; ?>
 			</div><!-- .entry-meta -->
-		<?php endif; ?>
 	</header><!-- .entry-header -->
 
-	<?php glorify_post_thumbnail(); ?>
+	
 
 	<div class="entry-content">
 		<?php
