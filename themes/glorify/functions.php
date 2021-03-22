@@ -221,6 +221,11 @@ require get_template_directory() . '/inc/template-functions.php';
  */
 require get_template_directory() . '/inc/customizer.php';
 
+/**
+ * Customizer post type . 
+ */
+require get_template_directory() . '/inc/post-types.php';
+
 /***
  * Enqueuing block editor assets
  * Only Loads for the admin editor of wordpress
