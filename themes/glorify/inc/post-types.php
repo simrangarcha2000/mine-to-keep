@@ -4,13 +4,13 @@
  */
 
 
- //Creating a post type for --> Salons 
+ //Creating a post type for --> Salons near me
 function salon_init() {
     $labels = array(
-        'name'                  => _x( 'salons', 'Post type general name', 'salon' ),
-        'singular_name'         => _x( 'salon', 'Post type singular name', 'salon' ),
-        'menu_name'             => _x( 'salons', 'Admin Menu text', 'salon' ),
-        'name_admin_bar'        => _x( 'salon', 'Add New on Toolbar', 'salon' ),
+        'name'                  => _x( 'Salons', 'Post type general name', 'salon' ),
+        'singular_name'         => _x( 'Salon', 'Post type singular name', 'salon' ),
+        'menu_name'             => _x( 'Salons', 'Admin Menu text', 'salon' ),
+        'name_admin_bar'        => _x( 'Salon', 'Add New on Toolbar', 'salon' ),
         'add_new'               => __( 'Add New', 'salon' ),
         'add_new_item'          => __( 'Add New salon', 'salon' ),
         'new_item'              => __( 'New salon', 'salon' ),
@@ -21,7 +21,7 @@ function salon_init() {
         'parent_item_colon'     => __( 'Parent salons:', 'salon' ),
         'not_found'             => __( 'No salons found.', 'salon' ),
         'not_found_in_trash'    => __( 'No salons found in Trash.', 'salon' ),
-        'featured_image'        => _x( 'salon Cover Image', 'Overrides the “Featured Image” phrase for this post type. Added in 4.3', 'salon' ),
+        'featured_image'        => _x( 'Salon Cover Image', 'Overrides the “Featured Image” phrase for this post type. Added in 4.3', 'salon' ),
         'set_featured_image'    => _x( 'Set cover image', 'Overrides the “Set featured image” phrase for this post type. Added in 4.3', 'salon' ),
         'remove_featured_image' => _x( 'Remove cover image', 'Overrides the “Remove featured image” phrase for this post type. Added in 4.3', 'salon' ),
         'use_featured_image'    => _x( 'Use as cover image', 'Overrides the “Use as featured image” phrase for this post type. Added in 4.3', 'salon' ),

@@ -18,8 +18,23 @@
             <div class="grid-x grid-margin-x">
                 <div class="cell small-12 large-4 large-offset-2">
 					<h1>Recent Posts :</h1>
+
+					<!--Creating a WP_Query to get the posts of the custom post type and print its information in the footer-->
 					<ul>
-						<li>Tips and Tricks to the perfect natural makeup</li>
+						<?php
+						//Creating the argument
+						$salon_args = array(
+							'post_type' => 'glorify_salon_name', //Refering to the Custom post type name
+							'posts_per_page' => 4, //The info of 4 recent posts will be printed in the footer
+						);
+
+						//A loop which will print info of the post if it exists the post if it 
+						$salon_query = new WP_Query ($salon_args);
+						if ($salon_query -> have_posts()) {
+							$salon_query -> the_post();
+						}
+						?>
+						<li><?php the_title(); ?></li>
                     </ul>
 				</div>
 				<div class="cell small-6 small-offset-2  large-offset-2 large-4">
@@ -31,6 +46,7 @@
 				</div>
             </div>
         </div>
+
 		<div class="grid-container">
             <div class="grid-x grid-margin-x">
                 <div class="cell small-12 large-offset-4 large-6">
@@ -41,6 +57,8 @@
 				</div>
             </div>
         </div>
+		
+		<!--Creating Menu for the Footer-->
 		<div class="grid-container">
             <div class="grid-x grid-margin-x large-offset-1">
                 <div class="cell small-6 large-2 large-offset-0 menuPlaceOne">
