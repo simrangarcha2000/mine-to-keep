@@ -56,7 +56,7 @@
         </div>
 		
 		<!--Creating Menu for the Footer-->
-		<div class="grid-container">
+		<div class="grid-container footerNav">
             <div class="grid-x grid-margin-x large-offset-1">
 				
 				<!--Menu Under the About Heading-->

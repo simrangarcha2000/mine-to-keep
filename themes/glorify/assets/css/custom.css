@@ -7,6 +7,25 @@ body{
     font-family: 'Montserrat', sans-serif;
 }
 
+
+
+.wp-block{
+    width: 1200px;
+}
+
+.post, .page {
+    margin: 0 0 0em;
+}
+
+.grid-container {
+    max-width: 120rem;
+}
+
+
+h1.has-background, h2.has-background, h3.has-background, h4.has-background, h5.has-background, h6.has-background{
+    padding: 1.2rem;
+}
+
 /*-----------------------------------------------HEADER -------------------------------------------------------*/
 
 #top-header{
@@ -17,13 +36,12 @@ body{
 }
 
 
+
 .is-style-main-heading{
     font-size: 50px !important;
 }
 
-.grid-container {
-    max-width: 120rem;
-}
+
 
 li{
     margin: 2px;
@@ -67,6 +85,17 @@ div#primary-menu a {
 /*----------------------------------------------   HOME PAGE  -------------------------------------------------------*/
 .threeCol{
     margin: 2rem 5rem 2rem 10rem;;
+}
+
+.page-id-48 .entry-content{
+    margin: 0px;
+}
+
+/*----------------------------------------------   ABOUT PAGE  -------------------------------------------------------*/
+
+.page-id-19 p {
+    margin: 2opx;
+    margin: 1rem 9.5rem;
 }
 
 /*----------------------------------------------   FOOTER   -------------------------------------------------------*/
@@ -120,19 +149,10 @@ div#primary-menu a {
     padding: 10px;
 }
 
-
-.wp-block{
-    width: 1200px;
+.grid-container.footerNav {
+    margin-bottom: 2rem;
 }
 
-.post, .page {
-    margin: 0 0 0em;
-}
-
-
-h1.has-background, h2.has-background, h3.has-background, h4.has-background, h5.has-background, h6.has-background{
-    padding: 1.2rem;
-}
 
 
 /*----------------------------------------------   SINGLE POST  -------------------------------------------------------*/
