@@ -1,7 +1,6 @@
-/* WooCommerce */
+/* Coding for the pages og woocommerce and woocommerce plugin is done over here */
 
-/* Product Archieve*/
-
+/*----------------------------------------------   POST ARCHIVE  -------------------------------------------------------*/
 
 .woocommerce .woocommerce-ordering {
     margin: 2rem 17.3em;
@@ -35,7 +34,7 @@
     color: #F5E6E6;
 }
 
-/* Cart Page*/
+/*----------------------------------------------  CART PAGE   -------------------------------------------------------*/
 
 .woocommerce-cart-form {
     margin-left: 20%;
@@ -119,8 +118,7 @@ tbody tr:nth-child(2n) {
 }
 
 
-
-/* Checkout Page*/
+/*----------------------------------------------   CHECKOUT PAGE  -------------------------------------------------------*/
 
 .woocommerce .col2-set .col-1, .woocommerce-page .col2-set .col-1 {
     float: none;
@@ -174,7 +172,7 @@ tbody tr:nth-child(2n) {
 
 }
 
-/* Product Page*/
+/*----------------------------------------------   SINGLE PRODUCT PAGE  -------------------------------------------------------*/
 
 .woocommerce div.product div.images .woocommerce-product-gallery__wrapper {
     -webkit-transition: all cubic-bezier(.795,-.035,0,1) .5s;
