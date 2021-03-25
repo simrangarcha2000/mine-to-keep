@@ -1,18 +1,23 @@
+/* Targetting the body Tag and the fonts  family  */
+
 body{
     overflow-x: hidden;
     font-family: 'Montserrat', sans-serif;
 }
+
 
 .editor-styles-wrapper {
     font-family: 'Montserrat', sans-serif;
 }
 
 
-
+/*SEtting the widths of the blocks */
 .wp-block{
     width: 1200px;
 }
 
+
+/* Setting different dimensions and margins to the pages */
 .post, .page {
     margin: 0 0 0em;
 }
