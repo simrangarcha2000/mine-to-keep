@@ -26,7 +26,7 @@ body{
     max-width: 120rem;
 }
 
-
+/* Giving Background dimensions to different headings*/
 h1.has-background, h2.has-background, h3.has-background, h4.has-background, h5.has-background, h6.has-background{
     padding: 1.2rem;
 }
@@ -41,12 +41,9 @@ h1.has-background, h2.has-background, h3.has-background, h4.has-background, h5.h
 }
 
 
-
 .is-style-main-heading{
     font-size: 50px !important;
 }
-
-
 
 li{
     margin: 2px;
@@ -64,6 +61,7 @@ li{
 
 
 /*    Customize the nav */
+
 div#primary-menu ul {
     margin:20px 0px 20px 0px;
     list-style-type: none;
@@ -88,8 +86,9 @@ div#primary-menu a {
 }
 
 /*----------------------------------------------   HOME PAGE  -------------------------------------------------------*/
+
 .threeCol{
-    margin: 2rem 5rem 2rem 10rem;;
+    margin: 2rem 5rem 2rem 10rem;/* Styling the column in home page by giving them a class*/
 }
 
 .page-id-48 .entry-content{
@@ -99,7 +98,7 @@ div#primary-menu a {
 /*----------------------------------------------   ABOUT PAGE  -------------------------------------------------------*/
 
 .page-id-19 p {
-    margin: 2opx;
+    margin: 20px;
     margin: 1rem 9.5rem;
 }
 
@@ -126,6 +125,8 @@ div#primary-menu a {
     font-size: 40px;
 }
 
+/* Setting the Links of the footer and giving them a hover */
+
 .menuPlaceOne .menu a{
     line-height: 1;
     text-decoration: none;
@@ -141,6 +142,9 @@ div#primary-menu a {
     color: #F5E6E6;
     opacity: 0.8;
 }
+
+/* Giving the signup form a different colour 
+ --- Right now it is static and needs to be made dynamic */
 
 .fillform{
     background-color: #F5E6E6;
@@ -161,6 +165,7 @@ div#primary-menu a {
 
 
 /*----------------------------------------------   SINGLE POST  -------------------------------------------------------*/
+/* Styling a single post for the website */
 
 .entry-title{
     background-color: #D8A1A2;
@@ -218,6 +223,7 @@ a:visited{
 
 
 /*----------------------------------------------   POST ARCHIVE  -------------------------------------------------------*/
+/* Styling the main Post Archieve page */
 
 .cat-links a{
     text-align: center;
@@ -238,10 +244,12 @@ a:visited{
 /*  Mobile View    */
 
 @media only screen and (max-width: 900px) {
+    /* Screen overall setting*/
     .custom-logo{
         width: 100%;
     }
 
+    /* Setting the Header in mobile view */
     #colophon h1{
         margin-left: 30%;
         font-size: 30px;
@@ -255,6 +263,8 @@ a:visited{
         margin-left: 10%;
     }
 
+
+    /* Setting the Footer in mobile view */
     .fillform{
         width: 80%;
     }
@@ -287,6 +297,7 @@ a:visited{
         z-index: 1000;
     }
 
+
     .entry-posted-on{
         color: #F0DBDB;
         text-align: center;
@@ -298,10 +309,12 @@ a:visited{
         
     }
 
+    /* Giving Dimensions to Wp-Column  */
     .wp-block-columns {
         margin: 2rem 0% 0% 2%;
     }
 
+    /* Giving Margins to Images and Gallery  */
     .wp-block-image {
         margin-bottom: 1em;
         width: 100%;
