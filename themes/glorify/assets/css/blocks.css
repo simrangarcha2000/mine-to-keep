@@ -1,8 +1,9 @@
 
-/*Add Color Palette*/
+/*-----------------------------------------------ADD COLOUR PALETTE ---------------------------------------*/
 
 
-/* Giving Color */
+/* Giving Color and Background Colour */
+
 .has-cherry-pink-background-color {
     background-color: #D8A1A2;
 }
@@ -35,7 +36,7 @@
     color: #ffffff;
 }
 
-/*    Creating a Block Quote */
+/*-----------------------------------------------CREATING BLOCK QUOTE  ---------------------------------------*/
 .is-style-pink-quote.rich-text.block-editor-rich-text__editable.wp-block-quote, .is-style-pink-quote, .is-style-pink-quote{
     color: #D8A1A2;
     background-color: black;
@@ -57,7 +58,7 @@
 }
 
 
-/* Creating Block paragraph*/
+/*-----------------------------------------------CREATING BLOCK PARAGRAPH---------------------------------------*/
 .is-style-paragraph-glorify.rich-text.block-editor-rich-text__editable, .is-style-paragraph-glorify{
     color: #FFD1D1;
     background-color: black;
@@ -67,7 +68,7 @@
     font-family: 'Open Sans', sans-serif;
 }
 
-/*   Registering an Image  */
+/*-----------------------------------------------REGISTERING AN IMAGE---------------------------------------*/
 .wp-block-image.is-style-image-glorify, .wp-block-image.is-style-default {
     margin: 0px;
     margin: 0px;
@@ -93,7 +94,7 @@
 
 
 
-/* Creating Columns */
+/*-----------------------------------------------CREATING COLUMNS ---------------------------------------*/
 .wp-block-column.is-style-black-column, .wp-block-column.is-style-default{
     background-color: black;
     height: auto; 
@@ -107,7 +108,7 @@
     height: auto; 
 }
 
-/* Setting Heading */
+/*-----------------------------------------------SETTING HEADING ---------------------------------------*/
 .is-style-pink-heading.rich-text.block-editor-rich-text__editable,.wp-block-heading ,.is-style-pink-heading{
     font-family: 'Permanent Marker', cursive;
     color: #D8A1A2;
@@ -122,7 +123,7 @@
     margin-left: 9%;
 }
 
-
+/*-----------------------------------------------CREATING A PARAGRAPH ---------------------------------------*/
 .wp-block-paragraph.is-style-no-margin-para, .is-style-no-margin-para{
     margin: 0% 0% 0% 6%;
 }
