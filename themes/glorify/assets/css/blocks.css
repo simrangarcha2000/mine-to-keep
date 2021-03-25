@@ -59,6 +59,8 @@
 
 
 /*-----------------------------------------------CREATING BLOCK PARAGRAPH---------------------------------------*/
+
+/* Paragraph Glorify --- color pink with a background and font style */
 .is-style-paragraph-glorify.rich-text.block-editor-rich-text__editable, .is-style-paragraph-glorify{
     color: #FFD1D1;
     background-color: black;
@@ -68,20 +70,33 @@
     font-family: 'Open Sans', sans-serif;
 }
 
+/*------ NO Margin Para---------*/
+.wp-block-paragraph.is-style-no-margin-para, .is-style-no-margin-para{
+    margin: 0% 0% 0% 6%;
+}
+
+
+/*------ NO Margin Left Para---------*/
+.wp-block-paragraph.is-style-no-margin-para, .is-style-no-marginleft-para {
+    margin: 0% 15% 0% 2%;
+}
+
 /*-----------------------------------------------REGISTERING AN IMAGE---------------------------------------*/
+
+/*------ Image Glorify ---------*/
 .wp-block-image.is-style-image-glorify, .wp-block-image.is-style-default {
     margin: 0px;
     margin: 0px;
     max-width: 100%;
     margin-left: 10%;
-
 }
+
 
 .wp-block-image.is-style-image-glorify, .wp-block-image.is-style-default .aligncenter{
     margin-left: 9%;
 }
 
-
+/*------ Image Background ---------*/
 .wp-block-image.is-style-image-background{
     margin: 0px;
     margin: 0px;
@@ -95,6 +110,8 @@
 
 
 /*-----------------------------------------------CREATING COLUMNS ---------------------------------------*/
+
+/* --- Black Column --- */
 .wp-block-column.is-style-black-column, .wp-block-column.is-style-default{
     background-color: black;
     height: auto; 
@@ -103,17 +120,21 @@
     
 }
 
+/* --- Pink Column --- */
 .wp-block-column.is-style-pink-column{
     background-color: #D8A1A2;
     height: auto; 
 }
 
 /*-----------------------------------------------SETTING HEADING ---------------------------------------*/
+
+/* --- Pink Heading  --- */
 .is-style-pink-heading.rich-text.block-editor-rich-text__editable,.wp-block-heading ,.is-style-pink-heading{
     font-family: 'Permanent Marker', cursive;
     color: #D8A1A2;
 }
 
+/* --- Main Heading  --- */
 .is-style-main-heading{
     color: black;
     border-left: #D8A1A2 solid 20px;
@@ -123,21 +144,19 @@
     margin-left: 9%;
 }
 
-/*-----------------------------------------------CREATING A PARAGRAPH ---------------------------------------*/
-.wp-block-paragraph.is-style-no-margin-para, .is-style-no-margin-para{
-    margin: 0% 0% 0% 6%;
-}
 
-.wp-block-paragraph.is-style-no-margin-para, .is-style-no-marginleft-para {
-    margin: 0% 15% 0% 2%;
-}
+/*-----------------------------------------------CREATING A SEPARATOR ---------------------------------------*/
 
+/* --- Removing border from a separator --- */
 .wp-block-separator.has-background:not(.is-style-dots) {
     border-bottom: none;
     height: 10px;
 }
 
+
+
 /*-----------------------------------------------STYLING GALLERY ---------------------------------------*/
+/* --- Gallery Select --- */
 .wp-block-gallery.is-style-gallery-select{
     margin: 0px 13%;
     padding: 0% 13%;
@@ -157,17 +176,20 @@
 
 /*-----------------------------------------------ADDING CUSTOM TABLE ---------------------------------------*/
 
+/* --- Glorify Table --- */
 .wp-block-table.is-style-glorify-table{
     text-align: center;
     margin-left: 19%;
 }
 
+/* --- Table  --- */
 .is-style-glorify-table.wp-block-table td{
     border: #F0DBDB solid 3px;
     background: white;
 
 }
 
+/* --- Table Row  --- */
 .is-style-glorify-table tr{
     border: #F0DBDB solid 3px;
 }
