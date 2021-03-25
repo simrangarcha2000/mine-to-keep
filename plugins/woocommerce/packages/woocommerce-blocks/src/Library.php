@@ -40,7 +40,12 @@ class Library {
 	 * Register blocks, hooking up assets and render functions as needed.
 	 */
 	public static function register_blocks() {
+<<<<<<< HEAD
 		global $wp_version;
+=======
+		global $wp_version, $pagenow;
+
+>>>>>>> staging
 		$blocks = [
 			'AllReviews',
 			'FeaturedCategory',
@@ -57,6 +62,7 @@ class Library {
 			'ReviewsByCategory',
 			'ProductSearch',
 			'ProductTag',
+<<<<<<< HEAD
 		];
 		// Note: as a part of refactoring dynamic block registration, this will be moved
 		// to block level config.
@@ -70,10 +76,35 @@ class Library {
 				$blocks[] = 'Checkout';
 				$blocks[] = 'Cart';
 			}
+=======
+			'AllProducts',
+			'PriceFilter',
+			'AttributeFilter',
+			'ActiveFilters',
+		];
+		if ( Package::feature()->is_feature_plugin_build() ) {
+			$blocks[] = 'Checkout';
+			$blocks[] = 'Cart';
+>>>>>>> staging
 		}
 		if ( Package::feature()->is_experimental_build() ) {
 			$blocks[] = 'SingleProduct';
 		}
+<<<<<<< HEAD
+=======
+		/**
+		 * This disables specific blocks in Widget Areas by not registering them.
+		 */
+		if ( 'themes.php' === $pagenow ) {
+			$blocks_to_unset = [
+				'AllProducts',
+				'PriceFilter',
+				'AttributeFilter',
+				'ActiveFilters',
+			];
+			$blocks          = array_diff( $blocks, $blocks_to_unset );
+		}
+>>>>>>> staging
 		foreach ( $blocks as $class ) {
 			$class    = __NAMESPACE__ . '\\BlockTypes\\' . $class;
 			$instance = new $class();

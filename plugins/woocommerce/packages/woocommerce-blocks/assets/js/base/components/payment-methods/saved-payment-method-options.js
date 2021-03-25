@@ -1,6 +1,7 @@
 /**
  * External dependencies
  */
+<<<<<<< HEAD
 import { useEffect, useState, useRef, useCallback } from '@wordpress/element';
 import { __, sprintf } from '@wordpress/i18n';
 import {
@@ -10,6 +11,13 @@ import {
 import RadioControl from '@woocommerce/base-components/radio-control';
 import { getPaymentMethods } from '@woocommerce/blocks-registry';
 import PropTypes from 'prop-types';
+=======
+import { useEffect, useRef, useCallback } from '@wordpress/element';
+import { __, sprintf } from '@wordpress/i18n';
+import { usePaymentMethodDataContext } from '@woocommerce/base-context';
+import RadioControl from '@woocommerce/base-components/radio-control';
+import { getPaymentMethods } from '@woocommerce/blocks-registry';
+>>>>>>> staging
 
 /**
  * @typedef {import('@woocommerce/type-defs/contexts').CustomerPaymentMethod} CustomerPaymentMethod
@@ -47,7 +55,11 @@ const getCcOrEcheckPaymentMethodOption = (
 			setActivePaymentMethod( method.gateway );
 			setPaymentStatus().success( {
 				payment_method: method.gateway,
+<<<<<<< HEAD
 				[ savedTokenKey ]: token,
+=======
+				[ savedTokenKey ]: token + '',
+>>>>>>> staging
 				isSavedToken: true,
 			} );
 		},
@@ -81,13 +93,18 @@ const getDefaultPaymentMethodOptions = (
 			setActivePaymentMethod( method.gateway );
 			setPaymentStatus().success( {
 				payment_method: method.gateway,
+<<<<<<< HEAD
 				[ savedTokenKey ]: token,
+=======
+				[ savedTokenKey ]: token + '',
+>>>>>>> staging
 				isSavedToken: true,
 			} );
 		},
 	};
 };
 
+<<<<<<< HEAD
 const SavedPaymentMethodOptions = ( { onChange } ) => {
 	const { isEditor } = useEditorContext();
 	const {
@@ -96,6 +113,17 @@ const SavedPaymentMethodOptions = ( { onChange } ) => {
 		setActivePaymentMethod,
 	} = usePaymentMethodDataContext();
 	const [ selectedToken, setSelectedToken ] = useState( '' );
+=======
+const SavedPaymentMethodOptions = () => {
+	const {
+		setPaymentStatus,
+		customerPaymentMethods,
+		activePaymentMethod,
+		setActivePaymentMethod,
+		activeSavedToken,
+		setActiveSavedToken,
+	} = usePaymentMethodDataContext();
+>>>>>>> staging
 	const standardMethods = getPaymentMethods();
 
 	/**
@@ -109,10 +137,16 @@ const SavedPaymentMethodOptions = ( { onChange } ) => {
 			if ( token === '0' ) {
 				setPaymentStatus().started();
 			}
+<<<<<<< HEAD
 			setSelectedToken( token );
 			onChange( token );
 		},
 		[ onChange, setSelectedToken, setPaymentStatus ]
+=======
+			setActiveSavedToken( token );
+		},
+		[ setActiveSavedToken, setPaymentStatus ]
+>>>>>>> staging
 	);
 
 	useEffect( () => {
@@ -121,11 +155,14 @@ const SavedPaymentMethodOptions = ( { onChange } ) => {
 			.flatMap( ( type ) => {
 				const typeMethods = customerPaymentMethods[ type ];
 				return typeMethods.map( ( paymentMethod ) => {
+<<<<<<< HEAD
 					const method =
 						standardMethods[ paymentMethod.method.gateway ];
 					if ( ! method?.supports?.savePaymentInfo ) {
 						return null;
 					}
+=======
+>>>>>>> staging
 					const option =
 						type === 'cc' || type === 'echeck'
 							? getCcOrEcheckPaymentMethodOption(
@@ -138,7 +175,15 @@ const SavedPaymentMethodOptions = ( { onChange } ) => {
 									setActivePaymentMethod,
 									setPaymentStatus
 							  );
+<<<<<<< HEAD
 					if ( paymentMethod.is_default && selectedToken === '' ) {
+=======
+					if (
+						! activePaymentMethod &&
+						paymentMethod.is_default &&
+						activeSavedToken === ''
+					) {
+>>>>>>> staging
 						updateToken( paymentMethod.tokenId + '' );
 						option.onChange( paymentMethod.tokenId );
 					}
@@ -150,12 +195,18 @@ const SavedPaymentMethodOptions = ( { onChange } ) => {
 	}, [
 		customerPaymentMethods,
 		updateToken,
+<<<<<<< HEAD
 		selectedToken,
+=======
+		activeSavedToken,
+		activePaymentMethod,
+>>>>>>> staging
 		setActivePaymentMethod,
 		setPaymentStatus,
 		standardMethods,
 	] );
 
+<<<<<<< HEAD
 	// In the editor, show `Use a new payment method` option as selected.
 	const selectedOption = isEditor ? '0' : selectedToken + '';
 	const newPaymentMethodOption = {
@@ -169,12 +220,23 @@ const SavedPaymentMethodOptions = ( { onChange } ) => {
 			selected={ selectedOption }
 			onChange={ updateToken }
 			options={ [ ...currentOptions.current, newPaymentMethodOption ] }
+=======
+	return currentOptions.current.length > 0 ? (
+		<RadioControl
+			id={ 'wc-payment-method-saved-tokens' }
+			selected={ activeSavedToken }
+			onChange={ updateToken }
+			options={ currentOptions.current }
+>>>>>>> staging
 		/>
 	) : null;
 };
 
+<<<<<<< HEAD
 SavedPaymentMethodOptions.propTypes = {
 	onChange: PropTypes.func.isRequired,
 };
 
+=======
+>>>>>>> staging
 export default SavedPaymentMethodOptions;

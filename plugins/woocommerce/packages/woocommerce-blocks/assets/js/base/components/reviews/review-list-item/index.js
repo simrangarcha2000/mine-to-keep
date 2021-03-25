@@ -124,11 +124,20 @@ function getReviewRating( review ) {
 	const starStyle = {
 		width: ( rating / 5 ) * 100 + '%' /* stylelint-disable-line */,
 	};
+<<<<<<< HEAD
+=======
+	const ratingText = sprintf(
+		/* Translators: %f is referring to the average rating value */
+		__( 'Rated %f out of 5', 'woocommerce' ),
+		rating
+	);
+>>>>>>> staging
 	return (
 		<div className="wc-block-review-list-item__rating wc-block-components-review-list-item__rating">
 			<div
 				className="wc-block-review-list-item__rating__stars wc-block-components-review-list-item__rating__stars"
 				role="img"
+<<<<<<< HEAD
 			>
 				<span style={ starStyle }>
 					{ sprintf(
@@ -140,6 +149,11 @@ function getReviewRating( review ) {
 						rating
 					) }
 				</span>
+=======
+				aria-label={ ratingText }
+			>
+				<span style={ starStyle }>{ ratingText }</span>
+>>>>>>> staging
 			</div>
 		</div>
 	);

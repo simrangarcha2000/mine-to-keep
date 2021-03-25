@@ -8,9 +8,12 @@ wp.blocks.registerBlockStyle( 'core/quote', {
 
 
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> staging
 //Registering another Text block style - Paragraph
 wp.blocks.registerBlockStyle( 'core/paragraph', {
     name: 'paragraph-glorify',
@@ -30,7 +33,11 @@ wp.blocks.registerBlockStyle( 'core/paragraph', {
 } );
 
 
+<<<<<<< HEAD
 //Registering another Text block style - Paragraph
+=======
+//Registering another Text block style - Image
+>>>>>>> staging
 wp.blocks.registerBlockStyle( 'core/image', {
     name: 'image-glorify',
     label: 'Glorify Image'
@@ -94,5 +101,8 @@ wp.domReady(function(){
     wp.blocks.unregisterBlockStyle( 'core/paragraph', 'default' );
 });
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> staging

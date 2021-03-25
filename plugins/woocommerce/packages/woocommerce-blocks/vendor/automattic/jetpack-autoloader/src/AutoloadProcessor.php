@@ -14,8 +14,11 @@
 
 namespace Automattic\Jetpack\Autoloader;
 
+<<<<<<< HEAD
 use Composer\Util\Filesystem;
 
+=======
+>>>>>>> staging
 /**
  * Class AutoloadProcessor.
  */

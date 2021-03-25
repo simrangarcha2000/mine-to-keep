@@ -2,8 +2,12 @@
  * External dependencies
  */
 import { __ } from '@wordpress/i18n';
+<<<<<<< HEAD
 import { clamp, isNaN } from 'lodash';
 import { Fragment } from '@wordpress/element';
+=======
+import { clamp } from 'lodash';
+>>>>>>> staging
 import PropTypes from 'prop-types';
 import { RangeControl, ToggleControl } from '@wordpress/components';
 import {
@@ -29,14 +33,22 @@ const GridLayoutControl = ( {
 	alignButtons,
 } ) => {
 	return (
+<<<<<<< HEAD
 		<Fragment>
+=======
+		<>
+>>>>>>> staging
 			<RangeControl
 				label={ __( 'Columns', 'woocommerce' ) }
 				value={ columns }
 				onChange={ ( value ) => {
 					const newValue = clamp( value, MIN_COLUMNS, MAX_COLUMNS );
 					setAttributes( {
+<<<<<<< HEAD
 						columns: isNaN( newValue ) ? '' : newValue,
+=======
+						columns: Number.isNaN( newValue ) ? '' : newValue,
+>>>>>>> staging
 					} );
 				} }
 				min={ MIN_COLUMNS }
@@ -48,7 +60,11 @@ const GridLayoutControl = ( {
 				onChange={ ( value ) => {
 					const newValue = clamp( value, MIN_ROWS, MAX_ROWS );
 					setAttributes( {
+<<<<<<< HEAD
 						rows: isNaN( newValue ) ? '' : newValue,
+=======
+						rows: Number.isNaN( newValue ) ? '' : newValue,
+>>>>>>> staging
 					} );
 				} }
 				min={ MIN_ROWS }
@@ -75,7 +91,11 @@ const GridLayoutControl = ( {
 					setAttributes( { alignButtons: ! alignButtons } )
 				}
 			/>
+<<<<<<< HEAD
 		</Fragment>
+=======
+		</>
+>>>>>>> staging
 	);
 };
 

@@ -2,10 +2,17 @@
  * External dependencies
  */
 import { __ } from '@wordpress/i18n';
+<<<<<<< HEAD
 import { Component, Fragment } from '@wordpress/element';
 import { Disabled, PanelBody, Placeholder } from '@wordpress/components';
 import { InspectorControls } from '@wordpress/block-editor';
 import { ServerSideRender } from '@wordpress/editor';
+=======
+import { Component } from '@wordpress/element';
+import { Disabled, PanelBody, Placeholder } from '@wordpress/components';
+import { InspectorControls } from '@wordpress/block-editor';
+import ServerSideRender from '@wordpress/server-side-render';
+>>>>>>> staging
 import PropTypes from 'prop-types';
 import GridContentControl from '@woocommerce/editor-components/grid-content-control';
 import GridLayoutControl from '@woocommerce/editor-components/grid-layout-control';
@@ -107,7 +114,11 @@ class ProductOnSaleBlock extends Component {
 		}
 
 		return (
+<<<<<<< HEAD
 			<Fragment>
+=======
+			<>
+>>>>>>> staging
 				{ this.getInspectorControls() }
 				<Disabled>
 					<ServerSideRender
@@ -116,7 +127,11 @@ class ProductOnSaleBlock extends Component {
 						EmptyResponsePlaceholder={ EmptyPlaceholder }
 					/>
 				</Disabled>
+<<<<<<< HEAD
 			</Fragment>
+=======
+			</>
+>>>>>>> staging
 		);
 	}
 }

@@ -1,0 +1,330 @@
+/* Targetting the body Tag and the fonts  family  */
+
+body{
+    overflow-x: hidden;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+.editor-styles-wrapper {
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+/*SEtting the widths of the blocks */
+.wp-block{
+    width: 1200px;
+}
+
+
+/* Setting different dimensions and margins to the pages */
+.post, .page {
+    margin: 0 0 0em;
+}
+
+.grid-container {
+    max-width: 120rem;
+}
+
+/* Giving Background dimensions to different headings*/
+h1.has-background, h2.has-background, h3.has-background, h4.has-background, h5.has-background, h6.has-background{
+    padding: 1.2rem;
+}
+
+/*-----------------------------------------------HEADER -------------------------------------------------------*/
+
+#top-header{
+    background-color: #D8A1A2;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 15px;
+    width: 100%;
+}
+
+
+.is-style-main-heading{
+    font-size: 50px !important;
+}
+
+li{
+    margin: 2px;
+    list-style: none;
+    margin-left: 1.5rem;
+}
+
+
+#primary-menu a{
+    color: black;
+    font-family: 'Permanent Marker', cursive;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+
+/*    Customize the nav */
+
+div#primary-menu ul {
+    margin:20px 0px 20px 0px;
+    list-style-type: none;
+    list-style: none;
+    list-style-image: none;
+    text-align:right;
+}
+div#primary-menu li {
+    padding: 0px 20px 0px 0px;
+    display: inline;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 20px;
+} 
+div#primary-menu a { 
+    color:#000000;
+}
+
+/* LOGO */
+
+.custom-logo{
+    width: 70%;
+}
+
+/*----------------------------------------------   HOME PAGE  -------------------------------------------------------*/
+
+.threeCol{
+    margin: 2rem 5rem 2rem 10rem;/* Styling the column in home page by giving them a class*/
+}
+
+.page-id-48 .entry-content{
+    margin: 0px;
+}
+
+/*----------------------------------------------   ABOUT PAGE  -------------------------------------------------------*/
+
+.page-id-19 p {
+    margin: 20px;
+    margin: 1rem 9.5rem;
+}
+
+/*----------------------------------------------   FOOTER   -------------------------------------------------------*/
+
+#colophon{
+    background-color: black;
+}
+
+
+#colophon li ,h1, h2{
+    color: #F5E6E6;
+    
+}
+
+#colophon h2{
+    margin-left: 15%;
+    margin-top: 10%;
+    font-family: 'Permanent Marker', cursive;
+}
+
+#colophon h1{
+    font-family: 'Permanent Marker', cursive;
+    font-size: 40px;
+}
+
+/* Setting the Links of the footer and giving them a hover */
+
+.menuPlaceOne .menu a{
+    line-height: 1;
+    text-decoration: none;
+    display: block;
+    padding: 0.2rem 1rem;
+    color: #F5E6E6;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+.menuPlaceOne .menu a:hover{
+    transform: scale(0.95);
+    color: #F5E6E6;
+    opacity: 0.8;
+}
+
+/* Giving the signup form a different colour 
+ --- Right now it is static and needs to be made dynamic */
+
+.fillform{
+    background-color: #F5E6E6;
+    height: 3rem;
+    width: 100%;
+    margin-right: 2rem
+}
+
+.final-footer{
+    background-color: #D8A1A2;
+    padding: 10px;
+}
+
+.grid-container.footerNav {
+    margin-bottom: 2rem;
+}
+
+
+
+/*----------------------------------------------   SINGLE POST  -------------------------------------------------------*/
+/* Styling a single post for the website */
+
+.entry-title{
+    background-color: #D8A1A2;
+    width: 25%;
+    font-size: 2.8rem;
+    padding: 12px;
+    transform: translateX(68rem);
+    position: absolute;
+    min-height: 38%;
+    height: auto;
+    margin-top: 1.5rem;
+    margin-right: 15rem;
+    text-align: center;
+}
+
+.entry-header .featuredImage img{
+    
+    margin: 0rem 15rem;
+    margin-top: 1.5rem;
+    width: 47%;
+}
+
+.entry-meta{
+    background-color: #F0DBDB;
+    color: black;
+    width: 25%;
+    font-size: 1.5rem;
+    padding: 12px;
+    position: absolute;
+    min-height: 15%;
+    margin-right: 15rem;
+    transform: translate(68rem ,-9.8rem);
+}
+
+
+.entry-posted-on{
+    color: black;
+}
+
+a:visited{
+    color: black;
+}
+
+.byline{
+    margin-top: 20%;
+    font-size: 27px;
+}
+
+.posted-on{
+    font-size: 20px;
+    margin-top: 20%;
+    margin-left: 2rem;
+}
+
+
+
+/*----------------------------------------------   POST ARCHIVE  -------------------------------------------------------*/
+/* Styling the main Post Archieve page */
+
+.cat-links a{
+    text-align: center;
+    margin-left: 40%;
+    text-transform: uppercase;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 30px;
+    color: #000000;
+
+
+}
+
+
+
+/*  Tablet View    */
+
+
+/*  Mobile View    */
+
+@media only screen and (max-width: 900px) {
+    /* Screen overall setting*/
+    .custom-logo{
+        width: 100%;
+    }
+
+    /* Setting the Header in mobile view */
+    #colophon h1{
+        margin-left: 30%;
+        font-size: 30px;
+    }
+
+    .cat{
+        margin-left: 10%;
+    }
+
+    #cosmo{
+        margin-left: 10%;
+    }
+
+
+    /* Setting the Footer in mobile view */
+    .fillform{
+        width: 80%;
+    }
+
+    #colophon h2{
+        margin-left: 20%;
+    }
+
+    .entry-header .featuredImage img {
+        margin: 0rem 0rem;
+        width: 100%;
+        z-index: 999;
+    }
+    
+    .entry-title{
+        margin: 0rem 0rem;
+        width: 100%;
+        transform: translateX(0rem);
+        position: relative;
+        font-size: 30px;
+    }
+
+    .entry-meta{
+        margin: 0rem 0rem;
+        width: 100%;
+        transform: translateX(0rem);
+        position: relative;
+        background-color: black;
+        font-size: 10px;
+        z-index: 1000;
+    }
+
+
+    .entry-posted-on{
+        color: #F0DBDB;
+        text-align: center;
+        font-size: 15px;
+    }
+    
+    a:visited{
+        color: #F0DBDB;
+        
+    }
+
+    /* Giving Dimensions to Wp-Column  */
+    .wp-block-columns {
+        margin: 2rem 0% 0% 2%;
+    }
+
+    /* Giving Margins to Images and Gallery  */
+    .wp-block-image {
+        margin-bottom: 1em;
+        width: 100%;
+        margin-left: 4rem;
+    }
+
+    .wp-block-gallery.is-style-gallery-select {
+        margin: 0%;
+    }
+
+
+
+}

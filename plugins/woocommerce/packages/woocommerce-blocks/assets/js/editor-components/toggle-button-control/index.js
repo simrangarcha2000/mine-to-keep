@@ -68,7 +68,11 @@ class ToggleButtonControl extends Component {
 							buttonArgs.isPrimary = true;
 							buttonArgs[ 'aria-pressed' ] = true;
 						} else {
+<<<<<<< HEAD
 							buttonArgs.isDefault = true;
+=======
+							buttonArgs.isSecondary = true;
+>>>>>>> staging
 							buttonArgs[ 'aria-pressed' ] = false;
 						}
 

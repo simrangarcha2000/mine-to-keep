@@ -352,6 +352,7 @@ class WC_Tracker {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Get order counts
 	 *
 	 * @return array
@@ -376,6 +377,124 @@ class WC_Tracker {
 		$order_totals = self::get_order_totals();
 
 		return array_merge( $order_dates, $order_counts, $order_totals );
+=======
+	 * Get all order data.
+	 *
+	 * @return array
+	 */
+	private static function get_orders() {
+		$args = array(
+			'type'  => array( 'shop_order', 'shop_order_refund' ),
+			'limit' => get_option( 'posts_per_page' ),
+			'paged' => 1,
+		);
+
+		$first            = time();
+		$processing_first = $first;
+		$first_time       = $first;
+		$last             = 0;
+		$processing_last  = 0;
+		$order_data       = array();
+
+		$orders       = wc_get_orders( $args );
+		$orders_count = count( $orders );
+
+		while ( $orders_count ) {
+
+			foreach ( $orders as $order ) {
+
+				$date_created = (int) $order->get_date_created()->getTimestamp();
+				$type         = $order->get_type();
+				$status       = $order->get_status();
+
+				if ( 'shop_order' == $type ) {
+
+					// Find the first and last order dates for completed and processing statuses.
+					if ( 'completed' == $status && $date_created < $first ) {
+						$first = $date_created;
+					}
+					if ( 'completed' == $status && $date_created > $last ) {
+						$last = $date_created;
+					}
+					if ( 'processing' == $status && $date_created < $processing_first ) {
+						$processing_first = $date_created;
+					}
+					if ( 'processing' == $status && $date_created > $processing_last ) {
+						$processing_last = $date_created;
+					}
+
+					// Get order counts by status.
+					$status = 'wc-' . $status;
+
+					if ( ! isset( $order_data[ $status ] ) ) {
+						$order_data[ $status ]  = 1;
+					} else {
+						$order_data[ $status ] += 1;
+					}
+
+					// Count number of orders by gateway used.
+					$gateway = $order->get_payment_method();
+
+					if ( ! empty( $gateway ) && in_array( $status, array( 'wc-completed', 'wc-refunded', 'wc-processing' ) ) ) {
+						$gateway = 'gateway_' . $gateway;
+
+						if ( ! isset( $order_data[ $gateway ] ) ) {
+							$order_data[ $gateway ]  = 1;
+						} else {
+							$order_data[ $gateway ] += 1;
+						}
+					}
+				} else {
+					// If it is a refunded order (shop_order_refunnd type), add the prefix as this prefix gets
+					// added midway in the if clause.
+					$status = 'wc-' . $status;
+				}
+
+				// Calculate the gross total for 'completed' and 'processing' orders.
+				$total = $order->get_total();
+
+				if ( in_array( $status, array( 'wc-completed', 'wc-refunded' ) ) ) {
+					if ( ! isset( $order_data['gross'] ) ) {
+						$order_data['gross']  = $total;
+					} else {
+						$order_data['gross'] += $total;
+					}
+				} elseif ( 'wc-processing' == $status ) {
+					if ( ! isset( $order_data['processing_gross'] ) ) {
+						$order_data['processing_gross']  = $total;
+					} else {
+						$order_data['processing_gross'] += $total;
+					}
+				}
+			}
+			$args['paged']++;
+
+			$orders       = wc_get_orders( $args );
+			$orders_count = count( $orders );
+		}
+
+		if ( $first !== $first_time ) {
+			$order_data['first'] = gmdate( 'Y-m-d H:i:s', $first );
+		}
+
+		if ( $processing_first !== $first_time ) {
+			$order_data['processing_first'] = gmdate( 'Y-m-d H:i:s', $processing_first );
+		}
+
+		if ( $last ) {
+			$order_data['last'] = gmdate( 'Y-m-d H:i:s', $last );
+		}
+
+		if ( $processing_last ) {
+			$order_data['processing_last']  = gmdate( 'Y-m-d H:i:s', $processing_last );
+		}
+
+		foreach ( $order_data as $key => $value ) {
+			$order_data[ $key ] = (string) $value;
+		}
+
+		return $order_data;
+>>>>>>> staging
 	}
 
 	/**
@@ -543,6 +662,7 @@ class WC_Tracker {
 	/**
 	 * Get order totals
 	 *
+<<<<<<< HEAD
 	 * @return array
 	 */
 	public static function get_order_totals() {
@@ -631,6 +751,14 @@ class WC_Tracker {
 		}
 
 		return array_merge( $min_max, $processing_min_max );
+=======
+	 * @deprecated 5.1.0 Logic moved to get_orders.
+	 * @return array
+	 */
+	public static function get_order_totals() {
+		wc_deprecated_function( 'WC_Tracker::get_order_totals', '5.1.0', '' );
+		return self::get_orders();
+>>>>>>> staging
 	}
 
 	/**
@@ -660,6 +788,7 @@ class WC_Tracker {
 		return ( '0' !== $result ) ? 'Yes' : 'No';
 	}
 
+<<<<<<< HEAD
 	/**
 	 * Get blocks from a woocommerce page.
 	 *
@@ -703,6 +832,8 @@ class WC_Tracker {
 			)
 		);
 	}
+=======
+>>>>>>> staging
 
 	/**
 	 * Get tracker data for a specific block type on a woocommerce page.
@@ -714,7 +845,11 @@ class WC_Tracker {
 	 * - block_attributes
 	 */
 	public static function get_block_tracker_data( $block_name, $woo_page_name ) {
+<<<<<<< HEAD
 		$blocks = self::get_blocks_from_page( $block_name, $woo_page_name );
+=======
+		$blocks = WC_Blocks_Utils::get_blocks_from_page( $block_name, $woo_page_name );
+>>>>>>> staging
 
 		$block_present = false;
 		$attributes    = array();

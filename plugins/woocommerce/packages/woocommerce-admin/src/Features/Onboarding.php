@@ -105,7 +105,11 @@ class Onboarding {
 		add_action( 'current_screen', array( $this, 'add_help_tab' ), 60 );
 		add_action( 'current_screen', array( $this, 'reset_profiler' ) );
 		add_action( 'current_screen', array( $this, 'reset_task_list' ) );
+<<<<<<< HEAD
 		add_action( 'current_screen', array( $this, 'calypso_tests' ) );
+=======
+		add_action( 'current_screen', array( $this, 'reset_extended_task_list' ) );
+>>>>>>> staging
 		add_action( 'current_screen', array( $this, 'redirect_wccom_install' ) );
 		add_action( 'current_screen', array( $this, 'redirect_old_onboarding' ) );
 	}
@@ -724,7 +728,12 @@ class Onboarding {
 		$options[] = 'woocommerce_task_list_dismissed_tasks';
 		$options[] = 'woocommerce_allow_tracking';
 		$options[] = 'woocommerce_stripe_settings';
+<<<<<<< HEAD
 		$options[] = 'woocommerce_ppec_paypal_settings';
+=======
+		$options[] = 'woocommerce-ppcp-settings';
+		$options[] = 'woocommerce_ppcp-gateway_settings';
+>>>>>>> staging
 		$options[] = 'wc_square_refresh_tokens';
 		$options[] = 'woocommerce_square_credit_card_settings';
 		$options[] = 'woocommerce_payfast_settings';
@@ -736,6 +745,10 @@ class Onboarding {
 		$options[] = 'woocommerce_woocommerce_payments_settings';
 		$options[] = 'woocommerce_eway_settings';
 		$options[] = 'woocommerce_razorpay_settings';
+<<<<<<< HEAD
+=======
+		$options[] = 'woocommerce_mollie_payments_settings';
+>>>>>>> staging
 
 		return $options;
 	}
@@ -771,7 +784,11 @@ class Onboarding {
 				'jetpack'                             => 'jetpack/jetpack.php',
 				'woocommerce-services'                => 'woocommerce-services/woocommerce-services.php',
 				'woocommerce-gateway-stripe'          => 'woocommerce-gateway-stripe/woocommerce-gateway-stripe.php',
+<<<<<<< HEAD
 				'woocommerce-gateway-paypal-express-checkout' => 'woocommerce-gateway-paypal-express-checkout/woocommerce-gateway-paypal-express-checkout.php',
+=======
+				'woocommerce-paypal-payments'         => 'woocommerce-paypal-payments/woocommerce-paypal-payments.php',
+>>>>>>> staging
 				'klarna-checkout-for-woocommerce'     => 'klarna-checkout-for-woocommerce/klarna-checkout-for-woocommerce.php',
 				'klarna-payments-for-woocommerce'     => 'klarna-payments-for-woocommerce/klarna-payments-for-woocommerce.php',
 				'woocommerce-square'                  => 'woocommerce-square/woocommerce-square.php',
@@ -780,6 +797,10 @@ class Onboarding {
 				'woocommerce-payments'                => 'woocommerce-payments/woocommerce-payments.php',
 				'woocommerce-gateway-eway'            => 'woocommerce-gateway-eway/woocommerce-gateway-eway.php',
 				'woo-razorpay'                        => 'woo-razorpay/woo-razorpay.php',
+<<<<<<< HEAD
+=======
+				'mollie-payments-for-woocommerce'     => 'mollie-payments-for-woocommerce/mollie-payments-for-woocommerce.php',
+>>>>>>> staging
 			)
 		);
 		return array_merge( $plugins, $onboarding_plugins );
@@ -947,10 +968,16 @@ class Onboarding {
 			'id'    => 'woocommerce_onboard_tab',
 		);
 
+<<<<<<< HEAD
 		$task_list_hidden = (
 			'yes' === get_option( 'woocommerce_task_list_hidden', 'no' ) ||
 			'yes' === get_option( 'woocommerce_extended_task_list_hidden', 'no' )
 		);
+=======
+		$task_list_hidden = ( 'yes' === get_option( 'woocommerce_task_list_hidden', 'no' ) );
+
+		$extended_task_list_hidden = ( 'yes' === get_option( 'woocommerce_extended_task_list_hidden', 'no' ) );
+>>>>>>> staging
 
 		$help_tab['content'] = '<h2>' . __( 'WooCommerce Onboarding', 'woocommerce' ) . '</h2>';
 
@@ -965,6 +992,7 @@ class Onboarding {
 			: '<p><a href="' . wc_admin_url( '&reset_task_list=0' ) . '" class="button button-primary">' . __( 'Disable', 'woocommerce' ) . '</a></p>'
 		);
 
+<<<<<<< HEAD
 		if ( defined( 'WP_DEBUG' ) && WP_DEBUG ) {
 			$help_tab['content'] .= '<h3>' . __( 'Calypso / WordPress.com', 'woocommerce' ) . '</h3>';
 			if ( class_exists( 'Jetpack' ) ) {
@@ -975,11 +1003,20 @@ class Onboarding {
 			$help_tab['content'] .= '<p>' . __( 'Quickly access the WooCommerce.com connection flow in Calypso.', 'woocommerce' ) . '</p>';
 			$help_tab['content'] .= '<p><a href="' . wc_admin_url( '&test_wc_helper_connect=1' ) . '" class="button button-primary">' . __( 'Connect', 'woocommerce' ) . '</a></p>';
 		}
+=======
+		$help_tab['content'] .= '<h3>' . __( 'Extended task List', 'woocommerce' ) . '</h3>';
+		$help_tab['content'] .= '<p>' . __( 'If you need to enable or disable the extended task lists, please click on the button below.', 'woocommerce' ) . '</p>' .
+		( $extended_task_list_hidden
+			? '<p><a href="' . wc_admin_url( '&reset_extended_task_list=1' ) . '" class="button button-primary">' . __( 'Enable', 'woocommerce' ) . '</a></p>'
+			: '<p><a href="' . wc_admin_url( '&reset_extended_task_list=0' ) . '" class="button button-primary">' . __( 'Disable', 'woocommerce' ) . '</a></p>'
+		);
+>>>>>>> staging
 
 		$screen->add_help_tab( $help_tab );
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Allows quick access to testing the calypso parts of onboarding.
 	 */
 	public static function calypso_tests() {
@@ -1047,6 +1084,8 @@ class Onboarding {
 	}
 
 	/**
+=======
+>>>>>>> staging
 	 * Reset the onboarding profiler and redirect to the profiler.
 	 */
 	public static function reset_profiler() {
@@ -1096,7 +1135,10 @@ class Onboarding {
 
 		$task_list_hidden = 1 === absint( $_GET['reset_task_list'] ) ? 'no' : 'yes'; // phpcs:ignore CSRF ok.
 		update_option( 'woocommerce_task_list_hidden', $task_list_hidden );
+<<<<<<< HEAD
 		update_option( 'woocommerce_extended_task_list_hidden', $task_list_hidden );
+=======
+>>>>>>> staging
 
 		wc_admin_record_tracks_event(
 			'tasklist_toggled',
@@ -1109,6 +1151,33 @@ class Onboarding {
 	}
 
 	/**
+<<<<<<< HEAD
+=======
+	 * Reset the extended task list and redirect to the dashboard.
+	 */
+	public static function reset_extended_task_list() {
+		if (
+			! Loader::is_admin_page() ||
+			! isset( $_GET['reset_extended_task_list'] ) // phpcs:ignore CSRF ok.
+		) {
+			return;
+		}
+
+		$extended_task_list_hidden = 1 === absint( $_GET['reset_extended_task_list'] ) ? 'no' : 'yes'; // phpcs:ignore CSRF ok.
+		update_option( 'woocommerce_extended_task_list_hidden', $extended_task_list_hidden );
+
+		wc_admin_record_tracks_event(
+			'extended_tasklist_toggled',
+			array(
+				'status' => 'yes' === $extended_task_list_hidden ? 'disabled' : 'enabled',
+			)
+		);
+		wp_safe_redirect( wc_admin_url() );
+		exit;
+	}
+
+	/**
+>>>>>>> staging
 	 * Remove the install notice that prompts the user to visit the old onboarding setup wizard.
 	 *
 	 * @param bool   $show Show or hide the notice.

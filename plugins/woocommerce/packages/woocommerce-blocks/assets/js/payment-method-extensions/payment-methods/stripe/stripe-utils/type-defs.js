@@ -297,10 +297,20 @@
  *                                                              inline cc
  *                                                              form or separate inputs.
  * @property {{[k:string]:CreditCardIcon}} icons                Contains supported cc icons.
+<<<<<<< HEAD
  * @property {boolean}                     allowSavedCards      Used to indicate whether saved cards
  *                                                              can be used.
  * @property {boolean}                     allowPaymentRequest  True if merchant has enabled payment
  *                                                              request (Chrome/Apple Pay).
+=======
+ * @property {boolean}                     showSavedCards       Used to indicate whether saved cards
+ *                                                              can be used.
+ * @property {boolean}                     showSaveOption       Used to indicate whether the option to
+ *                                                              save card can be displayed.
+ * @property {boolean}                     allowPaymentRequest  True if merchant has enabled payment
+ *                                                              request (Chrome/Apple Pay).
+ * @property {Object}                      supports             List of features supported by the payment gateway
+>>>>>>> staging
  */
 /* eslint-enable jsdoc/valid-types */
 

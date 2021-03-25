@@ -2,7 +2,11 @@
 jQuery( function( $ ) {
 	// Orderby
 	$( '.woocommerce-ordering' ).on( 'change', 'select.orderby', function() {
+<<<<<<< HEAD
 		$( this ).closest( 'form' ).submit();
+=======
+		$( this ).closest( 'form' ).trigger( 'submit' );
+>>>>>>> staging
 	});
 
 	// Target quantity inputs on product pages

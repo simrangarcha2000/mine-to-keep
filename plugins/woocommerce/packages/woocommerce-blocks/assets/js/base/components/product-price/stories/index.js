@@ -2,6 +2,10 @@
  * External dependencies
  */
 import { number, select } from '@storybook/addon-knobs';
+<<<<<<< HEAD
+=======
+import { currencyKnob } from '@woocommerce/knobs';
+>>>>>>> staging
 
 /**
  * Internal dependencies
@@ -13,6 +17,7 @@ export default {
 	component: ProductPrice,
 };
 
+<<<<<<< HEAD
 const getKnobs = () => {
 	const align = select( 'Align', [ 'left', 'center', 'right' ], 'left' );
 	const currencies = [
@@ -44,6 +49,11 @@ const getKnobs = () => {
 
 export const standard = () => {
 	const { align, currency } = getKnobs();
+=======
+export const standard = () => {
+	const align = select( 'Align', [ 'left', 'center', 'right' ], 'left' );
+	const currency = currencyKnob();
+>>>>>>> staging
 	const price = number( 'Price', 4000 );
 
 	return (
@@ -52,7 +62,12 @@ export const standard = () => {
 };
 
 export const sale = () => {
+<<<<<<< HEAD
 	const { align, currency } = getKnobs();
+=======
+	const align = select( 'Align', [ 'left', 'center', 'right' ], 'left' );
+	const currency = currencyKnob();
+>>>>>>> staging
 	const price = number( 'Price', 3000 );
 	const regularPrice = number( 'Regular price', 4000 );
 
@@ -67,7 +82,12 @@ export const sale = () => {
 };
 
 export const range = () => {
+<<<<<<< HEAD
 	const { align, currency } = getKnobs();
+=======
+	const align = select( 'Align', [ 'left', 'center', 'right' ], 'left' );
+	const currency = currencyKnob();
+>>>>>>> staging
 	const minPrice = number( 'Min price', 3000 );
 	const maxPrice = number( 'Max price', 5000 );
 

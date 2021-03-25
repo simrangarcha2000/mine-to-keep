@@ -6,7 +6,15 @@ import {
 	useCheckoutContext,
 	usePaymentMethodDataContext,
 } from '@woocommerce/base-context';
+<<<<<<< HEAD
 import { usePaymentMethods } from '@woocommerce/base-hooks';
+=======
+
+/**
+ * Internal dependencies
+ */
+import { usePaymentMethods } from '../payment-methods';
+>>>>>>> staging
 
 /**
  * Returns the submitButtonText, onSubmit interface from the checkout context,
@@ -22,7 +30,11 @@ export const useCheckoutSubmit = () => {
 		isComplete,
 		hasError,
 	} = useCheckoutContext();
+<<<<<<< HEAD
 	const { paymentMethods } = usePaymentMethods();
+=======
+	const { paymentMethods = {} } = usePaymentMethods();
+>>>>>>> staging
 	const { activePaymentMethod } = usePaymentMethodDataContext();
 	const paymentMethod = paymentMethods[ activePaymentMethod ] || {};
 

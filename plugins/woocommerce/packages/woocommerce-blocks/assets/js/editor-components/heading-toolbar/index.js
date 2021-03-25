@@ -4,7 +4,11 @@
 import { range } from 'lodash';
 import { __, sprintf } from '@wordpress/i18n';
 import { Component } from '@wordpress/element';
+<<<<<<< HEAD
 import { Toolbar } from '@wordpress/components';
+=======
+import { ToolbarGroup } from '@wordpress/components';
+>>>>>>> staging
 
 /**
  * Internal dependencies
@@ -38,7 +42,11 @@ class HeadingToolbar extends Component {
 		} = this.props;
 
 		return (
+<<<<<<< HEAD
 			<Toolbar
+=======
+			<ToolbarGroup
+>>>>>>> staging
 				isCollapsed={ isCollapsed }
 				icon={ <HeadingLevelIcon level={ selectedLevel } /> }
 				controls={ range( minLevel, maxLevel ).map( ( index ) =>

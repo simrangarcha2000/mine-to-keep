@@ -339,6 +339,10 @@ class WC_Post_Types {
 					'description'         => __( 'This is where you can add new products to your store.', 'woocommerce' ),
 					'public'              => true,
 					'show_ui'             => true,
+<<<<<<< HEAD
+=======
+					'menu_icon'           => 'dashicons-archive',
+>>>>>>> staging
 					'capability_type'     => 'product',
 					'map_meta_cap'        => true,
 					'publicly_queryable'  => true,

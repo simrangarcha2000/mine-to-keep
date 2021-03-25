@@ -3,7 +3,10 @@
  */
 import PropTypes from 'prop-types';
 import { __ } from '@wordpress/i18n';
+<<<<<<< HEAD
 import { AddressForm } from '@woocommerce/base-components/cart-checkout';
+=======
+>>>>>>> staging
 import Button from '@woocommerce/base-components/button';
 import { useState } from '@wordpress/element';
 import isShallowEqual from '@wordpress/is-shallow-equal';
@@ -13,6 +16,10 @@ import { useValidationContext } from '@woocommerce/base-context';
  * Internal dependencies
  */
 import './style.scss';
+<<<<<<< HEAD
+=======
+import { AddressForm } from '../address-form';
+>>>>>>> staging
 
 const ShippingCalculatorAddress = ( {
 	address: initialAddress,

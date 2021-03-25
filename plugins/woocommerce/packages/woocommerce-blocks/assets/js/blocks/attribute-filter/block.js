@@ -11,6 +11,7 @@ import {
 	usePrevious,
 	useShallowEqual,
 } from '@woocommerce/base-hooks';
+<<<<<<< HEAD
 import {
 	useCallback,
 	Fragment,
@@ -18,6 +19,9 @@ import {
 	useState,
 	useMemo,
 } from '@wordpress/element';
+=======
+import { useCallback, useEffect, useState, useMemo } from '@wordpress/element';
+>>>>>>> staging
 import CheckboxList from '@woocommerce/base-components/checkbox-list';
 import DropdownSelector from '@woocommerce/base-components/dropdown-selector';
 import FilterSubmitButton from '@woocommerce/base-components/filter-submit-button';
@@ -332,7 +336,11 @@ const AttributeFilterBlock = ( {
 	const isDisabled = ! blockAttributes.isPreview && filteredCountsLoading;
 
 	return (
+<<<<<<< HEAD
 		<Fragment>
+=======
+		<>
+>>>>>>> staging
 			{ ! isEditor && blockAttributes.heading && (
 				<TagName>{ blockAttributes.heading }</TagName>
 			) }
@@ -366,7 +374,11 @@ const AttributeFilterBlock = ( {
 					/>
 				) }
 			</div>
+<<<<<<< HEAD
 		</Fragment>
+=======
+		</>
+>>>>>>> staging
 	);
 };
 

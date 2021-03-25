@@ -2,6 +2,7 @@
     "packages": [
         {
             "name": "automattic/jetpack-autoloader",
+<<<<<<< HEAD
             "version": "v2.5.0",
             "version_normalized": "2.5.0.0",
             "source": {
@@ -13,18 +14,41 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/Automattic/jetpack-autoloader/zipball/7945e862473e39f05e6f698f1598ea30a12e5965",
                 "reference": "7945e862473e39f05e6f698f1598ea30a12e5965",
+=======
+            "version": "v2.9.1",
+            "version_normalized": "2.9.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Automattic/jetpack-autoloader.git",
+                "reference": "d6ca2cc26ad6963e1be19b3338a9e98f40d9bd88"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Automattic/jetpack-autoloader/zipball/d6ca2cc26ad6963e1be19b3338a9e98f40d9bd88",
+                "reference": "d6ca2cc26ad6963e1be19b3338a9e98f40d9bd88",
+>>>>>>> staging
                 "shasum": ""
             },
             "require": {
                 "composer-plugin-api": "^1.1 || ^2.0"
             },
             "require-dev": {
+<<<<<<< HEAD
                 "phpunit/phpunit": "^5.7 || ^6.5 || ^7.5"
             },
             "time": "2020-10-08T19:51:11+00:00",
             "type": "composer-plugin",
             "extra": {
                 "class": "Automattic\\Jetpack\\Autoloader\\CustomAutoloaderPlugin"
+=======
+                "yoast/phpunit-polyfills": "0.2.0"
+            },
+            "time": "2021-02-05T19:07:06+00:00",
+            "type": "composer-plugin",
+            "extra": {
+                "class": "Automattic\\Jetpack\\Autoloader\\CustomAutoloaderPlugin",
+                "mirror-repo": "Automattic/jetpack-autoloader"
+>>>>>>> staging
             },
             "installation-source": "dist",
             "autoload": {
@@ -41,12 +65,17 @@
             ],
             "description": "Creates a custom autoloader for a plugin or theme.",
             "support": {
+<<<<<<< HEAD
                 "source": "https://github.com/Automattic/jetpack-autoloader/tree/v2.5.0"
+=======
+                "source": "https://github.com/Automattic/jetpack-autoloader/tree/v2.9.1"
+>>>>>>> staging
             },
             "install-path": "../automattic/jetpack-autoloader"
         },
         {
             "name": "composer/installers",
+<<<<<<< HEAD
             "version": "v1.9.0",
             "version_normalized": "1.9.0.0",
             "source": {
@@ -58,6 +87,19 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/composer/installers/zipball/b93bcf0fa1fccb0b7d176b0967d969691cd74cca",
                 "reference": "b93bcf0fa1fccb0b7d176b0967d969691cd74cca",
+=======
+            "version": "v1.10.0",
+            "version_normalized": "1.10.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/composer/installers.git",
+                "reference": "1a0357fccad9d1cc1ea0c9a05b8847fbccccb78d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/composer/installers/zipball/1a0357fccad9d1cc1ea0c9a05b8847fbccccb78d",
+                "reference": "1a0357fccad9d1cc1ea0c9a05b8847fbccccb78d",
+>>>>>>> staging
                 "shasum": ""
             },
             "require": {
@@ -68,6 +110,7 @@
                 "shama/baton": "*"
             },
             "require-dev": {
+<<<<<<< HEAD
                 "composer/composer": "1.6.* || 2.0.*@dev",
                 "composer/semver": "1.0.* || 2.0.*@dev",
                 "phpunit/phpunit": "^4.8.36",
@@ -75,11 +118,25 @@
                 "symfony/process": "^2.3"
             },
             "time": "2020-04-07T06:57:05+00:00",
+=======
+                "composer/composer": "1.6.* || ^2.0",
+                "composer/semver": "^1 || ^3",
+                "phpstan/phpstan": "^0.12.55",
+                "phpstan/phpstan-phpunit": "^0.12.16",
+                "symfony/phpunit-bridge": "^4.2 || ^5",
+                "symfony/process": "^2.3"
+            },
+            "time": "2021-01-14T11:07:16+00:00",
+>>>>>>> staging
             "type": "composer-plugin",
             "extra": {
                 "class": "Composer\\Installers\\Plugin",
                 "branch-alias": {
+<<<<<<< HEAD
                     "dev-master": "1.0-dev"
+=======
+                    "dev-main": "1.x-dev"
+>>>>>>> staging
                 }
             },
             "installation-source": "dist",
@@ -118,6 +175,10 @@
                 "Porto",
                 "RadPHP",
                 "SMF",
+<<<<<<< HEAD
+=======
+                "Starbug",
+>>>>>>> staging
                 "Thelia",
                 "Whmcs",
                 "WolfCMS",
@@ -158,6 +219,10 @@
                 "phpbb",
                 "piwik",
                 "ppi",
+<<<<<<< HEAD
+=======
+                "processwire",
+>>>>>>> staging
                 "puppet",
                 "pxcms",
                 "reindex",
@@ -175,7 +240,11 @@
             ],
             "support": {
                 "issues": "https://github.com/composer/installers/issues",
+<<<<<<< HEAD
                 "source": "https://github.com/composer/installers/tree/v1.9.0"
+=======
+                "source": "https://github.com/composer/installers/tree/v1.10.0"
+>>>>>>> staging
             },
             "funding": [
                 {
@@ -183,6 +252,13 @@
                     "type": "custom"
                 },
                 {
+<<<<<<< HEAD
+=======
+                    "url": "https://github.com/composer",
+                    "type": "github"
+                },
+                {
+>>>>>>> staging
                     "url": "https://tidelift.com/funding/github/packagist/composer/composer",
                     "type": "tidelift"
                 }

@@ -1,9 +1,13 @@
 <?php
 namespace Automattic\WooCommerce\Blocks\Payments\Integrations;
 
+<<<<<<< HEAD
 use Exception;
 use WC_Stripe_Payment_Request;
 use WC_Stripe_Helper;
+=======
+use WC_Gateway_Paypal;
+>>>>>>> staging
 use Automattic\WooCommerce\Blocks\Assets\Api;
 
 /**
@@ -73,6 +77,23 @@ final class PayPal extends AbstractPaymentMethodType {
 		return [
 			'title'       => $this->get_setting( 'title' ),
 			'description' => $this->get_setting( 'description' ),
+<<<<<<< HEAD
 		];
 	}
+=======
+			'supports'    => $this->get_supported_features(),
+		];
+	}
+
+	/**
+	 * Returns an array of supported features.
+	 *
+	 * @return string[]
+	 */
+	public function get_supported_features() {
+		$gateway  = new WC_Gateway_Paypal();
+		$features = array_filter( $gateway->supports, array( $gateway, 'supports' ) );
+		return apply_filters( '__experimental_woocommerce_blocks_payment_gateway_features_list', $features, $this->get_name() );
+	}
+>>>>>>> staging
 }

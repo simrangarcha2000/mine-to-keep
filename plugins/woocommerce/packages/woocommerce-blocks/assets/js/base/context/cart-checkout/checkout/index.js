@@ -4,6 +4,10 @@
 import { PluginArea } from '@wordpress/plugins';
 import { CURRENT_USER_IS_ADMIN } from '@woocommerce/block-settings';
 import BlockErrorBoundary from '@woocommerce/base-components/block-error-boundary';
+<<<<<<< HEAD
+=======
+import { SlotFillProvider } from '@woocommerce/blocks-checkout';
+>>>>>>> staging
 
 /**
  * Internal dependencies
@@ -37,6 +41,7 @@ export const CheckoutProvider = ( {
 			<CustomerDataProvider>
 				<ShippingDataProvider>
 					<PaymentMethodDataProvider>
+<<<<<<< HEAD
 						{ children }
 						{ /* If the current user is an admin, we let BlockErrorBoundary render
 						the error, or we simply die silently. */ }
@@ -47,6 +52,20 @@ export const CheckoutProvider = ( {
 						>
 							<PluginArea />
 						</BlockErrorBoundary>
+=======
+						<SlotFillProvider>
+							{ children }
+							{ /* If the current user is an admin, we let BlockErrorBoundary render
+								the error, or we simply die silently. */ }
+							<BlockErrorBoundary
+								renderError={
+									CURRENT_USER_IS_ADMIN ? null : () => null
+								}
+							>
+								<PluginArea />
+							</BlockErrorBoundary>
+						</SlotFillProvider>
+>>>>>>> staging
 						<CheckoutProcessor />
 					</PaymentMethodDataProvider>
 				</ShippingDataProvider>

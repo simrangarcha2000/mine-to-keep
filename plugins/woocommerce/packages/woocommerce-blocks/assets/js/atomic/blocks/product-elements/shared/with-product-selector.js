@@ -4,7 +4,11 @@
 import { __ } from '@wordpress/i18n';
 import { useState } from '@wordpress/element';
 import ProductControl from '@woocommerce/editor-components/product-control';
+<<<<<<< HEAD
 import { Placeholder, Button, Toolbar } from '@wordpress/components';
+=======
+import { Placeholder, Button, ToolbarGroup } from '@wordpress/components';
+>>>>>>> staging
 import { BlockControls } from '@wordpress/block-editor';
 import TextToolbarButton from '@woocommerce/editor-components/text-toolbar-button';
 import { useProductDataContext } from '@woocommerce/shared-context';
@@ -55,7 +59,11 @@ const withProductSelector = ( selectorArgs ) => ( OriginalComponent ) => {
 								} }
 							/>
 							<Button
+<<<<<<< HEAD
 								isDefault
+=======
+								isSecondary
+>>>>>>> staging
 								disabled={ ! productId }
 								onClick={ () => {
 									setIsEditing( false );
@@ -68,7 +76,11 @@ const withProductSelector = ( selectorArgs ) => ( OriginalComponent ) => {
 				) : (
 					<>
 						<BlockControls>
+<<<<<<< HEAD
 							<Toolbar>
+=======
+							<ToolbarGroup>
+>>>>>>> staging
 								<TextToolbarButton
 									onClick={ () => setIsEditing( true ) }
 								>
@@ -77,7 +89,11 @@ const withProductSelector = ( selectorArgs ) => ( OriginalComponent ) => {
 										'woocommerce'
 									) }
 								</TextToolbarButton>
+<<<<<<< HEAD
 							</Toolbar>
+=======
+							</ToolbarGroup>
+>>>>>>> staging
 						</BlockControls>
 						<OriginalComponent { ...props } />
 					</>

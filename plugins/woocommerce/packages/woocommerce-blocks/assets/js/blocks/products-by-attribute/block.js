@@ -3,16 +3,27 @@
  */
 import { __ } from '@wordpress/i18n';
 import { BlockControls, InspectorControls } from '@wordpress/block-editor';
+<<<<<<< HEAD
 import { ServerSideRender } from '@wordpress/editor';
+=======
+import ServerSideRender from '@wordpress/server-side-render';
+>>>>>>> staging
 import {
 	Button,
 	Disabled,
 	PanelBody,
 	Placeholder,
+<<<<<<< HEAD
 	Toolbar,
 	withSpokenMessages,
 } from '@wordpress/components';
 import { Component, Fragment } from '@wordpress/element';
+=======
+	ToolbarGroup,
+	withSpokenMessages,
+} from '@wordpress/components';
+import { Component } from '@wordpress/element';
+>>>>>>> staging
 import { Icon, tags } from '@woocommerce/icons';
 import PropTypes from 'prop-types';
 import GridContentControl from '@woocommerce/editor-components/grid-content-control';
@@ -162,9 +173,15 @@ class ProductsByAttributeBlock extends Component {
 		}
 
 		return (
+<<<<<<< HEAD
 			<Fragment>
 				<BlockControls>
 					<Toolbar
+=======
+			<>
+				<BlockControls>
+					<ToolbarGroup
+>>>>>>> staging
 						controls={ [
 							{
 								icon: 'edit',
@@ -187,7 +204,11 @@ class ProductsByAttributeBlock extends Component {
 						/>
 					</Disabled>
 				) }
+<<<<<<< HEAD
 			</Fragment>
+=======
+			</>
+>>>>>>> staging
 		);
 	}
 }

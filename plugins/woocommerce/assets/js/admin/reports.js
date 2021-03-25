@@ -10,7 +10,11 @@ jQuery(function( $ ) {
 	var prev_data_index = null;
 	var prev_series_index = null;
 
+<<<<<<< HEAD
 	$( '.chart-placeholder' ).bind( 'plothover', function ( event, pos, item ) {
+=======
+	$( '.chart-placeholder' ).on( 'plothover', function ( event, pos, item ) {
+>>>>>>> staging
 		if ( item ) {
 			if ( prev_data_index !== item.dataIndex || prev_series_index !== item.seriesIndex ) {
 				prev_data_index   = item.dataIndex;

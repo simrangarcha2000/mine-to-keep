@@ -90,7 +90,11 @@ jQuery( function ( $ ) {
 
 				$state.replaceWith( $newstate );
 
+<<<<<<< HEAD
 				$newstate.show().selectWoo().hide().change();
+=======
+				$newstate.show().selectWoo().hide().trigger( 'change' );
+>>>>>>> staging
 			} else {
 				$newstate = $( '<input type="text" />' )
 					.prop( 'id', input_id )
@@ -143,8 +147,13 @@ jQuery( function ( $ ) {
 			$this.parent().find( 'a' ).toggle();
 
 			if ( ! $country_input.val() ) {
+<<<<<<< HEAD
 				$country_input.val( woocommerce_admin_meta_boxes_order.default_country ).change();
 				$state_input.val( woocommerce_admin_meta_boxes_order.default_state ).change();
+=======
+				$country_input.val( woocommerce_admin_meta_boxes_order.default_country ).trigger( 'change' );
+				$state_input.val( woocommerce_admin_meta_boxes_order.default_state ).trigger( 'change' );
+>>>>>>> staging
 			}
 
 			$edit_address.show();
@@ -158,7 +167,11 @@ jQuery( function ( $ ) {
 
 		change_customer_user: function() {
 			if ( ! $( '#_billing_country' ).val() ) {
+<<<<<<< HEAD
 				$( 'a.edit_address' ).click();
+=======
+				$( 'a.edit_address' ).trigger( 'click' );
+>>>>>>> staging
 				wc_meta_boxes_order.load_billing( true );
 				wc_meta_boxes_order.load_shipping( true );
 			}
@@ -196,7 +209,11 @@ jQuery( function ( $ ) {
 					success: function( response ) {
 						if ( response && response.billing ) {
 							$.each( response.billing, function( key, data ) {
+<<<<<<< HEAD
 								$( ':input#_billing_' + key ).val( data ).change();
+=======
+								$( ':input#_billing_' + key ).val( data ).trigger( 'change' );
+>>>>>>> staging
 							});
 						}
 						$( 'div.edit_address' ).unblock();
@@ -238,7 +255,11 @@ jQuery( function ( $ ) {
 					success: function( response ) {
 						if ( response && response.billing ) {
 							$.each( response.shipping, function( key, data ) {
+<<<<<<< HEAD
 								$( ':input#_shipping_' + key ).val( data ).change();
+=======
+								$( ':input#_shipping_' + key ).val( data ).trigger( 'change' );
+>>>>>>> staging
 							});
 						}
 						$( 'div.edit_address' ).unblock();
@@ -253,7 +274,11 @@ jQuery( function ( $ ) {
 				$('.order_data_column :input[name^="_billing_"]').each( function() {
 					var input_name = $(this).attr('name');
 					input_name     = input_name.replace( '_billing_', '_shipping_' );
+<<<<<<< HEAD
 					$( ':input#' + input_name ).val( $(this).val() ).change();
+=======
+					$( ':input#' + input_name ).val( $(this).val() ).trigger( 'change' );
+>>>>>>> staging
 				});
 			}
 			return false;
@@ -643,7 +668,11 @@ jQuery( function ( $ ) {
 			$( this ).closest( 'tr' ).find( '.view' ).hide();
 			$( this ).closest( 'tr' ).find( '.edit' ).show();
 			$( this ).hide();
+<<<<<<< HEAD
 			$( 'button.add-line-item' ).click();
+=======
+			$( 'button.add-line-item' ).trigger( 'click' );
+>>>>>>> staging
 			$( 'button.cancel-action' ).attr( 'data-reload', true );
 			window.wcTracks.recordEvent( 'order_edit_edit_item_click', {
 				order_id: woocommerce_admin_meta_boxes.post_id,
@@ -1002,7 +1031,11 @@ jQuery( function ( $ ) {
 						'',
 						woocommerce_admin.mon_decimal_point
 					) )
+<<<<<<< HEAD
 					.change();
+=======
+					.trigger( 'change' );
+>>>>>>> staging
 			},
 
 			amount_changed: function() {
@@ -1032,7 +1065,11 @@ jQuery( function ( $ ) {
 					parseFloat( accounting.formatNumber( unit_total * refund_qty, woocommerce_admin_meta_boxes.rounding_precision, '' ) )
 						.toString()
 						.replace( '.', woocommerce_admin.mon_decimal_point )
+<<<<<<< HEAD
 				).change();
+=======
+				).trigger( 'change' );
+>>>>>>> staging
 
 				// Taxes
 				$( '.refund_line_tax', $row ).each( function() {
@@ -1054,9 +1091,15 @@ jQuery( function ( $ ) {
 							parseFloat( accounting.formatNumber( unit_total_tax * refund_qty, precision, '' ) )
 								.toString()
 								.replace( '.', woocommerce_admin.mon_decimal_point )
+<<<<<<< HEAD
 						).change();
 					} else {
 						$refund_line_total_tax.val( 0 ).change();
+=======
+						).trigger( 'change' );
+					} else {
+						$refund_line_total_tax.val( 0 ).trigger( 'change' );
+>>>>>>> staging
 					}
 				});
 
@@ -1401,7 +1444,11 @@ jQuery( function ( $ ) {
 				}
 
 				$( document.body ).trigger( 'wc-init-datepickers' );
+<<<<<<< HEAD
 				$( '#grant_access_id' ).val( '' ).change();
+=======
+				$( '#grant_access_id' ).val( '' ).trigger( 'change' );
+>>>>>>> staging
 				$( '.order_download_permissions' ).unblock();
 			});
 

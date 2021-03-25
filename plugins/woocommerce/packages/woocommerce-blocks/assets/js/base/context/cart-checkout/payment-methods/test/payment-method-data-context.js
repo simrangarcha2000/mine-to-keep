@@ -60,6 +60,12 @@ const registerMockPaymentMethods = () => {
 			edit: <div>A payment method</div>,
 			icons: null,
 			canMakePayment: () => true,
+<<<<<<< HEAD
+=======
+			supports: {
+				features: [ 'products' ],
+			},
+>>>>>>> staging
 			ariaLabel: name,
 		} );
 	} );
@@ -72,7 +78,13 @@ const registerMockPaymentMethods = () => {
 			icons: null,
 			canMakePayment: () => true,
 			supports: {
+<<<<<<< HEAD
 				savePaymentInfo: true,
+=======
+				showSavedCards: true,
+				showSaveOption: true,
+				features: [ 'products' ],
+>>>>>>> staging
 			},
 			ariaLabel: name,
 		} );
@@ -99,6 +111,12 @@ const registerMockPaymentMethods = () => {
 			edit: <div>An express payment method</div>,
 			canMakePayment: () => true,
 			paymentMethodId: name,
+<<<<<<< HEAD
+=======
+			supports: {
+				features: [ 'products' ],
+			},
+>>>>>>> staging
 		} );
 	} );
 };

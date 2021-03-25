@@ -1,5 +1,12 @@
 
+<<<<<<< HEAD
 /*Add Color Palette*/
+=======
+/*-----------------------------------------------ADD COLOUR PALETTE ---------------------------------------*/
+
+
+/* Giving Color and Background Colour */
+>>>>>>> staging
 
 .has-cherry-pink-background-color {
     background-color: #D8A1A2;
@@ -33,7 +40,11 @@
     color: #ffffff;
 }
 
+<<<<<<< HEAD
 /*    Creating a Block Quote */
+=======
+/*-----------------------------------------------CREATING BLOCK QUOTE  ---------------------------------------*/
+>>>>>>> staging
 .is-style-pink-quote.rich-text.block-editor-rich-text__editable.wp-block-quote, .is-style-pink-quote, .is-style-pink-quote{
     color: #D8A1A2;
     background-color: black;
@@ -55,7 +66,11 @@
 }
 
 
+<<<<<<< HEAD
 /* Creating Block paragraph*/
+=======
+/*-----------------------------------------------CREATING BLOCK PARAGRAPH---------------------------------------*/
+>>>>>>> staging
 .is-style-paragraph-glorify.rich-text.block-editor-rich-text__editable, .is-style-paragraph-glorify{
     color: #FFD1D1;
     background-color: black;
@@ -65,7 +80,11 @@
     font-family: 'Open Sans', sans-serif;
 }
 
+<<<<<<< HEAD
 /*   Registering an Image  */
+=======
+/*-----------------------------------------------REGISTERING AN IMAGE---------------------------------------*/
+>>>>>>> staging
 .wp-block-image.is-style-image-glorify, .wp-block-image.is-style-default {
     margin: 0px;
     margin: 0px;
@@ -91,12 +110,19 @@
 
 
 
+<<<<<<< HEAD
 /* Creating Columns */
+=======
+/*-----------------------------------------------CREATING COLUMNS ---------------------------------------*/
+>>>>>>> staging
 .wp-block-column.is-style-black-column, .wp-block-column.is-style-default{
     background-color: black;
     height: auto; 
     padding: 3% 3% 3% 1%;
+<<<<<<< HEAD
     margin-right: 20px;
+=======
+>>>>>>> staging
     text-align: center;
     
 }
@@ -106,7 +132,11 @@
     height: auto; 
 }
 
+<<<<<<< HEAD
 /* Setting Heading */
+=======
+/*-----------------------------------------------SETTING HEADING ---------------------------------------*/
+>>>>>>> staging
 .is-style-pink-heading.rich-text.block-editor-rich-text__editable,.wp-block-heading ,.is-style-pink-heading{
     font-family: 'Permanent Marker', cursive;
     color: #D8A1A2;
@@ -118,6 +148,7 @@
     padding: 0px;
     font-family: 'Permanent Marker', cursive;
     padding-left: 1rem;
+<<<<<<< HEAD
     margin-left: 15%;
 }
 
@@ -125,6 +156,12 @@
     margin: 2% 13%;
 }
 
+=======
+    margin-left: 9%;
+}
+
+/*-----------------------------------------------CREATING A PARAGRAPH ---------------------------------------*/
+>>>>>>> staging
 .wp-block-paragraph.is-style-no-margin-para, .is-style-no-margin-para{
     margin: 0% 0% 0% 6%;
 }
@@ -138,7 +175,11 @@
     height: 10px;
 }
 
+<<<<<<< HEAD
 /*  Styling Gallery */
+=======
+/*-----------------------------------------------STYLING GALLERY ---------------------------------------*/
+>>>>>>> staging
 .wp-block-gallery.is-style-gallery-select{
     margin: 0px 13%;
     padding: 0% 13%;
@@ -156,8 +197,12 @@
     font-family: 'Permanent Marker', cursive;
 }
 
+<<<<<<< HEAD
 
 /*  Styling the table */
+=======
+/*-----------------------------------------------ADDING CUSTOM TABLE ---------------------------------------*/
+>>>>>>> staging
 
 .wp-block-table.is-style-glorify-table{
     text-align: center;
@@ -172,11 +217,18 @@
 
 .is-style-glorify-table tr{
     border: #F0DBDB solid 3px;
+<<<<<<< HEAD
 
 }
 
 
 /* Styling the list */
+=======
+}
+
+
+/*-----------------------------------------------STYLING LIST ---------------------------------------*/
+>>>>>>> staging
 .is-style-glorify-list {
     list-style-type: armenian;
     margin-top: -65px;
@@ -189,18 +241,31 @@ margin-left: -30px;
 
 
 
+<<<<<<< HEAD
 /*Mobile View*/
+=======
+/*-----------------------------------------------MOBILE VIEW ---------------------------------------*/
+>>>>>>> staging
 
 
 @media only screen and (max-width: 900px) {
     
+<<<<<<< HEAD
+=======
+
+    /*-----------------------------------------------SETTING FONT SIZE OF PARAGRAPH  ---------------------------------------*/
+>>>>>>> staging
     .is-style-paragraph-glorify.rich-text.block-editor-rich-text__editable,.wp-block-paragraph.is-style-default, .is-style-paragraph-glorify{
         font-size: 0.85rem;
     }
 
 
 
+<<<<<<< HEAD
     text__editable.wp-block-quote, .is-style-pink-quote, .is-style-pink-quote {
+=======
+    .text__editable.wp-block-quote, .is-style-pink-quote, .is-style-pink-quote {
+>>>>>>> staging
         margin: 0;
         width: 100%;
         margin-top: -20px;
@@ -210,6 +275,10 @@ margin-left: -30px;
         margin: 2% 5%;
     }
 
+<<<<<<< HEAD
+=======
+    /*-----------------------------------------------STYLING TABLE ---------------------------------------*/
+>>>>>>> staging
     .wp-block-table.is-style-glorify-table{
         text-align: center;
         margin-left: 0%;
@@ -217,6 +286,10 @@ margin-left: -30px;
         float: left;
     }
     
+<<<<<<< HEAD
+=======
+    /*-----------------------------------------------STYLING LIST ---------------------------------------*/
+>>>>>>> staging
     .is-style-glorify-list ul{
         list-style-type: armenian;
         margin-top: -65px;

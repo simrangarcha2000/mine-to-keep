@@ -1,4 +1,12 @@
 /**
+<<<<<<< HEAD
+=======
+ * External dependencies
+ */
+import deprecated from '@wordpress/deprecated';
+
+/**
+>>>>>>> staging
  * Internal dependencies
  */
 import {
@@ -7,6 +15,11 @@ import {
 	assertValidElementOrString,
 } from './assertions';
 
+<<<<<<< HEAD
+=======
+import { canMakePaymentWithFeaturesCheck } from './payment-method-config-helper';
+
+>>>>>>> staging
 export default class PaymentMethodConfig {
 	constructor( config ) {
 		// validate config
@@ -18,11 +31,27 @@ export default class PaymentMethodConfig {
 		this.content = config.content;
 		this.icons = config.icons;
 		this.edit = config.edit;
+<<<<<<< HEAD
 		this.canMakePayment = config.canMakePayment;
 		this.paymentMethodId = config.paymentMethodId || this.name;
 		this.supports = {
 			savePaymentInfo: config?.supports?.savePaymentInfo || false,
 		};
+=======
+		this.paymentMethodId = config.paymentMethodId || this.name;
+		this.supports = {
+			showSavedCards:
+				config?.supports?.showSavedCards ||
+				config?.supports?.savePaymentInfo || // Kept for backward compatibility if methods still pass this when registering.
+				false,
+			showSaveOption: config?.supports?.showSaveOption || false,
+			features: config?.supports?.features || [ 'products' ],
+		};
+		this.canMakePayment = canMakePaymentWithFeaturesCheck(
+			config.canMakePayment,
+			this.supports.features
+		);
+>>>>>>> staging
 	}
 
 	static assertValidConfig = ( config ) => {
@@ -78,12 +107,47 @@ export default class PaymentMethodConfig {
 			);
 		}
 		if (
+<<<<<<< HEAD
 			config.supports &&
 			typeof config.supports.savePaymentInfo !== 'undefined' &&
 			typeof config.supports.savePaymentInfo !== 'boolean'
 		) {
 			throw new TypeError(
 				'If the payment method includes the `supports.savePaymentInfo` property, it must be a boolean'
+=======
+			typeof config.supports?.showSavedCards !== 'undefined' &&
+			typeof config.supports?.showSavedCards !== 'boolean'
+		) {
+			throw new TypeError(
+				'If the payment method includes the `supports.showSavedCards` property, it must be a boolean'
+			);
+		}
+		if ( typeof config.supports?.savePaymentInfo !== 'undefined' ) {
+			deprecated(
+				'Passing savePaymentInfo when registering a payment method.',
+				{
+					alternative: 'Pass showSavedCards and showSaveOption',
+					plugin: 'woocommerce-gutenberg-products-block',
+					link:
+						'https://github.com/woocommerce/woocommerce-gutenberg-products-block/pull/3686',
+				}
+			);
+		}
+		if (
+			typeof config.supports?.features !== 'undefined' &&
+			! Array.isArray( config.supports?.features )
+		) {
+			throw new Error(
+				'The features property for the payment method must be an array or undefined.'
+			);
+		}
+		if (
+			typeof config.supports?.showSaveOption !== 'undefined' &&
+			typeof config.supports?.showSaveOption !== 'boolean'
+		) {
+			throw new TypeError(
+				'If the payment method includes the `supports.showSaveOption` property, it must be a boolean'
+>>>>>>> staging
 			);
 		}
 	};

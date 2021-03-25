@@ -72,6 +72,7 @@ class CartUpdateCustomer extends AbstractCartRoute {
 				'permission_callback' => '__return_true',
 				'args'                => [
 					'billing_address'  => [
+<<<<<<< HEAD
 						'description' => __( 'Billing address.', 'woocommerce' ),
 						'type'        => 'object',
 						'context'     => [ 'view', 'edit' ],
@@ -82,6 +83,22 @@ class CartUpdateCustomer extends AbstractCartRoute {
 						'type'        => 'object',
 						'context'     => [ 'view', 'edit' ],
 						'properties'  => $this->shipping_address_schema->get_properties(),
+=======
+						'description'       => __( 'Billing address.', 'woocommerce' ),
+						'type'              => 'object',
+						'context'           => [ 'view', 'edit' ],
+						'properties'        => $this->billing_address_schema->get_properties(),
+						'sanitize_callback' => [ $this->billing_address_schema, 'sanitize_callback' ],
+						'validate_callback' => [ $this->billing_address_schema, 'validate_callback' ],
+					],
+					'shipping_address' => [
+						'description'       => __( 'Shipping address.', 'woocommerce' ),
+						'type'              => 'object',
+						'context'           => [ 'view', 'edit' ],
+						'properties'        => $this->shipping_address_schema->get_properties(),
+						'sanitize_callback' => [ $this->shipping_address_schema, 'sanitize_callback' ],
+						'validate_callback' => [ $this->shipping_address_schema, 'validate_callback' ],
+>>>>>>> staging
 					],
 				],
 			],
@@ -99,17 +116,40 @@ class CartUpdateCustomer extends AbstractCartRoute {
 	protected function get_route_post_response( \WP_REST_Request $request ) {
 		$controller = new CartController();
 		$cart       = $controller->get_cart_instance();
+<<<<<<< HEAD
 		$billing    = isset( $request['billing_address'] ) ? $this->prepare_address_fields( $request['billing_address'], wc()->countries->get_allowed_countries() ) : [];
 		$shipping   = isset( $request['shipping_address'] ) ? $this->prepare_address_fields( $request['shipping_address'], wc()->countries->get_shipping_countries() ) : [];
 
 		if ( ! $cart->needs_shipping() ) {
 			$shipping = $billing;
+=======
+		$billing    = isset( $request['billing_address'] ) ? $request['billing_address'] : [];
+		$shipping   = isset( $request['shipping_address'] ) ? $request['shipping_address'] : [];
+
+		// If the cart does not need shipping, shipping address is forced to match billing address unless defined.
+		if ( ! $cart->needs_shipping() && ! isset( $request['shipping_address'] ) ) {
+			$shipping = isset( $request['billing_address'] ) ? $request['billing_address'] : [
+				'first_name' => wc()->customer->get_billing_first_name(),
+				'last_name'  => wc()->customer->get_billing_last_name(),
+				'company'    => wc()->customer->get_billing_company(),
+				'address_1'  => wc()->customer->get_billing_address_1(),
+				'address_2'  => wc()->customer->get_billing_address_2(),
+				'city'       => wc()->customer->get_billing_city(),
+				'state'      => wc()->customer->get_billing_state(),
+				'postcode'   => wc()->customer->get_billing_postcode(),
+				'country'    => wc()->customer->get_billing_country(),
+			];
+>>>>>>> staging
 		}
 
 		wc()->customer->set_props(
 			array(
 				'billing_first_name'  => isset( $billing['first_name'] ) ? $billing['first_name'] : null,
 				'billing_last_name'   => isset( $billing['last_name'] ) ? $billing['last_name'] : null,
+<<<<<<< HEAD
+=======
+				'billing_company'     => isset( $billing['company'] ) ? $billing['company'] : null,
+>>>>>>> staging
 				'billing_address_1'   => isset( $billing['address_1'] ) ? $billing['address_1'] : null,
 				'billing_address_2'   => isset( $billing['address_2'] ) ? $billing['address_2'] : null,
 				'billing_city'        => isset( $billing['city'] ) ? $billing['city'] : null,
@@ -120,6 +160,10 @@ class CartUpdateCustomer extends AbstractCartRoute {
 				'billing_phone'       => isset( $request['billing_address'], $request['billing_address']['phone'] ) ? $request['billing_address']['phone'] : null,
 				'shipping_first_name' => isset( $shipping['first_name'] ) ? $shipping['first_name'] : null,
 				'shipping_last_name'  => isset( $shipping['last_name'] ) ? $shipping['last_name'] : null,
+<<<<<<< HEAD
+=======
+				'shipping_company'    => isset( $shipping['company'] ) ? $shipping['company'] : null,
+>>>>>>> staging
 				'shipping_address_1'  => isset( $shipping['address_1'] ) ? $shipping['address_1'] : null,
 				'shipping_address_2'  => isset( $shipping['address_2'] ) ? $shipping['address_2'] : null,
 				'shipping_city'       => isset( $shipping['city'] ) ? $shipping['city'] : null,
@@ -135,6 +179,7 @@ class CartUpdateCustomer extends AbstractCartRoute {
 
 		return rest_ensure_response( $this->schema->get_item_response( $cart ) );
 	}
+<<<<<<< HEAD
 
 	/**
 	 * Format provided address fields.
@@ -200,4 +245,6 @@ class CartUpdateCustomer extends AbstractCartRoute {
 
 		return $address;
 	}
+=======
+>>>>>>> staging
 }

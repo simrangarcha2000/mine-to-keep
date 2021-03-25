@@ -18,7 +18,11 @@ class OxidInstaller extends BaseInstaller
 	 *
 	 * @param PackageInterface $package
 	 * @param string $frameworkType
+<<<<<<< HEAD
 	 * @return void
+=======
+	 * @return string
+>>>>>>> staging
 	 */
 	public function getInstallPath(PackageInterface $package, $frameworkType = '')
 	{

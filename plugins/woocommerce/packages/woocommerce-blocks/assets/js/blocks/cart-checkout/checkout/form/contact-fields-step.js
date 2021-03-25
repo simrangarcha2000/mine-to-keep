@@ -3,7 +3,11 @@
  */
 import { __ } from '@wordpress/i18n';
 import { FormStep } from '@woocommerce/base-components/cart-checkout';
+<<<<<<< HEAD
 import { DebouncedValidatedTextInput } from '@woocommerce/base-components/text-input';
+=======
+import { ValidatedTextInput } from '@woocommerce/base-components/text-input';
+>>>>>>> staging
 import { useCheckoutContext } from '@woocommerce/base-context';
 import {
 	CHECKOUT_ALLOWS_GUEST,
@@ -56,7 +60,11 @@ const ContactFieldsStep = ( {
 			) }
 			stepHeadingContent={ () => <LoginPrompt /> }
 		>
+<<<<<<< HEAD
 			<DebouncedValidatedTextInput
+=======
+			<ValidatedTextInput
+>>>>>>> staging
 				id="email"
 				type="email"
 				label={ __( 'Email address', 'woocommerce' ) }

@@ -26,6 +26,10 @@ const OrderNotesStep = () => {
 		<FormStep
 			id="order-notes"
 			showStepNumber={ false }
+<<<<<<< HEAD
+=======
+			className="wc-block-checkout__order-notes"
+>>>>>>> staging
 			disabled={ checkoutIsProcessing }
 		>
 			<CheckoutOrderNotes

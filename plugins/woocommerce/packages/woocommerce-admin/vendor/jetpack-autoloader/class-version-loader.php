@@ -5,7 +5,11 @@
  * @package automattic/jetpack-autoloader
  */
 
+<<<<<<< HEAD
 namespace Automattic\Jetpack\Autoloader\jp108fd4c3a9f02449d3b5926cf1eca128;
+=======
+namespace Automattic\Jetpack\Autoloader\jp775c0c01ea21abefbace56aa4080a824;
+>>>>>>> staging
 
  // phpcs:ignore
 

@@ -7,7 +7,11 @@ import PropTypes from 'prop-types';
 /**
  * Internal dependencies
  */
+<<<<<<< HEAD
 import ProductList from './index';
+=======
+import ProductList from './product-list';
+>>>>>>> staging
 
 const ProductListContainer = ( { attributes } ) => {
 	const [ currentPage, setPage ] = useState( 1 );

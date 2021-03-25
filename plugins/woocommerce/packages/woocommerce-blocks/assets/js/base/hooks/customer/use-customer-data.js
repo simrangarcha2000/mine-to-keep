@@ -3,15 +3,27 @@
  */
 import { useDispatch } from '@wordpress/data';
 import { useEffect, useState, useCallback, useRef } from '@wordpress/element';
+<<<<<<< HEAD
 import { useStoreNotices, useStoreCart } from '@woocommerce/base-hooks';
 import { CART_STORE_KEY as storeKey } from '@woocommerce/block-data';
 import { useDebounce } from 'use-debounce';
 import isShallowEqual from '@wordpress/is-shallow-equal';
+=======
+import { CART_STORE_KEY as storeKey } from '@woocommerce/block-data';
+import { useDebounce } from 'use-debounce';
+import isShallowEqual from '@wordpress/is-shallow-equal';
+import { formatStoreApiErrorMessage } from '@woocommerce/base-utils';
+>>>>>>> staging
 
 /**
  * Internal dependencies
  */
 import { shouldUpdateAddressStore } from './utils';
+<<<<<<< HEAD
+=======
+import { useStoreNotices } from '../use-store-notices';
+import { useStoreCart } from '../cart';
+>>>>>>> staging
 
 /**
  * This is a custom hook for syncing customer address data (billing and shipping) with the server.
@@ -19,6 +31,7 @@ import { shouldUpdateAddressStore } from './utils';
 export const useCustomerData = () => {
 	const { updateCustomerData } = useDispatch( storeKey );
 	const { addErrorNotice, removeNotice } = useStoreNotices();
+<<<<<<< HEAD
 	const {
 		billingAddress: cartBillingData,
 		shippingAddress: cartShippingAddress,
@@ -33,6 +46,30 @@ export const useCustomerData = () => {
 		equalityFn: ( prevData, newData ) => {
 			return ! (
 				isShallowEqual( prevData.billingData, newData.billingData ) ||
+=======
+
+	// Grab the initial values from the store cart hook.
+	const {
+		billingAddress: initialBillingAddress,
+		shippingAddress: initialShippingAddress,
+	} = useStoreCart();
+
+	// State of customer data is tracked here from this point, using the initial values from the useStoreCart hook.
+	const [ customerData, setCustomerData ] = useState( {
+		billingData: initialBillingAddress,
+		shippingAddress: initialShippingAddress,
+	} );
+
+	// Store values last sent to the server in a ref to avoid requests unless important fields are changed.
+	const previousCustomerData = useRef( customerData );
+
+	// Debounce updates to the customerData state so it's not triggered excessively.
+	const [ debouncedCustomerData ] = useDebounce( customerData, 1000, {
+		// Default equalityFn is prevData === newData.
+		equalityFn: ( prevData, newData ) => {
+			return (
+				isShallowEqual( prevData.billingData, newData.billingData ) &&
+>>>>>>> staging
 				isShallowEqual(
 					prevData.shippingAddress,
 					newData.shippingAddress
@@ -58,6 +95,12 @@ export const useCustomerData = () => {
 		} );
 	}, [] );
 
+<<<<<<< HEAD
+=======
+	/**
+	 * Set shipping data.
+	 */
+>>>>>>> staging
 	const setShippingAddress = useCallback( ( newData ) => {
 		setCustomerData( ( prevState ) => ( {
 			...prevState,
@@ -65,6 +108,7 @@ export const useCustomerData = () => {
 		} ) );
 	}, [] );
 
+<<<<<<< HEAD
 	useEffect( () => {
 		if (
 			! isShallowEqual(
@@ -95,10 +139,26 @@ export const useCustomerData = () => {
 					currentCustomerData.current.shippingAddress,
 					debouncedCustomerData.shippingAddress
 				)
+=======
+	/**
+	 * This pushes changes to the API when the local state differs from the address in the cart.
+	 */
+	useEffect( () => {
+		// Only push updates when enough fields are populated.
+		if (
+			! shouldUpdateAddressStore(
+				previousCustomerData.current.billingData,
+				debouncedCustomerData.billingData
+			) &&
+			! shouldUpdateAddressStore(
+				previousCustomerData.current.shippingAddress,
+				debouncedCustomerData.shippingAddress
+>>>>>>> staging
 			)
 		) {
 			return;
 		}
+<<<<<<< HEAD
 		removeNotice( 'address' );
 		updateCustomerData( {
 			billing_address: debouncedCustomerData.billingData,
@@ -108,6 +168,21 @@ export const useCustomerData = () => {
 				id: 'address',
 			} );
 		} );
+=======
+		previousCustomerData.current = debouncedCustomerData;
+		updateCustomerData( {
+			billing_address: debouncedCustomerData.billingData,
+			shipping_address: debouncedCustomerData.shippingAddress,
+		} )
+			.then( () => {
+				removeNotice( 'checkout' );
+			} )
+			.catch( ( response ) => {
+				addErrorNotice( formatStoreApiErrorMessage( response ), {
+					id: 'checkout',
+				} );
+			} );
+>>>>>>> staging
 	}, [
 		debouncedCustomerData,
 		addErrorNotice,

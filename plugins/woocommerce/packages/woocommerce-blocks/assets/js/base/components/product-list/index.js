@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /**
  * External dependencies
  */
@@ -240,3 +241,7 @@ ProductList.propTypes = {
 };
 
 export default withScrollToTop( ProductList );
+=======
+export { default as ProductList } from './product-list';
+export { default as ProductListContainer } from './container';
+>>>>>>> staging

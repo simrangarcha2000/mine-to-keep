@@ -33,7 +33,11 @@ export const renderNoProductsPlaceholder = ( blockTitle, blockIcon ) => (
 		</p>
 		<Button
 			className="wc-block-products__add-product-button"
+<<<<<<< HEAD
 			isDefault
+=======
+			isSecondary
+>>>>>>> staging
 			href={ ADMIN_URL + 'post-new.php?post_type=product' }
 		>
 			{ __( 'Add new product', 'woocommerce' ) + ' ' }

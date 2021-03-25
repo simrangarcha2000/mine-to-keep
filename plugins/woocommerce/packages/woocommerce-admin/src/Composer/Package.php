@@ -24,7 +24,11 @@ class Package {
 	 *
 	 * @var string
 	 */
+<<<<<<< HEAD
 	const VERSION = '1.9.0';
+=======
+	const VERSION = '2.0.2';
+>>>>>>> staging
 
 	/**
 	 * Package active.
@@ -49,6 +53,7 @@ class Package {
 		// Avoid double initialization when the feature plugin is in use.
 		if ( defined( 'WC_ADMIN_VERSION_NUMBER' ) ) {
 			self::$active_version = WC_ADMIN_VERSION_NUMBER;
+<<<<<<< HEAD
 			$update_version       = new DeactivatePlugin();
 			if ( version_compare( WC_ADMIN_VERSION_NUMBER, self::VERSION, '<' ) ) {
 				if ( method_exists( $update_version, 'possibly_add_note' ) ) {
@@ -57,6 +62,11 @@ class Package {
 			} else {
 				$update_version::delete_note();
 			}
+=======
+
+			// Check version after WooCommerce is initialized.
+			add_action( 'woocommerce_init', array( __CLASS__, 'check_outdated_wca_plugin' ) );
+>>>>>>> staging
 
 			// Register a deactivation hook for the feature plugin.
 			register_deactivation_hook( WC_ADMIN_PLUGIN_FILE, array( __CLASS__, 'on_deactivation' ) );
@@ -126,4 +136,23 @@ class Package {
 		$update_version = new DeactivatePlugin();
 		$update_version::delete_note();
 	}
+<<<<<<< HEAD
+=======
+
+	/**
+	 * Checks if embedded WCA version is newer than standalone WCA
+	 * and adds/removes DeactivatePlugin note as necessary.
+	 */
+	public static function check_outdated_wca_plugin() {
+		$update_version = new DeactivatePlugin();
+
+		if ( version_compare( WC_ADMIN_VERSION_NUMBER, self::VERSION, '<' ) ) {
+			if ( method_exists( $update_version, 'possibly_add_note' ) ) {
+				$update_version::possibly_add_note();
+			}
+		} else {
+			$update_version::delete_note();
+		}
+	}
+>>>>>>> staging
 }

@@ -3,16 +3,27 @@
  */
 import { __ } from '@wordpress/i18n';
 import { BlockControls, InspectorControls } from '@wordpress/block-editor';
+<<<<<<< HEAD
 import { ServerSideRender } from '@wordpress/editor';
+=======
+import ServerSideRender from '@wordpress/server-side-render';
+>>>>>>> staging
 import {
 	Button,
 	Disabled,
 	PanelBody,
 	Placeholder,
+<<<<<<< HEAD
 	Toolbar,
 	withSpokenMessages,
 } from '@wordpress/components';
 import { Component, Fragment } from '@wordpress/element';
+=======
+	ToolbarGroup,
+	withSpokenMessages,
+} from '@wordpress/components';
+import { Component } from '@wordpress/element';
+>>>>>>> staging
 import PropTypes from 'prop-types';
 import { HAS_TAGS } from '@woocommerce/block-settings';
 import GridContentControl from '@woocommerce/editor-components/grid-content-control';
@@ -260,6 +271,7 @@ class ProductsByTagBlock extends Component {
 			return gridBlockPreview;
 		}
 
+<<<<<<< HEAD
 		return (
 			<Fragment>
 				{ HAS_TAGS ? (
@@ -305,6 +317,44 @@ class ProductsByTagBlock extends Component {
 					</Placeholder>
 				) }
 			</Fragment>
+=======
+		return HAS_TAGS ? (
+			<>
+				<BlockControls>
+					<ToolbarGroup
+						controls={ [
+							{
+								icon: 'edit',
+								title: __( 'Edit' ),
+								onClick: () =>
+									isEditing
+										? this.stopEditing()
+										: this.startEditing(),
+								isActive: isEditing,
+							},
+						] }
+					/>
+				</BlockControls>
+				{ this.getInspectorControls() }
+				{ isEditing ? this.renderEditMode() : this.renderViewMode() }
+			</>
+		) : (
+			<Placeholder
+				icon={
+					<Icon icon={ more } className="block-editor-block-icon" />
+				}
+				label={ __(
+					'Products by Tag',
+					'woocommerce'
+				) }
+				className="wc-block-products-grid wc-block-product-tag"
+			>
+				{ __(
+					"This block displays products from selected tags. In order to preview this you'll first need to create a product and assign it some tags.",
+					'woocommerce'
+				) }
+			</Placeholder>
+>>>>>>> staging
 		);
 	}
 }

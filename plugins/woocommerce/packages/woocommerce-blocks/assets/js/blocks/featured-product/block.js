@@ -7,8 +7,12 @@ import {
 	BlockControls,
 	InnerBlocks,
 	InspectorControls,
+<<<<<<< HEAD
 	MediaUpload,
 	MediaUploadCheck,
+=======
+	MediaReplaceFlow,
+>>>>>>> staging
 	PanelColorSettings,
 	withColors,
 	RichText,
@@ -17,18 +21,29 @@ import { withSelect } from '@wordpress/data';
 import {
 	Button,
 	FocalPointPicker,
+<<<<<<< HEAD
 	IconButton,
+=======
+>>>>>>> staging
 	PanelBody,
 	Placeholder,
 	RangeControl,
 	ResizableBox,
 	Spinner,
 	ToggleControl,
+<<<<<<< HEAD
 	Toolbar,
 	withSpokenMessages,
 } from '@wordpress/components';
 import classnames from 'classnames';
 import { Fragment, Component } from '@wordpress/element';
+=======
+	ToolbarGroup,
+	withSpokenMessages,
+} from '@wordpress/components';
+import classnames from 'classnames';
+import { Component } from '@wordpress/element';
+>>>>>>> staging
 import { compose, createHigherOrderComponent } from '@wordpress/compose';
 import { isEmpty } from 'lodash';
 import PropTypes from 'prop-types';
@@ -61,7 +76,11 @@ import {
  * @param {Object} props.product Product object.
  * @param {function(any):any} props.setAttributes Setter for attributes.
  * @param {function(any):any} props.setOverlayColor Setter for overlay color.
+<<<<<<< HEAD
  * @param {function(any):any} props.triggerUrlUpdate Function for triggering a url update for product.
+=======
+ * @param {function():any} props.triggerUrlUpdate Function for triggering a url update for product.
+>>>>>>> staging
  */
 const FeaturedProduct = ( {
 	attributes,
@@ -97,7 +116,11 @@ const FeaturedProduct = ( {
 		};
 
 		return (
+<<<<<<< HEAD
 			<Fragment>
+=======
+			<>
+>>>>>>> staging
 				{ getBlockControls() }
 				<Placeholder
 					icon={ <Icon srcElement={ star } /> }
@@ -130,12 +153,20 @@ const FeaturedProduct = ( {
 						</Button>
 					</div>
 				</Placeholder>
+<<<<<<< HEAD
 			</Fragment>
+=======
+			</>
+>>>>>>> staging
 		);
 	};
 
 	const getBlockControls = () => {
+<<<<<<< HEAD
 		const { contentAlign, editMode } = attributes;
+=======
+		const { contentAlign, editMode, mediaSrc } = attributes;
+>>>>>>> staging
 		const mediaId = attributes.mediaId || getImageIdFromProduct( product );
 
 		return (
@@ -146,6 +177,7 @@ const FeaturedProduct = ( {
 						setAttributes( { contentAlign: nextAlign } );
 					} }
 				/>
+<<<<<<< HEAD
 				<MediaUploadCheck>
 					<Toolbar>
 						<MediaUpload
@@ -170,6 +202,22 @@ const FeaturedProduct = ( {
 					</Toolbar>
 				</MediaUploadCheck>
 				<Toolbar
+=======
+				<MediaReplaceFlow
+					mediaId={ mediaId }
+					mediaURL={ mediaSrc }
+					accept="image/*"
+					onSelect={ ( media ) => {
+						setAttributes( {
+							mediaId: media.id,
+							mediaSrc: media.url,
+						} );
+					} }
+					allowedTypes={ [ 'image' ] }
+				/>
+
+				<ToolbarGroup
+>>>>>>> staging
 					controls={ [
 						{
 							icon: 'edit',
@@ -233,7 +281,11 @@ const FeaturedProduct = ( {
 					] }
 				>
 					{ !! url && (
+<<<<<<< HEAD
 						<Fragment>
+=======
+						<>
+>>>>>>> staging
 							<RangeControl
 								label={ __(
 									'Background Opacity',
@@ -257,7 +309,11 @@ const FeaturedProduct = ( {
 									}
 								/>
 							) }
+<<<<<<< HEAD
 						</Fragment>
+=======
+						</>
+>>>>>>> staging
 					) }
 				</PanelColorSettings>
 			</InspectorControls>
@@ -421,11 +477,19 @@ const FeaturedProduct = ( {
 	}
 
 	return (
+<<<<<<< HEAD
 		<Fragment>
 			{ getBlockControls() }
 			{ getInspectorControls() }
 			{ product ? renderProduct() : renderNoProduct() }
 		</Fragment>
+=======
+		<>
+			{ getBlockControls() }
+			{ getInspectorControls() }
+			{ product ? renderProduct() : renderNoProduct() }
+		</>
+>>>>>>> staging
 	);
 };
 

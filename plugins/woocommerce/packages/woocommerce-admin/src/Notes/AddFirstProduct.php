@@ -29,8 +29,13 @@ class AddFirstProduct {
 	 * @return Note
 	 */
 	public static function get_note() {
+<<<<<<< HEAD
 		// We want to show the note after three days.
 		if ( ! self::wc_admin_active_for( 3 * DAY_IN_SECONDS ) ) {
+=======
+		// We want to show the note after 3 days and before 30.
+		if ( ! self::wc_admin_active_for( 3 * DAY_IN_SECONDS ) || self::wc_admin_active_for( 30 * DAY_IN_SECONDS ) ) {
+>>>>>>> staging
 			return;
 		}
 
@@ -47,6 +52,19 @@ class AddFirstProduct {
 			return;
 		}
 
+<<<<<<< HEAD
+=======
+		// Don't show if there is an orders.
+		$args   = array(
+			'limit'  => 1,
+			'return' => 'ids',
+		);
+		$orders = wc_get_orders( $args );
+		if ( 0 !== count( $orders ) ) {
+			return;
+		}
+
+>>>>>>> staging
 		$content_lines = array(
 			__( 'Nice one, you’ve created a WooCommerce store! Now it’s time to add your first product.<br/><br/>', 'woocommerce' ),
 			__( 'There are three ways to add your products: you can <strong>create products manually, import them at once via CSV file</strong>, or <strong>migrate them from another service</strong>.<br/><br/>', 'woocommerce' ),
@@ -63,7 +81,11 @@ class AddFirstProduct {
 		$note->set_content_data( (object) $additional_data );
 		$note->set_image(
 			plugins_url(
+<<<<<<< HEAD
 				'/images/admin_notes/img-product-light.png',
+=======
+				'/images/admin_notes/openbox+purple.png',
+>>>>>>> staging
 				WC_ADMIN_PLUGIN_FILE
 			)
 		);

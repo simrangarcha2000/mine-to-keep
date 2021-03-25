@@ -4,6 +4,7 @@
 import { __ } from '@wordpress/i18n';
 import triggerFetch from '@wordpress/api-fetch';
 import {
+<<<<<<< HEAD
 	useCheckoutContext,
 	useShippingDataContext,
 	useCustomerDataContext,
@@ -11,6 +12,8 @@ import {
 	useValidationContext,
 } from '@woocommerce/base-context';
 import {
+=======
+>>>>>>> staging
 	useEffect,
 	useRef,
 	useCallback,
@@ -18,11 +21,23 @@ import {
 	useMemo,
 } from '@wordpress/element';
 import { useStoreCart, useStoreNotices } from '@woocommerce/base-hooks';
+<<<<<<< HEAD
+=======
+import { formatStoreApiErrorMessage } from '@woocommerce/base-utils';
+>>>>>>> staging
 
 /**
  * Internal dependencies
  */
 import { preparePaymentData } from './utils';
+<<<<<<< HEAD
+=======
+import { useCheckoutContext } from '../../checkout-state';
+import { useShippingDataContext } from '../../shipping';
+import { useCustomerDataContext } from '../../customer';
+import { usePaymentMethodDataContext } from '../../payment-methods';
+import { useValidationContext } from '../../../shared';
+>>>>>>> staging
 
 /**
  * CheckoutProcessor component.
@@ -200,6 +215,7 @@ const CheckoutProcessor = () => {
 				fetchResponse.json().then( function ( response ) {
 					if ( ! fetchResponse.ok ) {
 						// We received an error response.
+<<<<<<< HEAD
 						if ( response.body && response.body.message ) {
 							addErrorNotice( response.body.message, {
 								id: 'checkout',
@@ -215,6 +231,14 @@ const CheckoutProcessor = () => {
 								}
 							);
 						}
+=======
+						addErrorNotice(
+							formatStoreApiErrorMessage( response ),
+							{
+								id: 'checkout',
+							}
+						);
+>>>>>>> staging
 						dispatchActions.setHasError();
 					}
 					dispatchActions.setAfterProcessing( response );
@@ -237,6 +261,12 @@ const CheckoutProcessor = () => {
 					if ( response.data?.cart ) {
 						receiveCart( response.data.cart );
 					}
+<<<<<<< HEAD
+=======
+					addErrorNotice( formatStoreApiErrorMessage( response ), {
+						id: 'checkout',
+					} );
+>>>>>>> staging
 					dispatchActions.setHasError();
 					dispatchActions.setAfterProcessing( response );
 					setIsProcessingOrder( false );

@@ -1,7 +1,11 @@
 /**
  * External dependencies
  */
+<<<<<<< HEAD
 import { Component, createRef, Fragment } from 'react';
+=======
+import { Component, createRef } from 'react';
+>>>>>>> staging
 
 /**
  * Internal dependencies
@@ -54,7 +58,11 @@ const withScrollToTop = ( OriginalComponent ) => {
 
 		render() {
 			return (
+<<<<<<< HEAD
 				<Fragment>
+=======
+				<>
+>>>>>>> staging
 					<div
 						className="with-scroll-to-top__scroll-point"
 						ref={ this.scrollPointRef }
@@ -64,7 +72,11 @@ const withScrollToTop = ( OriginalComponent ) => {
 						{ ...this.props }
 						scrollToTop={ this.scrollToTop }
 					/>
+<<<<<<< HEAD
 				</Fragment>
+=======
+				</>
+>>>>>>> staging
 			);
 		}
 	}

@@ -4,7 +4,10 @@
 import { Component } from '@wordpress/element';
 import { createHigherOrderComponent } from '@wordpress/compose';
 import PropTypes from 'prop-types';
+<<<<<<< HEAD
 import { isNil } from 'lodash';
+=======
+>>>>>>> staging
 
 /**
  * HOC that transforms a single select to a multiple select.
@@ -16,11 +19,19 @@ const withTransformSingleSelectToMultipleSelect = createHigherOrderComponent(
 		class WrappedComponent extends Component {
 			render() {
 				const { selected } = this.props;
+<<<<<<< HEAD
 
 				return (
 					<OriginalComponent
 						{ ...this.props }
 						selected={ isNil( selected ) ? [] : [ selected ] }
+=======
+				const isNil = selected === null || selected === undefined;
+				return (
+					<OriginalComponent
+						{ ...this.props }
+						selected={ isNil ? [] : [ selected ] }
+>>>>>>> staging
 					/>
 				);
 			}

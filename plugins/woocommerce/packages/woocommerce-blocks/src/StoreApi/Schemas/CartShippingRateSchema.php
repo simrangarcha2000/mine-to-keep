@@ -32,7 +32,11 @@ class CartShippingRateSchema extends AbstractSchema {
 		return [
 			'package_id'     => [
 				'description' => __( 'The ID of the package the shipping rates belong to.', 'woocommerce' ),
+<<<<<<< HEAD
 				'type'        => 'integer',
+=======
+				'type'        => [ 'integer', 'string' ],
+>>>>>>> staging
 				'context'     => [ 'view', 'edit' ],
 				'readonly'    => true,
 			],
@@ -224,7 +228,45 @@ class CartShippingRateSchema extends AbstractSchema {
 	 * @return array
 	 */
 	public function get_item_response( $package ) {
+<<<<<<< HEAD
 		// Add product names and quantities.
+=======
+		return [
+			'package_id'     => $package['package_id'],
+			'name'           => $package['package_name'],
+			'destination'    => $this->prepare_package_destination_response( $package ),
+			'items'          => $this->prepare_package_items_response( $package ),
+			'shipping_rates' => $this->prepare_package_shipping_rates_response( $package ),
+		];
+	}
+
+	/**
+	 * Gets and formats the destination address of a package.
+	 *
+	 * @param array $package Shipping package complete with rates from WooCommerce.
+	 * @return object
+	 */
+	protected function prepare_package_destination_response( $package ) {
+		return (object) $this->prepare_html_response(
+			[
+				'address_1' => $package['destination']['address_1'],
+				'address_2' => $package['destination']['address_2'],
+				'city'      => $package['destination']['city'],
+				'state'     => $package['destination']['state'],
+				'postcode'  => $package['destination']['postcode'],
+				'country'   => $package['destination']['country'],
+			]
+		);
+	}
+
+	/**
+	 * Gets items from a package and creates an array of strings containing product names and quantities.
+	 *
+	 * @param array $package Shipping package complete with rates from WooCommerce.
+	 * @return array
+	 */
+	protected function prepare_package_items_response( $package ) {
+>>>>>>> staging
 		$items = array();
 		foreach ( $package['contents'] as $item_id => $values ) {
 			$items[] = [
@@ -233,6 +275,7 @@ class CartShippingRateSchema extends AbstractSchema {
 				'quantity' => $values['quantity'],
 			];
 		}
+<<<<<<< HEAD
 
 		// Generate package name.
 		$package_number       = absint( $package['package_id'] ) + 1;
@@ -265,6 +308,9 @@ class CartShippingRateSchema extends AbstractSchema {
 			'items'          => $items,
 			'shipping_rates' => $this->prepare_rates_response( $package ),
 		];
+=======
+		return $items;
+>>>>>>> staging
 	}
 
 	/**
@@ -273,10 +319,17 @@ class CartShippingRateSchema extends AbstractSchema {
 	 * @param array $package Shipping package complete with rates from WooCommerce.
 	 * @return array
 	 */
+<<<<<<< HEAD
 	protected function prepare_rates_response( $package ) {
 		$rates          = $package['rates'];
 		$selected_rates = wc()->session->get( 'chosen_shipping_methods', array() );
 		$selected_rate  = isset( $chosen_shipping_methods[ $package['package_id'] ] ) ? $chosen_shipping_methods[ $package['package_id'] ] : '';
+=======
+	protected function prepare_package_shipping_rates_response( $package ) {
+		$rates          = $package['rates'];
+		$selected_rates = wc()->session->get( 'chosen_shipping_methods', array() );
+		$selected_rate  = isset( $selected_rates[ $package['package_id'] ] ) ? $selected_rates[ $package['package_id'] ] : '';
+>>>>>>> staging
 
 		if ( empty( $selected_rate ) && ! empty( $package['rates'] ) ) {
 			$selected_rate = wc_get_chosen_shipping_method_for_package( $package['package_id'], $package );

@@ -7,8 +7,12 @@ import {
 	BlockControls,
 	InnerBlocks,
 	InspectorControls,
+<<<<<<< HEAD
 	MediaUpload,
 	MediaUploadCheck,
+=======
+	MediaReplaceFlow,
+>>>>>>> staging
 	PanelColorSettings,
 	withColors,
 	RichText,
@@ -16,18 +20,27 @@ import {
 import {
 	Button,
 	FocalPointPicker,
+<<<<<<< HEAD
 	IconButton,
+=======
+>>>>>>> staging
 	PanelBody,
 	Placeholder,
 	RangeControl,
 	ResizableBox,
 	Spinner,
 	ToggleControl,
+<<<<<<< HEAD
 	Toolbar,
 	withSpokenMessages,
 } from '@wordpress/components';
 import classnames from 'classnames';
 import { Fragment } from '@wordpress/element';
+=======
+	withSpokenMessages,
+} from '@wordpress/components';
+import classnames from 'classnames';
+>>>>>>> staging
 import { compose } from '@wordpress/compose';
 import PropTypes from 'prop-types';
 import { MIN_HEIGHT } from '@woocommerce/block-settings';
@@ -83,7 +96,11 @@ const FeaturedCategory = ( {
 	);
 
 	const getBlockControls = () => {
+<<<<<<< HEAD
 		const { contentAlign } = attributes;
+=======
+		const { contentAlign, mediaSrc } = attributes;
+>>>>>>> staging
 		const mediaId = attributes.mediaId || getCategoryImageId( category );
 
 		return (
@@ -94,6 +111,7 @@ const FeaturedCategory = ( {
 						setAttributes( { contentAlign: nextAlign } );
 					} }
 				/>
+<<<<<<< HEAD
 				<MediaUploadCheck>
 					<Toolbar>
 						<MediaUpload
@@ -117,6 +135,20 @@ const FeaturedCategory = ( {
 						/>
 					</Toolbar>
 				</MediaUploadCheck>
+=======
+				<MediaReplaceFlow
+					mediaId={ mediaId }
+					mediaURL={ mediaSrc }
+					accept="image/*"
+					onSelect={ ( media ) => {
+						setAttributes( {
+							mediaId: media.id,
+							mediaSrc: media.url,
+						} );
+					} }
+					allowedTypes={ [ 'image' ] }
+				/>
+>>>>>>> staging
 			</BlockControls>
 		);
 	};
@@ -158,7 +190,11 @@ const FeaturedCategory = ( {
 					] }
 				>
 					{ !! url && (
+<<<<<<< HEAD
 						<Fragment>
+=======
+						<>
+>>>>>>> staging
 							<RangeControl
 								label={ __(
 									'Background Opacity',
@@ -182,7 +218,11 @@ const FeaturedCategory = ( {
 									}
 								/>
 							) }
+<<<<<<< HEAD
 						</Fragment>
+=======
+						</>
+>>>>>>> staging
 					) }
 				</PanelColorSettings>
 			</InspectorControls>
@@ -374,11 +414,19 @@ const FeaturedCategory = ( {
 	}
 
 	return (
+<<<<<<< HEAD
 		<Fragment>
 			{ getBlockControls() }
 			{ getInspectorControls() }
 			{ category ? renderCategory() : renderNoCategory() }
 		</Fragment>
+=======
+		<>
+			{ getBlockControls() }
+			{ getInspectorControls() }
+			{ category ? renderCategory() : renderNoCategory() }
+		</>
+>>>>>>> staging
 	);
 };
 

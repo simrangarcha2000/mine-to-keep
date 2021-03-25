@@ -13,7 +13,10 @@ import {
 } from '@wordpress/element';
 import { getSetting } from '@woocommerce/settings';
 import { useStoreNotices, useEmitResponse } from '@woocommerce/base-hooks';
+<<<<<<< HEAD
 import { useEditorContext } from '@woocommerce/base-context';
+=======
+>>>>>>> staging
 
 /**
  * Internal dependencies
@@ -40,6 +43,10 @@ import {
 import { useCustomerDataContext } from '../customer';
 import { useCheckoutContext } from '../checkout-state';
 import { useShippingDataContext } from '../shipping';
+<<<<<<< HEAD
+=======
+import { useEditorContext } from '../../editor';
+>>>>>>> staging
 import {
 	EMIT_TYPES,
 	emitterSubscribers,
@@ -81,6 +88,7 @@ export const usePaymentMethodDataContext = () => {
  * Gets the payment methods saved for the current user after filtering out
  * disabled ones.
  *
+<<<<<<< HEAD
  * @param {Object[]} availablePaymentMethods List of available payment methods.
  * @return {Object} Object containing the payment methods saved for a specific
  *                  user which are available.
@@ -97,6 +105,23 @@ const getCustomerPaymentMethods = ( availablePaymentMethods = [] ) => {
 			( paymentMethod ) => {
 				return Object.keys( availablePaymentMethods ).includes(
 					paymentMethod.method.gateway
+=======
+ * @param {Object} availablePaymentMethods List of available payment methods.
+ * @return {Object} Object containing the payment methods saved for a specific
+ *                  user which are available.
+ */
+const getCustomerPaymentMethods = ( availablePaymentMethods = {} ) => {
+	const customerPaymentMethods = getSetting( 'customerPaymentMethods', {} );
+	const paymentMethodKeys = Object.keys( customerPaymentMethods );
+	const enabledCustomerPaymentMethods = {};
+	paymentMethodKeys.forEach( ( type ) => {
+		const methods = customerPaymentMethods[ type ].filter(
+			( { method: { gateway } } ) => {
+				const isAvailable = gateway in availablePaymentMethods;
+				return (
+					isAvailable &&
+					availablePaymentMethods[ gateway ].supports?.showSavedCards
+>>>>>>> staging
 				);
 			}
 		);
@@ -132,7 +157,15 @@ export const PaymentMethodDataProvider = ( { children } ) => {
 		isFailResponse,
 		noticeContexts,
 	} = useEmitResponse();
+<<<<<<< HEAD
 	const [ activePaymentMethod, setActive ] = useState( '' );
+=======
+	// The active payment method - e.g. Stripe CC or BACS.
+	const [ activePaymentMethod, setActive ] = useState( '' );
+	// If a previously saved payment method is active, the token for that method.
+	// For example, a for a Stripe CC card saved to user account.
+	const [ activeSavedToken, setActiveSavedToken ] = useState( '' );
+>>>>>>> staging
 	const [ observers, subscriber ] = useReducer( emitReducer, {} );
 	const currentObservers = useRef( observers );
 
@@ -182,7 +215,11 @@ export const PaymentMethodDataProvider = ( { children } ) => {
 		}
 		if (
 			! paymentMethodsInitialized ||
+<<<<<<< HEAD
 			paymentData.paymentMethods.length === 0
+=======
+			Object.keys( paymentData.paymentMethods ).length === 0
+>>>>>>> staging
 		) {
 			return {};
 		}
@@ -446,6 +483,11 @@ export const PaymentMethodDataProvider = ( { children } ) => {
 		errorMessage: paymentData.errorMessage,
 		activePaymentMethod,
 		setActivePaymentMethod,
+<<<<<<< HEAD
+=======
+		activeSavedToken,
+		setActiveSavedToken,
+>>>>>>> staging
 		onPaymentProcessing,
 		customerPaymentMethods,
 		paymentMethods: paymentData.paymentMethods,

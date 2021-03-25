@@ -1,7 +1,11 @@
 /**
  * External dependencies
  */
+<<<<<<< HEAD
 import defaultAddressFields from '@woocommerce/base-components/cart-checkout/address-form/default-address-fields';
+=======
+import { defaultAddressFields } from '@woocommerce/base-components/cart-checkout';
+>>>>>>> staging
 import { useState, useEffect, useCallback, useRef } from '@wordpress/element';
 import {
 	useShippingDataContext,
@@ -60,6 +64,23 @@ export const useCheckoutAddress = () => {
 		[ shippingAsBilling, setShippingAddress, setBillingData ]
 	);
 
+<<<<<<< HEAD
+=======
+	/**
+	 * Sets billing address data, and also shipping if shipping is disabled.
+	 */
+	const setBillingFields = useCallback(
+		( value ) => {
+			setBillingData( value );
+
+			if ( ! needsShipping ) {
+				setShippingAddress( value );
+			}
+		},
+		[ needsShipping, setShippingAddress, setBillingData ]
+	);
+
+>>>>>>> staging
 	// When the "Use same address" checkbox is toggled we need to update the current billing address to reflect this;
 	// that is either setting the billing address to the shipping address, or restoring the billing address to it's
 	// previous state.
@@ -79,8 +100,19 @@ export const useCheckoutAddress = () => {
 		}
 	}, [ shippingAsBilling, setBillingData, shippingAddress, billingData ] );
 
+<<<<<<< HEAD
 	const setEmail = ( value ) => void setBillingData( { email: value } );
 	const setPhone = ( value ) => void setBillingData( { phone: value } );
+=======
+	const setEmail = ( value ) =>
+		void setBillingData( {
+			email: value,
+		} );
+	const setPhone = ( value ) =>
+		void setBillingData( {
+			phone: value,
+		} );
+>>>>>>> staging
 
 	// Note that currentShippingAsBilling is returned rather than the current state of shippingAsBilling--this is so that
 	// the billing fields are not rendered before sync (billing field values are debounced and would be outdated)
@@ -89,7 +121,11 @@ export const useCheckoutAddress = () => {
 		shippingFields: shippingAddress,
 		setShippingFields,
 		billingFields: billingData,
+<<<<<<< HEAD
 		setBillingFields: setBillingData,
+=======
+		setBillingFields,
+>>>>>>> staging
 		setEmail,
 		setPhone,
 		shippingAsBilling,

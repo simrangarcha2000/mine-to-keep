@@ -11,6 +11,10 @@ defined( 'ABSPATH' ) || exit;
 use \Automattic\WooCommerce\Admin\Notes\AddingAndManangingProducts;
 use \Automattic\WooCommerce\Admin\Notes\ChooseNiche;
 use \Automattic\WooCommerce\Admin\Notes\ChoosingTheme;
+<<<<<<< HEAD
+=======
+use \Automattic\WooCommerce\Admin\Notes\CustomizingProductCatalog;
+>>>>>>> staging
 use \Automattic\WooCommerce\Admin\Notes\GivingFeedbackNotes;
 use \Automattic\WooCommerce\Admin\Notes\InsightFirstProductAndPayment;
 use \Automattic\WooCommerce\Admin\Notes\MobileApp;
@@ -46,6 +50,10 @@ use \Automattic\WooCommerce\Admin\Notes\NavigationFeedbackFollowUp;
 use \Automattic\WooCommerce\Admin\Notes\FilterByProductVariationsInReports;
 use \Automattic\WooCommerce\Admin\Notes\AddFirstProduct;
 use \Automattic\WooCommerce\Admin\Notes\DrawAttention;
+<<<<<<< HEAD
+=======
+use \Automattic\WooCommerce\Admin\Notes\GettingStartedInEcommerceWebinar;
+>>>>>>> staging
 
 /**
  * Events Class.
@@ -140,6 +148,11 @@ class Events {
 		InsightFirstProductAndPayment::possibly_add_note();
 		AddFirstProduct::possibly_add_note();
 		AddingAndManangingProducts::possibly_add_note();
+<<<<<<< HEAD
+=======
+		CustomizingProductCatalog::possibly_add_note();
+		GettingStartedInEcommerceWebinar::possibly_add_note();
+>>>>>>> staging
 	}
 
 	/**

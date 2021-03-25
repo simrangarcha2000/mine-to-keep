@@ -8,10 +8,13 @@ import {
 } from '@woocommerce/blocks-registry';
 import { useState, useEffect, useRef, useCallback } from '@wordpress/element';
 import {
+<<<<<<< HEAD
 	useEditorContext,
 	useShippingDataContext,
 } from '@woocommerce/base-context';
 import {
+=======
+>>>>>>> staging
 	useEmitResponse,
 	useShallowEqual,
 	useStoreCart,
@@ -23,6 +26,15 @@ import {
 } from '@woocommerce/block-settings';
 
 /**
+<<<<<<< HEAD
+=======
+ * Internal dependencies
+ */
+import { useEditorContext } from '../../editor';
+import { useShippingDataContext } from '../shipping';
+
+/**
+>>>>>>> staging
  * This hook handles initializing registered payment methods and exposing all
  * registered payment methods that can be used in the current environment (via
  * the payment method's `canMakePayment` property).
@@ -52,12 +64,24 @@ const usePaymentMethodRegistration = (
 	const { selectedRates, shippingAddress } = useShippingDataContext();
 	const selectedShippingMethods = useShallowEqual( selectedRates );
 	const paymentMethodsOrder = useShallowEqual( paymentMethodsSortOrder );
+<<<<<<< HEAD
 	const { cartTotals, cartNeedsShipping } = useStoreCart();
+=======
+	const {
+		cartTotals,
+		cartNeedsShipping,
+		paymentRequirements,
+	} = useStoreCart();
+>>>>>>> staging
 	const canPayArgument = useRef( {
 		cartTotals,
 		cartNeedsShipping,
 		shippingAddress,
 		selectedShippingMethods,
+<<<<<<< HEAD
+=======
+		paymentRequirements,
+>>>>>>> staging
 	} );
 	const { addErrorNotice } = useStoreNotices();
 
@@ -67,12 +91,20 @@ const usePaymentMethodRegistration = (
 			cartNeedsShipping,
 			shippingAddress,
 			selectedShippingMethods,
+<<<<<<< HEAD
+=======
+			paymentRequirements,
+>>>>>>> staging
 		};
 	}, [
 		cartTotals,
 		cartNeedsShipping,
 		shippingAddress,
 		selectedShippingMethods,
+<<<<<<< HEAD
+=======
+		paymentRequirements,
+>>>>>>> staging
 	] );
 
 	const refreshCanMakePayments = useCallback( async () => {
@@ -142,7 +174,16 @@ const usePaymentMethodRegistration = (
 	// Some payment methods (e.g. COD) can be disabled for specific shipping methods.
 	useEffect( () => {
 		refreshCanMakePayments();
+<<<<<<< HEAD
 	}, [ refreshCanMakePayments, cartTotals, selectedShippingMethods ] );
+=======
+	}, [
+		refreshCanMakePayments,
+		cartTotals,
+		selectedShippingMethods,
+		paymentRequirements,
+	] );
+>>>>>>> staging
 
 	return isInitialized;
 };

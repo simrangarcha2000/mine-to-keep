@@ -4,6 +4,10 @@ namespace Automattic\WooCommerce\Blocks\Payments\Integrations;
 use Exception;
 use WC_Stripe_Payment_Request;
 use WC_Stripe_Helper;
+<<<<<<< HEAD
+=======
+use WC_Gateway_Stripe;
+>>>>>>> staging
 use Automattic\WooCommerce\Blocks\Assets\Api;
 use Automattic\WooCommerce\Blocks\Payments\PaymentContext;
 use Automattic\WooCommerce\Blocks\Payments\PaymentResult;
@@ -84,6 +88,10 @@ final class Stripe extends AbstractPaymentMethodType {
 			'stripeTotalLabel'    => $this->get_total_label(),
 			'publicKey'           => $this->get_publishable_key(),
 			'allowPrepaidCard'    => $this->get_allow_prepaid_card(),
+<<<<<<< HEAD
+=======
+			'title'               => $this->get_title(),
+>>>>>>> staging
 			'button'              => [
 				'type'   => $this->get_button_type(),
 				'theme'  => $this->get_button_theme(),
@@ -92,8 +100,15 @@ final class Stripe extends AbstractPaymentMethodType {
 			],
 			'inline_cc_form'      => $this->get_inline_cc_form(),
 			'icons'               => $this->get_icons(),
+<<<<<<< HEAD
 			'allowSavedCards'     => $this->get_allow_saved_cards(),
 			'allowPaymentRequest' => $this->get_allow_payment_request(),
+=======
+			'showSavedCards'      => $this->get_show_saved_cards(),
+			'allowPaymentRequest' => $this->get_allow_payment_request(),
+			'showSaveOption'      => $this->get_show_save_option(),
+			'supports'            => $this->get_supported_features(),
+>>>>>>> staging
 		];
 	}
 
@@ -102,8 +117,22 @@ final class Stripe extends AbstractPaymentMethodType {
 	 *
 	 * @return bool True if merchant allows shopper to save card (payment method) during checkout).
 	 */
+<<<<<<< HEAD
 	private function get_allow_saved_cards() {
 		$saved_cards = isset( $this->settings['saved_cards'] ) ? $this->settings['saved_cards'] : false;
+=======
+	private function get_show_saved_cards() {
+		return isset( $this->settings['saved_cards'] ) ? 'yes' === $this->settings['saved_cards'] : false;
+	}
+
+	/**
+	 * Determine if the checkbox to enable the user to save their payment method should be shown.
+	 *
+	 * @return bool True if the save payment checkbox should be displayed to the user.
+	 */
+	private function get_show_save_option() {
+		$saved_cards = $this->get_show_saved_cards();
+>>>>>>> staging
 		// This assumes that Stripe supports `tokenization` - currently this is true, based on
 		// https://github.com/woocommerce/woocommerce-gateway-stripe/blob/master/includes/class-wc-gateway-stripe.php#L95 .
 		// See https://github.com/woocommerce/woocommerce-gateway-stripe/blob/ad19168b63df86176cbe35c3e95203a245687640/includes/class-wc-gateway-stripe.php#L271 and
@@ -141,6 +170,18 @@ final class Stripe extends AbstractPaymentMethodType {
 	}
 
 	/**
+<<<<<<< HEAD
+=======
+	 * Returns the title string to use in the UI (customisable via admin settings screen).
+	 *
+	 * @return string Title / label string
+	 */
+	private function get_title() {
+		return isset( $this->settings['title'] ) ? $this->settings['title'] : __( 'Credit / Debit Card', 'woocommerce' );
+	}
+
+	/**
+>>>>>>> staging
 	 * Determine if store allows Payment Request buttons - e.g. Apple Pay / Chrome Pay.
 	 *
 	 * @return bool True if merchant has opted into payment request.
@@ -313,4 +354,17 @@ final class Stripe extends AbstractPaymentMethodType {
 			$order->save();
 		}
 	}
+<<<<<<< HEAD
+=======
+
+	/**
+	 * Returns an array of supported features.
+	 *
+	 * @return string[]
+	 */
+	public function get_supported_features() {
+		$gateway = new WC_Gateway_Stripe();
+		return array_filter( $gateway->supports, array( $gateway, 'supports' ) );
+	}
+>>>>>>> staging
 }

@@ -2,7 +2,11 @@
  * External dependencies
  */
 import { __ } from '@wordpress/i18n';
+<<<<<<< HEAD
 import { DebouncedValidatedTextInput } from '@woocommerce/base-components/text-input';
+=======
+import { ValidatedTextInput } from '@woocommerce/base-components/text-input';
+>>>>>>> staging
 
 /**
  * Renders a phone number input.
@@ -15,7 +19,11 @@ import { DebouncedValidatedTextInput } from '@woocommerce/base-components/text-i
  */
 const PhoneNumber = ( { isRequired = false, value = '', onChange } ) => {
 	return (
+<<<<<<< HEAD
 		<DebouncedValidatedTextInput
+=======
+		<ValidatedTextInput
+>>>>>>> staging
 			id="phone"
 			type="tel"
 			autoComplete="tel"

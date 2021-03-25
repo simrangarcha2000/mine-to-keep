@@ -67,4 +67,8 @@
 	<footer class="entry-footer">
 		<?php glorify_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
+<<<<<<< HEAD
 </article><!-- #post-<?php the_ID(); ?> -->
+=======
+</article><!-- #post-<?php the_ID(); ?> -->
+>>>>>>> staging

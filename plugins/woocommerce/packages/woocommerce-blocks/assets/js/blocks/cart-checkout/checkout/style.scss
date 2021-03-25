@@ -14,16 +14,26 @@
 
 .wc-block-checkout__actions {
 	display: flex;
+<<<<<<< HEAD
 	justify-content: space-between;
 	align-items: center;
 	margin: 0 0 $gap-large*2;
 	padding: 0 0 0 $gap-larger;
+=======
+	flex-direction: column;
+	margin: 0 0 $gap-large*2;
+	padding-left: 9px;
+>>>>>>> staging
 
 	.wc-block-components-checkout-place-order-button {
 		width: 50%;
 		padding: 1em;
 		height: auto;
+<<<<<<< HEAD
 		margin-left: auto;
+=======
+		margin-bottom: 44px;
+>>>>>>> staging
 
 		.wc-block-components-button__text {
 			line-height: 24px;
@@ -151,3 +161,10 @@
 		padding-right: 36px;
 	}
 }
+<<<<<<< HEAD
+=======
+
+.wc-block-checkout__actions {
+	margin-top: $gap;
+}
+>>>>>>> staging

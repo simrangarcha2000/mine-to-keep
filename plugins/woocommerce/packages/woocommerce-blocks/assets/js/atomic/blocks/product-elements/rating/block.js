@@ -45,7 +45,10 @@ const Block = ( { className } ) => {
 		<div
 			className={ classnames(
 				className,
+<<<<<<< HEAD
 				'star-rating',
+=======
+>>>>>>> staging
 				'wc-block-components-product-rating',
 				{
 					[ `${ parentClassName }__product-rating` ]: parentClassName,

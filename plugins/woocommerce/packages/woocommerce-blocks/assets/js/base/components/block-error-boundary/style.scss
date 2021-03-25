@@ -1,11 +1,20 @@
 .wc-block-components-error {
 	display: flex;
+<<<<<<< HEAD
 	background-color: #f3f3f4;
 	border-left: 4px solid #6d6d6d;
+=======
+	background-color: $gray-100;
+	border-left: 4px solid $gray-300;
+>>>>>>> staging
 	padding: $gap-larger $gap;
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
+<<<<<<< HEAD
+=======
+	color: $gray-700;
+>>>>>>> staging
 }
 
 .wc-block-components-error__header {
@@ -25,7 +34,11 @@
 	font-style: italic;
 }
 
+<<<<<<< HEAD
 @include breakpoint( ">480px" ) {
+=======
+@include breakpoint(">480px") {
+>>>>>>> staging
 	.wc-block-components-error {
 		flex-direction: row;
 	}

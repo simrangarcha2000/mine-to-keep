@@ -352,7 +352,11 @@ function wc_no_js() {
 			var c = document.body.className;
 			c = c.replace(/woocommerce-no-js/, 'woocommerce-js');
 			document.body.className = c;
+<<<<<<< HEAD
 		})()
+=======
+		})();
+>>>>>>> staging
 	</script>
 	<?php
 }

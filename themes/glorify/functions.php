@@ -112,6 +112,7 @@ if ( ! function_exists( 'glorify_setup' ) ) :
 
 	/**
 	 * Add support for wide alignment
+<<<<<<< HEAD
 	 */
 
 	add_theme_support('align-wide');
@@ -119,6 +120,15 @@ if ( ! function_exists( 'glorify_setup' ) ) :
 		/**
 	 * Add support for color palette
 	 */
+=======
+	 */
+
+	add_theme_support('align-wide');
+
+		/**
+	 * Add support for color palette
+	 */
+>>>>>>> staging
 	add_theme_support('editor-color-palette',array(
 	array(
 		'name' => esc_attr__('Cherry Pink','glorify'),
@@ -199,6 +209,12 @@ function glorify_scripts() {
 	//To put the script to the footer following the syntax and putting footer as true
 	wp_enqueue_script('foundation-script', get_template_directory_uri().'/assets/js/vendor/foundation.js', array(), false, true);
 
+	//Custom Style sheet referred
+	wp_enqueue_style('custom-style', get_template_directory_uri().'/assets/css/custom.css');
+
+	//Custom WooCommerce Stylesheet Referred
+	wp_enqueue_style('woocommerce-style', get_template_directory_uri().'/assets/css/woocommerce.css');
+
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
@@ -221,6 +237,11 @@ require get_template_directory() . '/inc/template-functions.php';
  */
 require get_template_directory() . '/inc/customizer.php';
 
+/**
+ * Customizing post type . 
+ */
+require get_template_directory() . '/inc/post-types.php';
+
 /***
  * Enqueuing block editor assets
  * Only Loads for the admin editor of wordpress
@@ -237,7 +258,7 @@ function glorify_enqueue_block_editor_assets() {
     );
 }
 
-//Action running then refering the func created above 
+//Action running then refering the function created above 
 add_action( 'enqueue_block_editor_assets', 'glorify_enqueue_block_editor_assets' );
 
 
@@ -253,4 +274,3 @@ function glorify_enqueue_block_assets() {
 	);
 }
 add_action( 'enqueue_block_assets', 'glorify_enqueue_block_assets' );
-

@@ -12,12 +12,20 @@
 
 .wc-block-components-quantity-selector {
 	display: flex;
+<<<<<<< HEAD
 	min-width: 100px;
+=======
+	width: 107px;
+>>>>>>> staging
 	border: 1px solid $gray-300;
 	background: #fff;
 	border-radius: 4px;
 	// needed so that buttons fill the container.
 	box-sizing: content-box;
+<<<<<<< HEAD
+=======
+	margin: 0 0 0.25em 0;
+>>>>>>> staging
 
 	.has-dark-controls & {
 		background-color: transparent;

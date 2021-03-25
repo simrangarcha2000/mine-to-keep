@@ -25,7 +25,11 @@ const NoShippingPlaceholder = () => {
 				) }
 			</span>
 			<Button
+<<<<<<< HEAD
 				isDefault
+=======
+				isSecondary
+>>>>>>> staging
 				href={ `${ ADMIN_URL }admin.php?page=wc-settings&tab=shipping` }
 				target="_blank"
 				rel="noopener noreferrer"

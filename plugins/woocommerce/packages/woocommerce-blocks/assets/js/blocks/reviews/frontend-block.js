@@ -2,7 +2,10 @@
  * External dependencies
  */
 import { __ } from '@wordpress/i18n';
+<<<<<<< HEAD
 import { Fragment } from 'react';
+=======
+>>>>>>> staging
 import PropTypes from 'prop-types';
 import { REVIEW_RATINGS_ENABLED } from '@woocommerce/block-settings';
 import LoadMoreButton from '@woocommerce/base-components/load-more-button';
@@ -36,7 +39,11 @@ const FrontendBlock = ( {
 	}
 
 	return (
+<<<<<<< HEAD
 		<Fragment>
+=======
+		<>
+>>>>>>> staging
 			{ attributes.showOrderby !== 'false' && REVIEW_RATINGS_ENABLED && (
 				<ReviewSortSelect
 					defaultValue={ orderby }
@@ -54,7 +61,11 @@ const FrontendBlock = ( {
 						) }
 					/>
 				) }
+<<<<<<< HEAD
 		</Fragment>
+=======
+		</>
+>>>>>>> staging
 	);
 };
 

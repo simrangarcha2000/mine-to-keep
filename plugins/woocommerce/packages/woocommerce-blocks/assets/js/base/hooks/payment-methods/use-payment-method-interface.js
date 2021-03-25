@@ -8,11 +8,18 @@ import {
 	useCustomerDataContext,
 } from '@woocommerce/base-context';
 import { __ } from '@wordpress/i18n';
+<<<<<<< HEAD
 import { getCurrencyFromPriceResponse } from '@woocommerce/base-utils';
 import { useEffect, useRef } from '@wordpress/element';
 import { DISPLAY_CART_PRICES_INCLUDING_TAX } from '@woocommerce/block-settings';
 import { ValidationInputError } from '@woocommerce/base-components/validation';
 import { useEmitResponse } from '@woocommerce/base-hooks';
+=======
+import { getCurrencyFromPriceResponse } from '@woocommerce/price-format';
+import { useEffect, useRef } from '@wordpress/element';
+import { DISPLAY_CART_PRICES_INCLUDING_TAX } from '@woocommerce/block-settings';
+import { ValidationInputError } from '@woocommerce/base-components/validation';
+>>>>>>> staging
 import {
 	PaymentMethodIcons,
 	PaymentMethodLabel,
@@ -21,7 +28,11 @@ import {
 /**
  * Internal dependencies
  */
+<<<<<<< HEAD
 import { useStoreCartCoupons, useStoreCart } from '..';
+=======
+import { useStoreCartCoupons, useStoreCart, useEmitResponse } from '..';
+>>>>>>> staging
 
 /**
  * @typedef {import('@woocommerce/type-defs/registered-payment-method-props').RegisteredPaymentMethodProps} RegisteredPaymentMethodProps

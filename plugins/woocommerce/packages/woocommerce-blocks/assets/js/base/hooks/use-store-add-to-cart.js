@@ -3,7 +3,10 @@
  */
 import { useState, useEffect, useRef } from '@wordpress/element';
 import { useDispatch } from '@wordpress/data';
+<<<<<<< HEAD
 import { useStoreCart } from '@woocommerce/base-hooks';
+=======
+>>>>>>> staging
 import { CART_STORE_KEY as storeKey } from '@woocommerce/block-data';
 import { decodeEntities } from '@wordpress/html-entities';
 
@@ -11,6 +14,10 @@ import { decodeEntities } from '@wordpress/html-entities';
  * Internal dependencies
  */
 import { useStoreNotices } from './use-store-notices';
+<<<<<<< HEAD
+=======
+import { useStoreCart } from './cart';
+>>>>>>> staging
 
 /**
  * @typedef {import('@woocommerce/type-defs/hooks').StoreCartItemAddToCart} StoreCartItemAddToCart

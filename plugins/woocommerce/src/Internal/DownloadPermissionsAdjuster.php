@@ -83,6 +83,12 @@ class DownloadPermissionsAdjuster {
 	 */
 	public function adjust_download_permissions( int $product_id ) {
 		$product = wc_get_product( $product_id );
+<<<<<<< HEAD
+=======
+		if ( ! $product ) {
+			return;
+		}
+>>>>>>> staging
 
 		$children_ids = $product->get_children();
 		if ( ! $children_ids ) {

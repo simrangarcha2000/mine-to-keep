@@ -2,7 +2,10 @@
  * External dependencies
  */
 import { __, _n, sprintf } from '@wordpress/i18n';
+<<<<<<< HEAD
 import { Fragment } from '@wordpress/element';
+=======
+>>>>>>> staging
 import { find } from 'lodash';
 import PropTypes from 'prop-types';
 import { SearchListControl, SearchListItem } from '@woocommerce/components';
@@ -134,7 +137,11 @@ const ProductAttributeTermControl = ( {
 	}
 
 	return (
+<<<<<<< HEAD
 		<Fragment>
+=======
+		<>
+>>>>>>> staging
 			<SearchListControl
 				className="woocommerce-product-attributes"
 				list={ currentList }
@@ -184,7 +191,11 @@ const ProductAttributeTermControl = ( {
 					/>
 				</div>
 			) }
+<<<<<<< HEAD
 		</Fragment>
+=======
+		</>
+>>>>>>> staging
 	);
 };
 

@@ -30,7 +30,11 @@ const RadioControl = ( {
 			>
 				{ options.map( ( option ) => (
 					<RadioControlOption
+<<<<<<< HEAD
 						key={ option.value }
+=======
+						key={ `${ radioControlId }-${ option.value }` }
+>>>>>>> staging
 						name={ `radio-control-${ radioControlId }` }
 						checked={ option.value === selected }
 						option={ option }

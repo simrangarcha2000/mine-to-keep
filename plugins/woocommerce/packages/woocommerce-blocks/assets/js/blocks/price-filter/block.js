@@ -7,11 +7,19 @@ import {
 	useCollectionData,
 	usePrevious,
 } from '@woocommerce/base-hooks';
+<<<<<<< HEAD
 import { Fragment, useCallback, useState, useEffect } from '@wordpress/element';
 import PriceSlider from '@woocommerce/base-components/price-slider';
 import { useDebouncedCallback } from 'use-debounce';
 import PropTypes from 'prop-types';
 import { getCurrencyFromPriceResponse } from '@woocommerce/base-utils';
+=======
+import { useCallback, useState, useEffect } from '@wordpress/element';
+import PriceSlider from '@woocommerce/base-components/price-slider';
+import { useDebouncedCallback } from 'use-debounce';
+import PropTypes from 'prop-types';
+import { getCurrencyFromPriceResponse } from '@woocommerce/price-format';
+>>>>>>> staging
 
 /**
  * Internal dependencies
@@ -149,7 +157,11 @@ const PriceFilterBlock = ( { attributes, isEditor = false } ) => {
 	const TagName = `h${ attributes.headingLevel }`;
 
 	return (
+<<<<<<< HEAD
 		<Fragment>
+=======
+		<>
+>>>>>>> staging
 			{ ! isEditor && attributes.heading && (
 				<TagName>{ attributes.heading }</TagName>
 			) }
@@ -167,7 +179,11 @@ const PriceFilterBlock = ( { attributes, isEditor = false } ) => {
 					isLoading={ isLoading }
 				/>
 			</div>
+<<<<<<< HEAD
 		</Fragment>
+=======
+		</>
+>>>>>>> staging
 	);
 };
 

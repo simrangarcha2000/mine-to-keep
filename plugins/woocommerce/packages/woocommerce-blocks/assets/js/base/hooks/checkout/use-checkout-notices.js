@@ -1,10 +1,21 @@
 /**
  * External dependencies
  */
+<<<<<<< HEAD
 import { useEmitResponse } from '@woocommerce/base-hooks';
 import { useSelect } from '@wordpress/data';
 
 /**
+=======
+import { useSelect } from '@wordpress/data';
+
+/**
+ * Internal dependencies
+ */
+import { useEmitResponse } from './use-emit-response';
+
+/**
+>>>>>>> staging
  * @typedef {import('@woocommerce/type-defs/contexts').StoreNoticeObject} StoreNoticeObject
  * @typedef {import('@woocommerce/type-defs/hooks').CheckoutNotices} CheckoutNotices
  */

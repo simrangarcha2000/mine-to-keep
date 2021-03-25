@@ -818,7 +818,11 @@ class WC_Shop_Customizer {
 				'description'     => __( 'Optionally add some text about your store privacy policy to show during checkout.', 'woocommerce' ),
 				'section'         => 'woocommerce_checkout',
 				'settings'        => 'woocommerce_checkout_privacy_policy_text',
+<<<<<<< HEAD
 				'active_callback' => 'wc_privacy_policy_page_id',
+=======
+				'active_callback' => array( $this, 'has_privacy_policy_page_id' ),
+>>>>>>> staging
 				'type'            => 'textarea',
 			)
 		);
@@ -830,7 +834,11 @@ class WC_Shop_Customizer {
 				'description'     => __( 'Optionally add some text for the terms checkbox that customers must accept.', 'woocommerce' ),
 				'section'         => 'woocommerce_checkout',
 				'settings'        => 'woocommerce_checkout_terms_and_conditions_checkbox_text',
+<<<<<<< HEAD
 				'active_callback' => 'wc_terms_and_conditions_page_id',
+=======
+				'active_callback' => array( $this, 'has_terms_and_conditions_page_id' ),
+>>>>>>> staging
 				'type'            => 'text',
 			)
 		);
@@ -865,6 +873,27 @@ class WC_Shop_Customizer {
 		$options = array( 'hidden', 'optional', 'required' );
 		return in_array( $value, $options, true ) ? $value : '';
 	}
+<<<<<<< HEAD
+=======
+
+	/**
+	 * Whether or not a page has been chose for the privacy policy.
+	 *
+	 * @return bool
+	 */
+	public function has_privacy_policy_page_id() {
+		return wc_privacy_policy_page_id() > 0;
+	}
+
+	/**
+	 * Whether or not a page has been chose for the terms and conditions.
+	 *
+	 * @return bool
+	 */
+	public function has_terms_and_conditions_page_id() {
+		return wc_terms_and_conditions_page_id() > 0;
+	}
+>>>>>>> staging
 }
 
 new WC_Shop_Customizer();

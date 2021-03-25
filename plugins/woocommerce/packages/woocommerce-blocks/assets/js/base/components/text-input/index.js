@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /**
  * External dependencies
  */
@@ -111,3 +112,7 @@ TextInput.propTypes = {
 export default TextInput;
 export { default as ValidatedTextInput } from './validated';
 export { default as DebouncedValidatedTextInput } from './debounced-validated';
+=======
+export { default as TextInput } from './text-input';
+export { default as ValidatedTextInput } from './validated-text-input';
+>>>>>>> staging

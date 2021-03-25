@@ -4,7 +4,10 @@
 import { __ } from '@wordpress/i18n';
 import { InspectorControls } from '@wordpress/block-editor';
 import { PanelBody, ToggleControl } from '@wordpress/components';
+<<<<<<< HEAD
 import { Fragment } from '@wordpress/element';
+=======
+>>>>>>> staging
 import PropTypes from 'prop-types';
 import { Icon, discussion } from '@woocommerce/icons';
 
@@ -62,7 +65,11 @@ const AllReviewsEditor = ( { attributes, setAttributes } ) => {
 	};
 
 	return (
+<<<<<<< HEAD
 		<Fragment>
+=======
+		<>
+>>>>>>> staging
 			{ getInspectorControls() }
 			<EditorContainerBlock
 				attributes={ attributes }
@@ -75,7 +82,11 @@ const AllReviewsEditor = ( { attributes, setAttributes } ) => {
 				name={ __( 'All Reviews', 'woocommerce' ) }
 				noReviewsPlaceholder={ NoReviewsPlaceholder }
 			/>
+<<<<<<< HEAD
 		</Fragment>
+=======
+		</>
+>>>>>>> staging
 	);
 };
 

@@ -7,7 +7,11 @@ import {
 	useContext,
 	useState,
 } from '@wordpress/element';
+<<<<<<< HEAD
 import { omit, pickBy } from 'lodash';
+=======
+import { pickBy } from 'lodash';
+>>>>>>> staging
 import isShallowEqual from '@wordpress/is-shallow-equal';
 
 /**
@@ -85,6 +89,7 @@ export const ValidationContextProvider = ( { children } ) => {
 	 * @param {string} property  The name of the property to clear if exists in
 	 *                           validation error state.
 	 */
+<<<<<<< HEAD
 	const clearValidationError = useCallback( ( property ) => {
 		updateValidationErrors( ( prevErrors ) => {
 			if ( ! prevErrors[ property ] ) {
@@ -93,6 +98,37 @@ export const ValidationContextProvider = ( { children } ) => {
 			return omit( prevErrors, [ property ] );
 		} );
 	}, [] );
+=======
+	const clearValidationError = useCallback(
+		/**
+		 * Callback that is memoized.
+		 *
+		 * @param {string} property
+		 */
+		( property ) => {
+			updateValidationErrors(
+				/**
+				 * Callback for validation Errors handling.
+				 *
+				 * @param {Object} prevErrors
+				 */
+				( prevErrors ) => {
+					if ( ! prevErrors[ property ] ) {
+						return prevErrors;
+					}
+
+					const {
+						// eslint-disable-next-line no-unused-vars -- this is intentional to omit the dynamic property from the returned object.
+						[ property ]: clearedProperty,
+						...newErrors
+					} = prevErrors;
+					return newErrors;
+				}
+			);
+		},
+		[]
+	);
+>>>>>>> staging
 
 	/**
 	 * Clears the entire validation error state.

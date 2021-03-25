@@ -39,11 +39,14 @@ const CartLineItemsTable = ( { lineItems = [], isLoading = false } ) => {
 							{ __( 'Details', 'woocommerce' ) }
 						</span>
 					</th>
+<<<<<<< HEAD
 					<th className="wc-block-cart-items__header-quantity">
 						<span>
 							{ __( 'Quantity', 'woocommerce' ) }
 						</span>
 					</th>
+=======
+>>>>>>> staging
 					<th className="wc-block-cart-items__header-total">
 						<span>
 							{ __( 'Total', 'woocommerce' ) }

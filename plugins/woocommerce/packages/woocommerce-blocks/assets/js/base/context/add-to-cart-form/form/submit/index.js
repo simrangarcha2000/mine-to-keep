@@ -3,16 +3,28 @@
  */
 import { __ } from '@wordpress/i18n';
 import triggerFetch from '@wordpress/api-fetch';
+<<<<<<< HEAD
 import {
 	useAddToCartFormContext,
 	useValidationContext,
 } from '@woocommerce/base-context';
+=======
+>>>>>>> staging
 import { useEffect, useCallback, useState } from '@wordpress/element';
 import { useStoreCart, useStoreNotices } from '@woocommerce/base-hooks';
 import { decodeEntities } from '@wordpress/html-entities';
 import { triggerFragmentRefresh } from '@woocommerce/base-utils';
 
 /**
+<<<<<<< HEAD
+=======
+ * Internal dependencies
+ */
+import { useAddToCartFormContext } from '../../form-state';
+import { useValidationContext } from '../../../shared';
+
+/**
+>>>>>>> staging
  * FormSubmit.
  *
  * Subscribes to add to cart form context and triggers processing via the API.

@@ -250,7 +250,11 @@
 		var shifted    = false;
 		var hasFocus   = false;
 
+<<<<<<< HEAD
 		$( document.body ).bind( 'keyup keydown', function( e ) {
+=======
+		$( document.body ).on( 'keyup keydown', function( e ) {
+>>>>>>> staging
 			shifted    = e.shiftKey;
 			controlled = e.ctrlKey || e.metaKey;
 		});
@@ -315,7 +319,11 @@
 			} else {
 				$( this ).closest( 'tr' ).next( 'tr' ).show();
 			}
+<<<<<<< HEAD
 		}).change();
+=======
+		}).trigger( 'change' );
+>>>>>>> staging
 
 		// Hidden options
 		$( '.hide_options_if_checked' ).each( function() {
@@ -331,7 +339,11 @@
 						.nextUntil( '.hide_options_if_checked, .show_options_if_checked', '.hidden_option' )
 						.show();
 				}
+<<<<<<< HEAD
 			}).change();
+=======
+			}).trigger( 'change' );
+>>>>>>> staging
 		});
 
 		$( '.show_options_if_checked' ).each( function() {
@@ -347,7 +359,11 @@
 						.nextUntil( '.hide_options_if_checked, .show_options_if_checked', '.hidden_option' )
 						.hide();
 				}
+<<<<<<< HEAD
 			}).change();
+=======
+			}).trigger( 'change' );
+>>>>>>> staging
 		});
 
 		// Reviews.
@@ -357,7 +373,11 @@
 			} else {
 				$( '#woocommerce_enable_review_rating' ).closest( 'tr' ).hide();
 			}
+<<<<<<< HEAD
 		}).change();
+=======
+		}).trigger( 'change' );
+>>>>>>> staging
 
 		// Attribute term table
 		$( 'table.attributes-table tbody tr:nth-child(odd)' ).addClass( 'alternate' );

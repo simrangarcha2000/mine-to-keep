@@ -2,7 +2,10 @@
  * External dependencies
  */
 import { __ } from '@wordpress/i18n';
+<<<<<<< HEAD
 import { Fragment } from '@wordpress/element';
+=======
+>>>>>>> staging
 import { InspectorControls } from '@wordpress/block-editor';
 import {
 	Placeholder,
@@ -134,7 +137,11 @@ export default function ( { attributes, setAttributes } ) {
 			</p>
 			<Button
 				className="wc-block-price-slider__add-product-button"
+<<<<<<< HEAD
 				isDefault
+=======
+				isSecondary
+>>>>>>> staging
 				href={ getAdminLink( 'post-new.php?post_type=product' ) }
 			>
 				{ __( 'Add new product', 'woocommerce' ) +
@@ -152,7 +159,11 @@ export default function ( { attributes, setAttributes } ) {
 	);
 
 	return (
+<<<<<<< HEAD
 		<Fragment>
+=======
+		<>
+>>>>>>> staging
 			{ PRODUCT_COUNT === 0 ? (
 				noProductsPlaceholder()
 			) : (
@@ -170,6 +181,10 @@ export default function ( { attributes, setAttributes } ) {
 					</Disabled>
 				</div>
 			) }
+<<<<<<< HEAD
 		</Fragment>
+=======
+		</>
+>>>>>>> staging
 	);
 }

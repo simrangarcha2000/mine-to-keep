@@ -2,7 +2,11 @@
  * External dependencies
  */
 import { __, sprintf } from '@wordpress/i18n';
+<<<<<<< HEAD
 import { formatPrice } from '@woocommerce/base-utils';
+=======
+import { formatPrice } from '@woocommerce/price-format';
+>>>>>>> staging
 import { RemovableChip } from '@woocommerce/base-components/chip';
 
 /**

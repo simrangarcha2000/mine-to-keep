@@ -81,6 +81,10 @@ abstract class AbstractRoute implements RouteInterface {
 		}
 
 		$response->header( 'X-WC-Store-API-Nonce', wp_create_nonce( 'wc_store_api' ) );
+<<<<<<< HEAD
+=======
+		$response->header( 'X-WC-Store-API-Nonce-Timestamp', time() );
+>>>>>>> staging
 		$response->header( 'X-WC-Store-API-User', get_current_user_id() );
 		return $response;
 	}

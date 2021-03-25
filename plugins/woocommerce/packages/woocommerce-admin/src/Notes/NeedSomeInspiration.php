@@ -29,8 +29,13 @@ class NeedSomeInspiration {
 	 * @return Note
 	 */
 	public static function get_note() {
+<<<<<<< HEAD
 		// We want to show the note after five days.
 		if ( ! self::wc_admin_active_for( 5 * DAY_IN_SECONDS ) ) {
+=======
+		// We want to show the note after 4 days.
+		if ( ! self::wc_admin_active_for( 4 * DAY_IN_SECONDS ) ) {
+>>>>>>> staging
 			return;
 		}
 
@@ -56,8 +61,13 @@ class NeedSomeInspiration {
 		}
 
 		$note = new Note();
+<<<<<<< HEAD
 		$note->set_title( __( 'Do you need some inspiration?', 'woocommerce' ) );
 		$note->set_content( __( 'Check some of our favorite customer stories from entrepreneurs, agencies, and developers in our global community.', 'woocommerce' ) );
+=======
+		$note->set_title( __( 'Browse our success stories', 'woocommerce' ) );
+		$note->set_content( __( 'Learn more about how other entrepreneurs used WooCommerce to build successful businesses.', 'woocommerce' ) );
+>>>>>>> staging
 		$note->set_type( Note::E_WC_ADMIN_NOTE_INFORMATIONAL );
 		$note->set_name( self::NOTE_NAME );
 		$note->set_content_data( (object) array() );

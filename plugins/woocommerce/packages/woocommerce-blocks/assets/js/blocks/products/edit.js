@@ -4,11 +4,14 @@
 import { __ } from '@wordpress/i18n';
 import { ToggleControl, SelectControl } from '@wordpress/components';
 
+<<<<<<< HEAD
 /**
  * Internal dependencies
  */
 import './editor.scss';
 
+=======
+>>>>>>> staging
 export const getSharedContentControls = ( attributes, setAttributes ) => {
 	const { contentVisibility } = attributes;
 	return (

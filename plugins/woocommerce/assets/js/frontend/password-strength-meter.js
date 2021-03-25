@@ -17,7 +17,11 @@
 					'form.edit-account #password_1, form.lost_reset_password #password_1',
 					this.strengthMeter
 				);
+<<<<<<< HEAD
 			$( 'form.checkout #createaccount' ).change();
+=======
+			$( 'form.checkout #createaccount' ).trigger( 'change' );
+>>>>>>> staging
 		},
 
 		/**

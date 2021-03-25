@@ -15,7 +15,11 @@ class CartSelectShippingRate extends AbstractCartRoute {
 	 * @return string
 	 */
 	public function get_path() {
+<<<<<<< HEAD
 		return '/cart/select-shipping-rate/(?P<package_id>[\d]+)';
+=======
+		return '/cart/select-shipping-rate';
+>>>>>>> staging
 	}
 
 	/**
@@ -32,7 +36,11 @@ class CartSelectShippingRate extends AbstractCartRoute {
 				'args'                => [
 					'package_id' => array(
 						'description' => __( 'The ID of the package being shipped.', 'woocommerce' ),
+<<<<<<< HEAD
 						'type'        => 'integer',
+=======
+						'type'        => [ 'integer', 'string' ],
+>>>>>>> staging
 						'required'    => true,
 					),
 					'rate_id'    => [
@@ -58,12 +66,17 @@ class CartSelectShippingRate extends AbstractCartRoute {
 			throw new RouteException( 'woocommerce_rest_shipping_disabled', __( 'Shipping is disabled.', 'woocommerce' ), 404 );
 		}
 
+<<<<<<< HEAD
 		if ( ! isset( $request['package_id'] ) || ! is_numeric( $request['package_id'] ) ) {
+=======
+		if ( ! isset( $request['package_id'] ) ) {
+>>>>>>> staging
 			throw new RouteException( 'woocommerce_rest_cart_missing_package_id', __( 'Invalid Package ID.', 'woocommerce' ), 400 );
 		}
 
 		$controller = new CartController();
 		$cart       = $controller->get_cart_instance();
+<<<<<<< HEAD
 
 		if ( $cart->needs_shipping() ) {
 			$package_id = absint( $request['package_id'] );
@@ -75,6 +88,17 @@ class CartSelectShippingRate extends AbstractCartRoute {
 				throw new RouteException( $e->getErrorCode(), $e->getMessage(), $e->getCode() );
 			}
 		}
+=======
+		$package_id = wc_clean( wp_unslash( $request['package_id'] ) );
+		$rate_id    = wc_clean( wp_unslash( $request['rate_id'] ) );
+
+		try {
+			$controller->select_shipping_rate( $package_id, $rate_id );
+		} catch ( \WC_Rest_Exception $e ) {
+			throw new RouteException( $e->getErrorCode(), $e->getMessage(), $e->getCode() );
+		}
+
+>>>>>>> staging
 		$cart->calculate_shipping();
 		$cart->calculate_totals();
 

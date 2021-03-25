@@ -1,4 +1,5 @@
 /**
+<<<<<<< HEAD
  * External dependencies
  */
 import { apiFetch, select } from '@wordpress/data-controls';
@@ -8,6 +9,11 @@ import { apiFetch, select } from '@wordpress/data-controls';
  */
 import { ACTION_TYPES as types } from './action-types';
 import { STORE_KEY as SCHEMA_STORE_KEY } from '../schema/constants';
+=======
+ * Internal dependencies
+ */
+import { ACTION_TYPES as types } from './action-types';
+>>>>>>> staging
 
 let Headers = window.Headers || null;
 Headers = Headers
@@ -62,6 +68,7 @@ export function receiveCollection(
 	};
 }
 
+<<<<<<< HEAD
 export function* __experimentalPersistItemToCollection(
 	namespace,
 	resourceName,
@@ -106,6 +113,8 @@ export function* __experimentalPersistItemToCollection(
 	}
 }
 
+=======
+>>>>>>> staging
 export function receiveCollectionError(
 	namespace,
 	resourceName,

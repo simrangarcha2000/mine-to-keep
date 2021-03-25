@@ -3,7 +3,10 @@
  */
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
+<<<<<<< HEAD
 import { decodeEntities } from '@wordpress/html-entities';
+=======
+>>>>>>> staging
 import {
 	useInnerBlockLayoutContext,
 	useProductDataContext,
@@ -12,6 +15,10 @@ import { getColorClassName, getFontSizeClass } from '@wordpress/block-editor';
 import { isFeaturePluginBuild } from '@woocommerce/block-settings';
 import { gatedStyledText } from '@woocommerce/atomic-utils';
 import { withProductDataContext } from '@woocommerce/shared-hocs';
+<<<<<<< HEAD
+=======
+import ProductName from '@woocommerce/base-components/product-name';
+>>>>>>> staging
 
 /**
  * Internal dependencies
@@ -79,8 +86,11 @@ export const Block = ( {
 		);
 	}
 
+<<<<<<< HEAD
 	const productName = decodeEntities( product.name );
 
+=======
+>>>>>>> staging
 	return (
 		// @ts-ignore
 		<TagName
@@ -94,6 +104,7 @@ export const Block = ( {
 				}
 			) }
 		>
+<<<<<<< HEAD
 			{ productLink ? (
 				<a
 					href={ product.permalink }
@@ -121,6 +132,21 @@ export const Block = ( {
 					{ productName }
 				</span>
 			) }
+=======
+			<ProductName
+				className={ classnames( {
+					[ titleClasses ]: isFeaturePluginBuild(),
+				} ) }
+				disabled={ ! productLink }
+				name={ product.name }
+				permalink={ product.permalink }
+				rel={ productLink ? 'nofollow' : null }
+				style={ gatedStyledText( {
+					color: customColor,
+					fontSize: customFontSize,
+				} ) }
+			/>
+>>>>>>> staging
 		</TagName>
 	);
 };

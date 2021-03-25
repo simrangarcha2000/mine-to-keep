@@ -49,6 +49,12 @@ const bankTransferPaymentMethod = {
 	edit: <Content />,
 	canMakePayment: () => true,
 	ariaLabel: label,
+<<<<<<< HEAD
+=======
+	supports: {
+		features: settings?.supports ?? [],
+	},
+>>>>>>> staging
 };
 
 registerPaymentMethod( bankTransferPaymentMethod );

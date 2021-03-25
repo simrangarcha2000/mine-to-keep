@@ -156,6 +156,10 @@ export const previewCart = {
 			},
 		},
 	],
+<<<<<<< HEAD
+=======
+	fees: [],
+>>>>>>> staging
 	items_count: 3,
 	items_weight: 0,
 	needs_payment: true,

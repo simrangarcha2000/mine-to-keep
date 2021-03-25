@@ -2,7 +2,10 @@
  * External dependencies
  */
 import { __ } from '@wordpress/i18n';
+<<<<<<< HEAD
 import { Fragment } from '@wordpress/element';
+=======
+>>>>>>> staging
 import PropTypes from 'prop-types';
 import { Icon, notice } from '@woocommerce/icons';
 import classNames from 'classnames';
@@ -25,6 +28,7 @@ const ErrorPlaceholder = ( { className, error, isLoading, onRetry } ) => (
 	>
 		<ErrorMessage error={ error } />
 		{ onRetry && (
+<<<<<<< HEAD
 			<Fragment>
 				{ isLoading ? (
 					<Spinner />
@@ -34,6 +38,17 @@ const ErrorPlaceholder = ( { className, error, isLoading, onRetry } ) => (
 					</Button>
 				) }
 			</Fragment>
+=======
+			<>
+				{ isLoading ? (
+					<Spinner />
+				) : (
+					<Button isSecondary onClick={ onRetry }>
+						{ __( 'Retry', 'woocommerce' ) }
+					</Button>
+				) }
+			</>
+>>>>>>> staging
 		) }
 	</Placeholder>
 );

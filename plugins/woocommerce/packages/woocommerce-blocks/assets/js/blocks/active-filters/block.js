@@ -3,7 +3,11 @@
  */
 import { __ } from '@wordpress/i18n';
 import { useQueryStateByKey } from '@woocommerce/base-hooks';
+<<<<<<< HEAD
 import { useMemo, Fragment } from '@wordpress/element';
+=======
+import { useMemo } from '@wordpress/element';
+>>>>>>> staging
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import Label from '@woocommerce/base-components/label';
@@ -91,14 +95,22 @@ const ActiveFiltersBlock = ( {
 	} );
 
 	return (
+<<<<<<< HEAD
 		<Fragment>
+=======
+		<>
+>>>>>>> staging
 			{ ! isEditor && blockAttributes.heading && (
 				<TagName>{ blockAttributes.heading }</TagName>
 			) }
 			<div className="wc-block-active-filters">
 				<ul className={ listClasses }>
 					{ isEditor ? (
+<<<<<<< HEAD
 						<Fragment>
+=======
+						<>
+>>>>>>> staging
 							{ renderRemovableListItem( {
 								type: __(
 									'Size',
@@ -121,12 +133,21 @@ const ActiveFiltersBlock = ( {
 								),
 								displayStyle: blockAttributes.displayStyle,
 							} ) }
+<<<<<<< HEAD
 						</Fragment>
 					) : (
 						<Fragment>
 							{ activePriceFilters }
 							{ activeAttributeFilters }
 						</Fragment>
+=======
+						</>
+					) : (
+						<>
+							{ activePriceFilters }
+							{ activeAttributeFilters }
+						</>
+>>>>>>> staging
 					) }
 				</ul>
 				<button
@@ -149,7 +170,11 @@ const ActiveFiltersBlock = ( {
 					/>
 				</button>
 			</div>
+<<<<<<< HEAD
 		</Fragment>
+=======
+		</>
+>>>>>>> staging
 	);
 };
 

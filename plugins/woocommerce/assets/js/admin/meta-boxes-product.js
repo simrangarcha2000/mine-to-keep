@@ -20,7 +20,11 @@ jQuery( function( $ ) {
 	});
 
 	// Prevent enter submitting post form.
+<<<<<<< HEAD
 	$( '#upsell_product_data' ).bind( 'keypress', function( e ) {
+=======
+	$( '#upsell_product_data' ).on( 'keypress', function( e ) {
+>>>>>>> staging
 		if ( e.keyCode === 13 ) {
 			return false;
 		}
@@ -100,7 +104,11 @@ jQuery( function( $ ) {
 		var select_val = $( this ).val();
 
 		if ( 'variable' === select_val ) {
+<<<<<<< HEAD
 			$( 'input#_manage_stock' ).change();
+=======
+			$( 'input#_manage_stock' ).trigger( 'change' );
+>>>>>>> staging
 			$( 'input#_downloadable' ).prop( 'checked', false );
 			$( 'input#_virtual' ).removeAttr( 'checked' );
 		} else if ( 'grouped' === select_val ) {
@@ -113,11 +121,19 @@ jQuery( function( $ ) {
 
 		show_and_hide_panels();
 
+<<<<<<< HEAD
 		$( 'ul.wc-tabs li:visible' ).eq( 0 ).find( 'a' ).click();
 
 		$( document.body ).trigger( 'woocommerce-product-type-change', select_val, $( this ) );
 
 	}).change();
+=======
+		$( 'ul.wc-tabs li:visible' ).eq( 0 ).find( 'a' ).trigger( 'click' );
+
+		$( document.body ).trigger( 'woocommerce-product-type-change', select_val, $( this ) );
+
+	}).trigger( 'change' );
+>>>>>>> staging
 
 	$( 'input#_downloadable, input#_virtual' ).change( function() {
 		show_and_hide_panels();
@@ -165,7 +181,11 @@ jQuery( function( $ ) {
 
 		$( '.hide_if_' + product_type ).hide();
 
+<<<<<<< HEAD
 		$( 'input#_manage_stock' ).change();
+=======
+		$( 'input#_manage_stock' ).trigger( 'change' );
+>>>>>>> staging
 
 		// Hide empty panels/tabs after display.
 		$( '.woocommerce_options_panel' ).each( function() {
@@ -250,8 +270,13 @@ jQuery( function( $ ) {
 			$( 'p.stock_status_field:not( .hide_if_' + product_type + ' )' ).show();
 		}
 
+<<<<<<< HEAD
 		$( 'input.variable_manage_stock' ).change();
 	}).change();
+=======
+		$( 'input.variable_manage_stock' ).trigger( 'change' );
+	}).trigger( 'change' );
+>>>>>>> staging
 
 	// Date picker fields.
 	function date_picker_select( datepicker ) {
@@ -260,7 +285,11 @@ jQuery( function( $ ) {
 			date           = $( datepicker ).datepicker( 'getDate' );
 
 		$( otherDateField ).datepicker( 'option', option, date );
+<<<<<<< HEAD
 		$( datepicker ).change();
+=======
+		$( datepicker ).trigger( 'change' );
+>>>>>>> staging
 	}
 
 	$( '.sale_price_dates_fields' ).each( function() {
@@ -335,7 +364,11 @@ jQuery( function( $ ) {
 
 			attribute_row_indexes();
 
+<<<<<<< HEAD
 			$attributes.find( '.woocommerce_attribute' ).last().find( 'h3' ).click();
+=======
+			$attributes.find( '.woocommerce_attribute' ).last().find( 'h3' ).trigger( 'click' );
+>>>>>>> staging
 
 			$wrapper.unblock();
 
@@ -356,13 +389,21 @@ jQuery( function( $ ) {
 
 	$( '.product_attributes' ).on( 'click', 'button.select_all_attributes', function() {
 		$( this ).closest( 'td' ).find( 'select option' ).prop( 'selected', 'selected' );
+<<<<<<< HEAD
 		$( this ).closest( 'td' ).find( 'select' ).change();
+=======
+		$( this ).closest( 'td' ).find( 'select' ).trigger( 'change' );
+>>>>>>> staging
 		return false;
 	});
 
 	$( '.product_attributes' ).on( 'click', 'button.select_no_attributes', function() {
 		$( this ).closest( 'td' ).find( 'select option' ).removeAttr( 'selected' );
+<<<<<<< HEAD
 		$( this ).closest( 'td' ).find( 'select' ).change();
+=======
+		$( this ).closest( 'td' ).find( 'select' ).trigger( 'change' );
+>>>>>>> staging
 		return false;
 	});
 
@@ -436,7 +477,11 @@ jQuery( function( $ ) {
 					// Success.
 					$wrapper.find( 'select.attribute_values' )
 						.append( '<option value="' + response.term_id + '" selected="selected">' + response.name + '</option>' );
+<<<<<<< HEAD
 					$wrapper.find( 'select.attribute_values' ).change();
+=======
+					$wrapper.find( 'select.attribute_values' ).trigger( 'change' );
+>>>>>>> staging
 				}
 
 				$( '.product_attributes' ).unblock();
@@ -556,7 +601,11 @@ jQuery( function( $ ) {
 				}
 			});
 
+<<<<<<< HEAD
 			file_path_field.val( file_path ).change();
+=======
+			file_path_field.val( file_path ).trigger( 'change' );
+>>>>>>> staging
 		});
 
 		// Set post to 0 and set our custom type.

@@ -8,6 +8,10 @@
 namespace Automattic\WooCommerce\Admin\Features\Navigation;
 
 use Automattic\WooCommerce\Admin\Loader;
+<<<<<<< HEAD
+=======
+use Automattic\WooCommerce\Admin\Survey;
+>>>>>>> staging
 use Automattic\WooCommerce\Admin\Features\Navigation\Screen;
 use Automattic\WooCommerce\Admin\Features\Navigation\Menu;
 use Automattic\WooCommerce\Admin\Features\Navigation\CoreMenu;
@@ -33,7 +37,10 @@ class Init {
 
 		if ( Loader::is_feature_enabled( 'navigation' ) ) {
 			add_action( 'in_admin_header', array( __CLASS__, 'embed_navigation' ) );
+<<<<<<< HEAD
 			add_action( 'admin_enqueue_scripts', array( $this, 'maybe_enqueue_scripts' ) );
+=======
+>>>>>>> staging
 
 			Menu::instance()->init();
 			CoreMenu::instance()->init();
@@ -146,6 +153,7 @@ class Init {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Enqueue scripts on non-WooCommerce pages.
 	 */
 	public function maybe_enqueue_scripts() {
@@ -164,6 +172,8 @@ class Init {
 	}
 
 	/**
+=======
+>>>>>>> staging
 	 * Reloads the page when the option is toggled to make sure all nav features are loaded.
 	 *
 	 * @param string $old_value Old value.
@@ -208,6 +218,17 @@ class Init {
 			true
 		);
 
+<<<<<<< HEAD
+=======
+		wp_localize_script(
+			'wc-admin-navigation-opt-out',
+			'surveyData',
+			array(
+				'url' => Survey::get_url( '/new-navigation-opt-out' ),
+			)
+		);
+
+>>>>>>> staging
 		delete_option( 'woocommerce_navigation_show_opt_out' );
 	}
 }

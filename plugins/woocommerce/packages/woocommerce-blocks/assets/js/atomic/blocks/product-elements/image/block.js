@@ -2,7 +2,12 @@
  * External dependencies
  */
 import PropTypes from 'prop-types';
+<<<<<<< HEAD
 import { useState } from '@wordpress/element';
+=======
+import { useState, Fragment } from '@wordpress/element';
+import { __, sprintf } from '@wordpress/i18n';
+>>>>>>> staging
 import classnames from 'classnames';
 import { PLACEHOLDER_IMG_SRC } from '@woocommerce/block-settings';
 import {
@@ -10,7 +15,10 @@ import {
 	useProductDataContext,
 } from '@woocommerce/shared-context';
 import { withProductDataContext } from '@woocommerce/shared-hocs';
+<<<<<<< HEAD
 import { isEmpty } from 'lodash';
+=======
+>>>>>>> staging
 
 /**
  * Internal dependencies
@@ -29,10 +37,17 @@ import './style.scss';
  * @param {string} [props.saleBadgeAlign] How should the sale badge be aligned if displayed.
  * @return {*} The component.
  */
+<<<<<<< HEAD
 const Block = ( {
 	className,
 	imageSizing = 'full-size',
 	productLink = true,
+=======
+export const Block = ( {
+	className,
+	imageSizing = 'full-size',
+	productLink: showProductLink = true,
+>>>>>>> staging
 	showSaleBadge,
 	saleBadgeAlign = 'right',
 } ) => {
@@ -56,8 +71,24 @@ const Block = ( {
 			</div>
 		);
 	}
+<<<<<<< HEAD
 
 	const image = ! isEmpty( product.images ) ? product.images[ 0 ] : null;
+=======
+	const hasProductImages = !! product.images.length;
+	const image = hasProductImages ? product.images[ 0 ] : null;
+	const ParentComponent = showProductLink ? 'a' : Fragment;
+	const anchorLabel = sprintf(
+		/* Translators: %s is referring to the product name */
+		__( 'Link to %s', 'woocommerce' ),
+		product.name
+	);
+	const anchorProps = {
+		href: product.permalink,
+		rel: 'nofollow',
+		...( ! hasProductImages && { 'aria-label': anchorLabel } ),
+	};
+>>>>>>> staging
 
 	return (
 		<div
@@ -69,6 +100,7 @@ const Block = ( {
 				}
 			) }
 		>
+<<<<<<< HEAD
 			{ productLink ? (
 				<a href={ product.permalink } rel="nofollow">
 					{ !! showSaleBadge && (
@@ -100,6 +132,23 @@ const Block = ( {
 					/>
 				</>
 			) }
+=======
+			<ParentComponent { ...( showProductLink && anchorProps ) }>
+				{ !! showSaleBadge && (
+					<ProductSaleBadge
+						align={ saleBadgeAlign }
+						product={ product }
+					/>
+				) }
+				<Image
+					fallbackAlt={ product.name }
+					image={ image }
+					onLoad={ () => setImageLoaded( true ) }
+					loaded={ imageLoaded }
+					showFullSize={ imageSizing !== 'cropped' }
+				/>
+			</ParentComponent>
+>>>>>>> staging
 		</div>
 	);
 };
@@ -110,6 +159,7 @@ const ImagePlaceholder = () => {
 	);
 };
 
+<<<<<<< HEAD
 const Image = ( { image, onLoad, loaded, showFullSize } ) => {
 	const { thumbnail, src, srcset, sizes, alt } = image || {};
 
@@ -132,6 +182,24 @@ const Image = ( { image, onLoad, loaded, showFullSize } ) => {
 		<>
 			{ /* eslint-disable-next-line jsx-a11y/alt-text */ }
 			<img { ...imageProps } />
+=======
+const Image = ( { image, onLoad, loaded, showFullSize, fallbackAlt } ) => {
+	const { thumbnail, src, srcset, sizes, alt } = image || {};
+	const imageProps = {
+		alt: alt || fallbackAlt,
+		onLoad,
+		hidden: ! loaded,
+		src: thumbnail,
+		...( showFullSize && { src, srcSet: srcset, sizes } ),
+	};
+
+	return (
+		<>
+			{ imageProps.src && (
+				/* eslint-disable-next-line jsx-a11y/alt-text */
+				<img data-testid="product-image" { ...imageProps } />
+			) }
+>>>>>>> staging
 			{ ! loaded && <ImagePlaceholder /> }
 		</>
 	);
@@ -139,6 +207,10 @@ const Image = ( { image, onLoad, loaded, showFullSize } ) => {
 
 Block.propTypes = {
 	className: PropTypes.string,
+<<<<<<< HEAD
+=======
+	fallbackAlt: PropTypes.string,
+>>>>>>> staging
 	productLink: PropTypes.bool,
 	showSaleBadge: PropTypes.bool,
 	saleBadgeAlign: PropTypes.string,

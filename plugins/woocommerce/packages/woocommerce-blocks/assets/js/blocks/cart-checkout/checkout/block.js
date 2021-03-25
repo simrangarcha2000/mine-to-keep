@@ -27,7 +27,11 @@ import {
 	CHECKOUT_ALLOWS_GUEST,
 	CHECKOUT_ALLOWS_SIGNUP,
 } from '@woocommerce/block-settings';
+<<<<<<< HEAD
 import { compareWithWooVersion, getSetting } from '@woocommerce/settings';
+=======
+import { isWcVersion, getSetting } from '@woocommerce/settings';
+>>>>>>> staging
 
 /**
  * Internal dependencies
@@ -65,6 +69,10 @@ const Checkout = ( { attributes, scrollToTop } ) => {
 		cartItems,
 		cartTotals,
 		cartCoupons,
+<<<<<<< HEAD
+=======
+		cartFees,
+>>>>>>> staging
 		cartNeedsPayment,
 	} = useStoreCart();
 	const {
@@ -88,7 +96,11 @@ const Checkout = ( { attributes, scrollToTop } ) => {
 	// uses updated my-account/lost-password screen from 4.7+ for
 	// setting initial password.
 	const allowCreateAccount =
+<<<<<<< HEAD
 		attributes.allowCreateAccount && compareWithWooVersion( '4.7.0', '<=' );
+=======
+		attributes.allowCreateAccount && isWcVersion( '4.7.0', '>=' );
+>>>>>>> staging
 
 	useEffect( () => {
 		if ( hasErrorsToDisplay ) {
@@ -140,6 +152,10 @@ const Checkout = ( { attributes, scrollToTop } ) => {
 						allowCreateAccount={ allowCreateAccount }
 					/>
 					<div className="wc-block-checkout__actions">
+<<<<<<< HEAD
+=======
+						<PlaceOrderButton />
+>>>>>>> staging
 						{ attributes.showReturnToCart && (
 							<ReturnToCartButton
 								link={ getSetting(
@@ -148,7 +164,10 @@ const Checkout = ( { attributes, scrollToTop } ) => {
 								) }
 							/>
 						) }
+<<<<<<< HEAD
 						<PlaceOrderButton />
+=======
+>>>>>>> staging
 					</div>
 					{ attributes.showPolicyLinks && <Policies /> }
 				</Main>
@@ -157,6 +176,10 @@ const Checkout = ( { attributes, scrollToTop } ) => {
 						cartCoupons={ cartCoupons }
 						cartItems={ cartItems }
 						cartTotals={ cartTotals }
+<<<<<<< HEAD
+=======
+						cartFees={ cartFees }
+>>>>>>> staging
 					/>
 				</Sidebar>
 			</SidebarLayout>

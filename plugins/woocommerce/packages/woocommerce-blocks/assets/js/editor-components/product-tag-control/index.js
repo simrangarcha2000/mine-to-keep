@@ -2,7 +2,11 @@
  * External dependencies
  */
 import { __, _n, sprintf } from '@wordpress/i18n';
+<<<<<<< HEAD
 import { Component, Fragment } from '@wordpress/element';
+=======
+import { Component } from '@wordpress/element';
+>>>>>>> staging
 import { debounce, find } from 'lodash';
 import PropTypes from 'prop-types';
 import { SearchListControl, SearchListItem } from '@woocommerce/components';
@@ -124,7 +128,11 @@ class ProductTagControl extends Component {
 		};
 
 		return (
+<<<<<<< HEAD
 			<Fragment>
+=======
+			<>
+>>>>>>> staging
 				<SearchListControl
 					className="woocommerce-product-tags"
 					list={ list }
@@ -175,7 +183,11 @@ class ProductTagControl extends Component {
 						/>
 					</div>
 				) }
+<<<<<<< HEAD
 			</Fragment>
+=======
+			</>
+>>>>>>> staging
 		);
 	}
 }

@@ -5,7 +5,11 @@ import { __ } from '@wordpress/i18n';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { ButtonGroup, Button } from '@wordpress/components';
+<<<<<<< HEAD
 import { useState, Fragment } from '@wordpress/element';
+=======
+import { useState } from '@wordpress/element';
+>>>>>>> staging
 import { withInstanceId } from '@wordpress/compose';
 
 /**
@@ -26,7 +30,11 @@ const ViewSwitcher = ( {
 	const htmlId = 'wc-block-view-switch-control-' + instanceId;
 
 	return (
+<<<<<<< HEAD
 		<Fragment>
+=======
+		<>
+>>>>>>> staging
 			<div className={ classes }>
 				<label
 					htmlFor={ htmlId }
@@ -57,7 +65,11 @@ const ViewSwitcher = ( {
 				</ButtonGroup>
 			</div>
 			{ render( currentView ) }
+<<<<<<< HEAD
 		</Fragment>
+=======
+		</>
+>>>>>>> staging
 	);
 };
 

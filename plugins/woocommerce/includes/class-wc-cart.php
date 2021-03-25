@@ -210,7 +210,11 @@ class WC_Cart extends WC_Legacy_Cart {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Get subtotal.
+=======
+	 * Get subtotal_tax.
+>>>>>>> staging
 	 *
 	 * @since 3.2.0
 	 * @return float

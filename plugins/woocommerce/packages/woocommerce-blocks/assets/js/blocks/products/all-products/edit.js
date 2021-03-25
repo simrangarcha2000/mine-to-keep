@@ -14,8 +14,12 @@ import {
 	withSpokenMessages,
 	Placeholder,
 	Button,
+<<<<<<< HEAD
 	IconButton,
 	Toolbar,
+=======
+	ToolbarGroup,
+>>>>>>> staging
 	Disabled,
 	Tip,
 } from '@wordpress/components';
@@ -46,6 +50,10 @@ import {
 } from '../base-utils';
 import { getSharedContentControls, getSharedListControls } from '../edit';
 import Block from './block';
+<<<<<<< HEAD
+=======
+import './editor.scss';
+>>>>>>> staging
 
 /**
  * Component to handle edit mode of "All Products".
@@ -139,7 +147,11 @@ class Editor extends Component {
 
 		return (
 			<BlockControls>
+<<<<<<< HEAD
 				<Toolbar
+=======
+				<ToolbarGroup
+>>>>>>> staging
 					controls={ [
 						{
 							icon: 'edit',
@@ -235,7 +247,11 @@ class Editor extends Component {
 						>
 							{ __( 'Cancel', 'woocommerce' ) }
 						</Button>
+<<<<<<< HEAD
 						<IconButton
+=======
+						<Button
+>>>>>>> staging
 							className="wc-block-all-products__reset-button"
 							icon={ <Icon srcElement={ grid } /> }
 							label={ __(
@@ -248,7 +264,11 @@ class Editor extends Component {
 								'Reset Layout',
 								'woocommerce'
 							) }
+<<<<<<< HEAD
 						</IconButton>
+=======
+						</Button>
+>>>>>>> staging
 					</div>
 				</div>
 			</Placeholder>

@@ -45,4 +45,14 @@ interface PaymentMethodTypeInterface {
 	 * @return array
 	 */
 	public function get_payment_method_data();
+<<<<<<< HEAD
+=======
+
+	/**
+	 * Get array of supported features.
+	 *
+	 * @return string[]
+	 */
+	public function get_supported_features();
+>>>>>>> staging
 }

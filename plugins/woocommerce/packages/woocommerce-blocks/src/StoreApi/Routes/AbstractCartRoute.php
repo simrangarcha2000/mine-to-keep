@@ -17,11 +17,16 @@ abstract class AbstractCartRoute extends AbstractRoute {
 	 */
 	public function get_response( \WP_REST_Request $request ) {
 		$this->maybe_load_cart();
+<<<<<<< HEAD
 		$this->maybe_recalculate_totals();
+=======
+		$this->calculate_totals();
+>>>>>>> staging
 		return parent::get_response( $request );
 	}
 
 	/**
+<<<<<<< HEAD
 	 * If shipping/tax data has changed on the server since last calculation, trigger a recalculation now.
 	 *
 	 * @return void
@@ -42,6 +47,15 @@ abstract class AbstractCartRoute extends AbstractRoute {
 			wc()->cart->calculate_shipping();
 			wc()->cart->calculate_totals();
 		}
+=======
+	 * Ensures the cart totals are calculated before an API response is generated.
+	 */
+	protected function calculate_totals() {
+		wc()->cart->get_cart();
+		wc()->cart->calculate_fees();
+		wc()->cart->calculate_shipping();
+		wc()->cart->calculate_totals();
+>>>>>>> staging
 	}
 
 	/**

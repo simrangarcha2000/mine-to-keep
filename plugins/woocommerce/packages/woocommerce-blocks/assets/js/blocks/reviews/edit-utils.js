@@ -6,7 +6,11 @@ import { createInterpolateElement } from 'wordpress-element';
 import {
 	Notice,
 	ToggleControl,
+<<<<<<< HEAD
 	Toolbar,
+=======
+	ToolbarGroup,
+>>>>>>> staging
 	RangeControl,
 	SelectControl,
 } from '@wordpress/components';
@@ -20,7 +24,11 @@ import ToggleButtonControl from '@woocommerce/editor-components/toggle-button-co
 
 export const getBlockControls = ( editMode, setAttributes ) => (
 	<BlockControls>
+<<<<<<< HEAD
 		<Toolbar
+=======
+		<ToolbarGroup
+>>>>>>> staging
 			controls={ [
 				{
 					icon: 'edit',

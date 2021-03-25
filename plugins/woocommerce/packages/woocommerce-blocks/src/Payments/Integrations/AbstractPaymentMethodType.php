@@ -71,6 +71,18 @@ abstract class AbstractPaymentMethodType implements PaymentMethodTypeInterface {
 	}
 
 	/**
+<<<<<<< HEAD
+=======
+	 * Returns an array of supported features.
+	 *
+	 * @return string[]
+	 */
+	public function get_supported_features() {
+		return [ 'products' ];
+	}
+
+	/**
+>>>>>>> staging
 	 * An array of key, value pairs of data made available to payment methods
 	 * client side.
 	 *

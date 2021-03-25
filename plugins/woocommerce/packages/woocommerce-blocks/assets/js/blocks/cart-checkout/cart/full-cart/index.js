@@ -5,6 +5,7 @@
 import PropTypes from 'prop-types';
 import { __ } from '@wordpress/i18n';
 import {
+<<<<<<< HEAD
 	SubtotalsItem,
 	TotalsFeesItem,
 	TotalsCouponCodeInput,
@@ -18,6 +19,25 @@ import {
 	DISPLAY_CART_PRICES_INCLUDING_TAX,
 } from '@woocommerce/block-settings';
 import { getCurrencyFromPriceResponse } from '@woocommerce/base-utils';
+=======
+	TotalsCoupon,
+	TotalsDiscount,
+	TotalsFooterItem,
+	TotalsShipping,
+} from '@woocommerce/base-components/cart-checkout';
+import {
+	Subtotal,
+	TotalsFees,
+	TotalsTaxes,
+	ExperimentalOrderMeta,
+} from '@woocommerce/blocks-checkout';
+
+import { getCurrencyFromPriceResponse } from '@woocommerce/price-format';
+import {
+	COUPONS_ENABLED,
+	DISPLAY_CART_PRICES_INCLUDING_TAX,
+} from '@woocommerce/block-settings';
+>>>>>>> staging
 import { CartExpressPayment } from '@woocommerce/base-components/payment-methods';
 import {
 	useStoreCartCoupons,
@@ -64,6 +84,10 @@ const Cart = ( { attributes } ) => {
 
 	const {
 		cartItems,
+<<<<<<< HEAD
+=======
+		cartFees,
+>>>>>>> staging
 		cartTotals,
 		cartIsLoading,
 		cartItemsCount,
@@ -112,6 +136,7 @@ const Cart = ( { attributes } ) => {
 				<Title headingLevel="2" className="wc-block-cart__totals-title">
 					{ __( 'Cart totals', 'woocommerce' ) }
 				</Title>
+<<<<<<< HEAD
 				<SubtotalsItem
 					currency={ totalsCurrency }
 					values={ cartTotals }
@@ -121,6 +146,11 @@ const Cart = ( { attributes } ) => {
 					values={ cartTotals }
 				/>
 				<TotalsDiscountItem
+=======
+				<Subtotal currency={ totalsCurrency } values={ cartTotals } />
+				<TotalsFees currency={ totalsCurrency } cartFees={ cartFees } />
+				<TotalsDiscount
+>>>>>>> staging
 					cartCoupons={ appliedCoupons }
 					currency={ totalsCurrency }
 					isRemovingCoupon={ isRemovingCoupon }
@@ -128,7 +158,11 @@ const Cart = ( { attributes } ) => {
 					values={ cartTotals }
 				/>
 				{ cartNeedsShipping && (
+<<<<<<< HEAD
 					<TotalsShippingItem
+=======
+					<TotalsShipping
+>>>>>>> staging
 						showCalculator={ isShippingCalculatorEnabled }
 						showRateSelector={ true }
 						values={ cartTotals }
@@ -136,13 +170,21 @@ const Cart = ( { attributes } ) => {
 					/>
 				) }
 				{ ! DISPLAY_CART_PRICES_INCLUDING_TAX && (
+<<<<<<< HEAD
 					<TotalsTaxesItem
+=======
+					<TotalsTaxes
+>>>>>>> staging
 						currency={ totalsCurrency }
 						values={ cartTotals }
 					/>
 				) }
 				{ COUPONS_ENABLED && (
+<<<<<<< HEAD
 					<TotalsCouponCodeInput
+=======
+					<TotalsCoupon
+>>>>>>> staging
 						onSubmit={ applyCoupon }
 						isLoading={ isApplyingCoupon }
 					/>
@@ -151,6 +193,10 @@ const Cart = ( { attributes } ) => {
 					currency={ totalsCurrency }
 					values={ cartTotals }
 				/>
+<<<<<<< HEAD
+=======
+				<ExperimentalOrderMeta.Slot />
+>>>>>>> staging
 				<div className="wc-block-cart__payment-options">
 					{ cartNeedsPayment && <CartExpressPayment /> }
 					<CheckoutButton

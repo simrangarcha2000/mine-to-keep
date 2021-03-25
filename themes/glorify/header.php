@@ -29,11 +29,15 @@
 <link href="https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&family=Montserrat:wght@300;400&display=swap" rel="stylesheet"> 
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+<<<<<<< HEAD
 	
 	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/assets/css/style.css" type="text/css" media="screen" />
 
 
 	<?php wp_head(); ?>
+=======
+<?php wp_head(); ?>
+>>>>>>> staging
 </head>
 
 <body <?php body_class(); ?>>
@@ -49,7 +53,11 @@
 			</div>
 			<div class="cell small-10 large-3">
 			<?php wp_nav_menu( array
+<<<<<<< HEAD
 	( 'theme_location' => 'header-menu-top', 'container_class' => 'header_menu_class' )) ?>
+=======
+			( 'theme_location' => 'header-menu-top', 'container_class' => 'header_menu_class' )) ?>
+>>>>>>> staging
 			</div>
 			</div>
 			</div>
@@ -93,4 +101,8 @@
 
 
 
+<<<<<<< HEAD
 	</header><!-- #masthead -->
+=======
+	</header><!-- #masthead -->
+>>>>>>> staging

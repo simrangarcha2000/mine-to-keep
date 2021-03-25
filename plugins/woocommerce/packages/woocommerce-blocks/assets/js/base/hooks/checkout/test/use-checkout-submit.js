@@ -13,16 +13,22 @@ const mockUseCheckoutContext = {
 	onSubmit: jest.fn(),
 };
 const mockUsePaymentMethodDataContext = {};
+<<<<<<< HEAD
 const mockUsePaymentMethods = {
 	paymentMethods: {},
 };
+=======
+>>>>>>> staging
 jest.mock( '@woocommerce/base-context', () => ( {
 	useCheckoutContext: () => mockUseCheckoutContext,
 	usePaymentMethodDataContext: () => mockUsePaymentMethodDataContext,
 } ) );
+<<<<<<< HEAD
 jest.mock( '@woocommerce/base-hooks', () => ( {
 	usePaymentMethods: () => mockUsePaymentMethods,
 } ) );
+=======
+>>>>>>> staging
 
 describe( 'useCheckoutSubmit', () => {
 	let registry, renderer;

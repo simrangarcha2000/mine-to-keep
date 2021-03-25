@@ -48,6 +48,7 @@
 	}
 }
 
+<<<<<<< HEAD
 // Adds border to placeholder lists, so they can be distinguished from the white background.
 .components-placeholder .woocommerce-search-list__list {
 	border: 1px solid $gray-200;
@@ -61,3 +62,11 @@
 	height: auto;
 	text-align: left;
 }
+=======
+// This border has been upstreamed to WooCommerce Admin, so it can be removed
+// from here once @woocommerce/components gets updated.
+// https://github.com/woocommerce/woocommerce-admin/pull/5901
+.woocommerce-search-list__list {
+	border: 1px solid $gray-200;
+}
+>>>>>>> staging

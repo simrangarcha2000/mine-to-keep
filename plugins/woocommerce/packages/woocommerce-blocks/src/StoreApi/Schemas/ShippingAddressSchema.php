@@ -11,7 +11,11 @@ use Automattic\WooCommerce\Blocks\RestApi\Routes;
  * @internal This API is used internally by Blocks--it is still in flux and may be subject to revisions.
  * @since 2.5.0
  */
+<<<<<<< HEAD
 class ShippingAddressSchema extends AbstractSchema {
+=======
+class ShippingAddressSchema extends AbstractAddressSchema {
+>>>>>>> staging
 	/**
 	 * The schema item name.
 	 *
@@ -27,6 +31,7 @@ class ShippingAddressSchema extends AbstractSchema {
 	const IDENTIFIER = 'shipping-address';
 
 	/**
+<<<<<<< HEAD
 	 * Term properties.
 	 *
 	 * @return array
@@ -82,6 +87,8 @@ class ShippingAddressSchema extends AbstractSchema {
 	}
 
 	/**
+=======
+>>>>>>> staging
 	 * Convert a term object into an object suitable for the response.
 	 *
 	 * @param \WC_Order|\WC_Customer $address An object with shipping address.

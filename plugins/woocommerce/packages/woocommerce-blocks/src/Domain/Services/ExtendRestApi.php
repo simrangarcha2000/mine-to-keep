@@ -11,7 +11,11 @@ use Exception;
 /**
  * Service class to provide utility functions to extend REST API.
  */
+<<<<<<< HEAD
 class ExtendRestApi {
+=======
+final class ExtendRestApi {
+>>>>>>> staging
 	/**
 	 * Holds the Package instance
 	 *
@@ -62,6 +66,16 @@ class ExtendRestApi {
 	private $extend_data = [];
 
 	/**
+<<<<<<< HEAD
+=======
+	 * Array of payment requirements
+	 *
+	 * @var array
+	 */
+	private $payment_requirements = [];
+
+	/**
+>>>>>>> staging
 	 * An endpoint that validates registration method call
 	 *
 	 * @param array $args {
@@ -136,6 +150,63 @@ class ExtendRestApi {
 	}
 
 	/**
+<<<<<<< HEAD
+=======
+	 * Registers and validates payment requirements callbacks.
+	 *
+	 * @param array $args {
+	 *     Array of registration data.
+	 *
+	 *     @type callable $data_callback Callback executed to add payment requirements data.
+	 * }
+	 *
+	 * @throws Exception On failure to register.
+	 * @return boolean True on success.
+	 */
+	public function register_payment_requirements( $args ) {
+		if ( ! is_callable( $args['data_callback'] ) ) {
+			$this->throw_exception( '$data_callback must be a callable function.' );
+		}
+
+		$this->payment_requirements[] = $args['data_callback'];
+
+		return true;
+	}
+
+	/**
+	 * Returns the additional payment requirements.
+	 *
+	 * @param array $initial_requirements list of requirements that should be added to the collected requirements.
+	 * @return array Returns a list of payment requirements.
+	 * @throws Exception If a registered callback throws an error, or silently logs it.
+	 */
+	public function get_payment_requirements( array $initial_requirements = [ 'products' ] ) {
+		$requirements = $initial_requirements;
+		if ( empty( $this->payment_requirements ) ) {
+			return $initial_requirements;
+		}
+
+		foreach ( $this->payment_requirements as $callback ) {
+			$data = [];
+
+			try {
+				$data = $callback();
+
+				if ( ! is_array( $data ) ) {
+					throw new Exception( '$data_callback must return an array.' );
+				}
+			} catch ( Throwable $e ) {
+				$this->throw_exception( $e );
+				continue;
+			}
+			$requirements = array_merge( $requirements, $data );
+		}
+
+		return array_unique( $requirements );
+	}
+
+	/**
+>>>>>>> staging
 	 * Returns the registered endpoint schema
 	 *
 	 * @param string $endpoint    A valid identifier.

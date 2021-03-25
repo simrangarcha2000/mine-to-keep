@@ -133,6 +133,19 @@ class ProductCategories extends AbstractDynamicBlock {
 			return [];
 		}
 
+<<<<<<< HEAD
+=======
+		// This ensures that no categories with a product count of 0 is rendered.
+		if ( ! $attributes['hasEmpty'] ) {
+			$categories = array_filter(
+				$categories,
+				function( $category ) {
+					return 0 !== $category->count;
+				}
+			);
+		}
+
+>>>>>>> staging
 		return $hierarchical ? $this->build_category_tree( $categories ) : $categories;
 	}
 

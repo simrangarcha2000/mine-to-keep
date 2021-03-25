@@ -1,4 +1,5 @@
 /**
+<<<<<<< HEAD
  * External dependencies
  */
 import { ValidationContextProvider } from '@woocommerce/base-context';
@@ -7,6 +8,12 @@ import { ValidationContextProvider } from '@woocommerce/base-context';
  * Internal dependencies
  */
 import { AddToCartFormStateContextProvider } from '../form-state';
+=======
+ * Internal dependencies
+ */
+import { AddToCartFormStateContextProvider } from '../form-state';
+import { ValidationContextProvider } from '../../shared';
+>>>>>>> staging
 import FormSubmit from './submit';
 
 /**

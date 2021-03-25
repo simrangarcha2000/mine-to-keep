@@ -1,7 +1,11 @@
 <?php
 /* HEADER */ // phpcs:ignore
 
+<<<<<<< HEAD
 use \Automattic\Jetpack\Autoloader\AutoloadGenerator;
+=======
+use Automattic\Jetpack\Autoloader\AutoloadGenerator;
+>>>>>>> staging
 
 /**
  * This class locates autoloaders.

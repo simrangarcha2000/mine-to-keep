@@ -69,6 +69,11 @@ export const DEFAULT_PAYMENT_METHOD_DATA = {
 	errorMessage: '',
 	activePaymentMethod: '',
 	setActivePaymentMethod: () => void null,
+<<<<<<< HEAD
+=======
+	activeSavedToken: '',
+	setActiveSavedToken: () => void null,
+>>>>>>> staging
 	customerPaymentMethods: {},
 	paymentMethods: {},
 	expressPaymentMethods: {},

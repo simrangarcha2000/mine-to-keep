@@ -37,6 +37,10 @@ const decodeAddress = ( address ) =>
 export const defaultCartData = {
 	cartCoupons: [],
 	cartItems: [],
+<<<<<<< HEAD
+=======
+	cartFees: [],
+>>>>>>> staging
 	cartItemsCount: 0,
 	cartItemsWeight: 0,
 	cartNeedsPayment: true,
@@ -50,6 +54,10 @@ export const defaultCartData = {
 	shippingRates: [],
 	shippingRatesLoading: false,
 	cartHasCalculatedShipping: false,
+<<<<<<< HEAD
+=======
+	paymentRequirements: [],
+>>>>>>> staging
 	receiveCart: () => {},
 };
 
@@ -80,6 +88,10 @@ export const useStoreCart = ( options = { shouldSelect: true } ) => {
 				return {
 					cartCoupons: previewCart.coupons,
 					cartItems: previewCart.items,
+<<<<<<< HEAD
+=======
+					cartFees: previewCart.fees,
+>>>>>>> staging
 					cartItemsCount: previewCart.items_count,
 					cartItemsWeight: previewCart.items_weight,
 					cartNeedsPayment: previewCart.needs_payment,
@@ -90,10 +102,18 @@ export const useStoreCart = ( options = { shouldSelect: true } ) => {
 					cartErrors: [],
 					billingAddress: defaultBillingAddress,
 					shippingAddress: defaultShippingAddress,
+<<<<<<< HEAD
+=======
+					extensions: {},
+>>>>>>> staging
 					shippingRates: previewCart.shipping_rates,
 					shippingRatesLoading: false,
 					cartHasCalculatedShipping:
 						previewCart.has_calculated_shipping,
+<<<<<<< HEAD
+=======
+					paymentRequirements: previewCart.paymentRequirements,
+>>>>>>> staging
 					receiveCart:
 						typeof previewCart?.receiveCart === 'function'
 							? previewCart.receiveCart
@@ -113,10 +133,18 @@ export const useStoreCart = ( options = { shouldSelect: true } ) => {
 			const billingAddress = decodeAddress( cartData.billingAddress );
 			const shippingAddress = cartData.needsShipping
 				? decodeAddress( cartData.shippingAddress )
+<<<<<<< HEAD
 				: defaultShippingAddress;
 			return {
 				cartCoupons: cartData.coupons,
 				cartItems: cartData.items || [],
+=======
+				: billingAddress;
+			return {
+				cartCoupons: cartData.coupons,
+				cartItems: cartData.items || [],
+				cartFees: cartData.fees || [],
+>>>>>>> staging
 				cartItemsCount: cartData.itemsCount,
 				cartItemsWeight: cartData.itemsWeight,
 				cartNeedsPayment: cartData.needsPayment,
@@ -127,9 +155,17 @@ export const useStoreCart = ( options = { shouldSelect: true } ) => {
 				cartErrors,
 				billingAddress,
 				shippingAddress,
+<<<<<<< HEAD
 				shippingRates: cartData.shippingRates || [],
 				shippingRatesLoading,
 				cartHasCalculatedShipping: cartData.hasCalculatedShipping,
+=======
+				extensions: cartData.extensions || {},
+				shippingRates: cartData.shippingRates || [],
+				shippingRatesLoading,
+				cartHasCalculatedShipping: cartData.hasCalculatedShipping,
+				paymentRequirements: cartData.paymentRequirements || [],
+>>>>>>> staging
 				receiveCart,
 			};
 		},

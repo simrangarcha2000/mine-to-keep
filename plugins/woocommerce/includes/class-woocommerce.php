@@ -23,7 +23,11 @@ final class WooCommerce {
 	 *
 	 * @var string
 	 */
+<<<<<<< HEAD
 	public $version = '5.0.0';
+=======
+	public $version = '5.1.0';
+>>>>>>> staging
 
 	/**
 	 * WooCommerce Schema version.
@@ -203,6 +207,10 @@ final class WooCommerce {
 		add_action( 'switch_blog', array( $this, 'wpdb_table_fix' ), 0 );
 		add_action( 'activated_plugin', array( $this, 'activated_plugin' ) );
 		add_action( 'deactivated_plugin', array( $this, 'deactivated_plugin' ) );
+<<<<<<< HEAD
+=======
+		add_filter( 'woocommerce_rest_prepare_note', array( 'WC_Admin_Notices', 'prepare_note_with_nonce' ) );
+>>>>>>> staging
 
 		// These classes set up hooks on instantiation.
 		wc_get_container()->get( DownloadPermissionsAdjuster::class );
@@ -425,6 +433,10 @@ final class WooCommerce {
 		include_once WC_ABSPATH . 'includes/queue/class-wc-action-queue.php';
 		include_once WC_ABSPATH . 'includes/queue/class-wc-queue.php';
 		include_once WC_ABSPATH . 'includes/admin/marketplace-suggestions/class-wc-marketplace-updater.php';
+<<<<<<< HEAD
+=======
+		include_once WC_ABSPATH . 'includes/blocks/class-wc-blocks-utils.php';
+>>>>>>> staging
 
 		/**
 		 * Data stores - used to store and retrieve CRUD object data from the database.

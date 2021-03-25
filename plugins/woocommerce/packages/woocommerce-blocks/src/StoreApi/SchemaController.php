@@ -63,6 +63,12 @@ class SchemaController {
 			Schemas\ShippingAddressSchema::IDENTIFIER  => new Schemas\ShippingAddressSchema(
 				$this->extend
 			),
+<<<<<<< HEAD
+=======
+			Schemas\CartShippingRateSchema::IDENTIFIER => new Schemas\CartShippingRateSchema(
+				$this->extend
+			),
+>>>>>>> staging
 			Schemas\CartSchema::IDENTIFIER             => new Schemas\CartSchema(
 				$this->extend,
 				new Schemas\CartItemSchema(
@@ -70,6 +76,10 @@ class SchemaController {
 					new Schemas\ImageAttachmentSchema( $this->extend )
 				),
 				new Schemas\CartCouponSchema( $this->extend ),
+<<<<<<< HEAD
+=======
+				new Schemas\CartFeeSchema( $this->extend ),
+>>>>>>> staging
 				new Schemas\CartShippingRateSchema( $this->extend ),
 				new Schemas\ShippingAddressSchema( $this->extend ),
 				new Schemas\BillingAddressSchema( $this->extend ),
@@ -80,6 +90,10 @@ class SchemaController {
 				$this->extend,
 				new Schemas\ImageAttachmentSchema( $this->extend )
 			),
+<<<<<<< HEAD
+=======
+			Schemas\CartFeeSchema::IDENTIFIER          => new Schemas\CartFeeSchema( $this->extend ),
+>>>>>>> staging
 			Schemas\CheckoutSchema::IDENTIFIER         => new Schemas\CheckoutSchema(
 				$this->extend,
 				new Schemas\BillingAddressSchema( $this->extend ),

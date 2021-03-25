@@ -9,7 +9,11 @@ import { Icon, noAlt } from '@woocommerce/icons';
 /**
  * Internal dependencies
  */
+<<<<<<< HEAD
 import { Chip } from './index.js';
+=======
+import Chip from './chip.js';
+>>>>>>> staging
 
 /**
  * Component used to render a "chip" -- an item containing some text with

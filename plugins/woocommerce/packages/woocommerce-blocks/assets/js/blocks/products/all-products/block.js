@@ -3,7 +3,11 @@
  */
 import { Component } from 'react';
 import PropTypes from 'prop-types';
+<<<<<<< HEAD
 import ProductListContainer from '@woocommerce/base-components/product-list/container';
+=======
+import { ProductListContainer } from '@woocommerce/base-components/product-list';
+>>>>>>> staging
 import { InnerBlockLayoutContextProvider } from '@woocommerce/shared-context';
 import { gridBlockPreview } from '@woocommerce/resource-previews';
 

@@ -148,7 +148,10 @@ class Cart extends AbstractBlock {
 							<tr class="wc-block-cart-items__header">
 								<th class="wc-block-cart-items__header-image"><span /></th>
 								<th class="wc-block-cart-items__header-product"><span /></th>
+<<<<<<< HEAD
 								<th class="wc-block-cart-items__header-quantity"><span /></th>
+=======
+>>>>>>> staging
 								<th class="wc-block-cart-items__header-total"><span /></th>
 							</tr>
 						</thead>
@@ -159,6 +162,7 @@ class Cart extends AbstractBlock {
 								</td>
 								<td class="wc-block-cart-item__product">
 									<div class="wc-block-cart-item__product-name"></div>
+<<<<<<< HEAD
 									<div class="wc-block-cart-item__product-metadata"></div>
 								</td>
 								<td class="wc-block-cart-item__quantity">
@@ -167,6 +171,15 @@ class Cart extends AbstractBlock {
 									<button class="wc-block-components-quantity-selector__button wc-block-components-quantity-selector__button--minus">－</button>
 									<button class="wc-block-components-quantity-selector__button wc-block-components-quantity-selector__button--plus">＋</button>
 								</div>
+=======
+									<div class="wc-block-cart-item__individual-price"></div>
+									<div class="wc-block-cart-item__product-metadata"></div>
+									<div class="wc-block-components-quantity-selector">
+										<input class="wc-block-components-quantity-selector__input" type="number" step="1" min="0" value="1" />
+										<button class="wc-block-components-quantity-selector__button wc-block-components-quantity-selector__button--minus">－</button>
+										<button class="wc-block-components-quantity-selector__button wc-block-components-quantity-selector__button--plus">＋</button>
+									</div>
+>>>>>>> staging
 								</td>
 								<td class="wc-block-cart-item__total">
 									<div class="wc-block-cart-item__price"></div>
@@ -177,6 +190,7 @@ class Cart extends AbstractBlock {
 									<div><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII=" width="1" height="1" /></div>
 								</td>
 								<td class="wc-block-cart-item__product">
+<<<<<<< HEAD
 									<div class="wc-block-cart-item__product-name">&nbsp;</div>
 									<div class="wc-block-cart-item__product-metadata">&nbsp;</div>
 								</td>
@@ -186,6 +200,16 @@ class Cart extends AbstractBlock {
 									<button class="wc-block-components-quantity-selector__button wc-block-components-quantity-selector__button--minus">－</button>
 									<button class="wc-block-components-quantity-selector__button wc-block-components-quantity-selector__button--plus">＋</button>
 								</div>
+=======
+									<div class="wc-block-cart-item__product-name"></div>
+									<div class="wc-block-cart-item__individual-price"></div>
+									<div class="wc-block-cart-item__product-metadata"></div>
+									<div class="wc-block-components-quantity-selector">
+										<input class="wc-block-components-quantity-selector__input" type="number" step="1" min="0" value="1" />
+										<button class="wc-block-components-quantity-selector__button wc-block-components-quantity-selector__button--minus">－</button>
+										<button class="wc-block-components-quantity-selector__button wc-block-components-quantity-selector__button--plus">＋</button>
+									</div>
+>>>>>>> staging
 								</td>
 								<td class="wc-block-cart-item__total">
 									<div class="wc-block-cart-item__price"></div>
@@ -197,6 +221,7 @@ class Cart extends AbstractBlock {
 								</td>
 								<td class="wc-block-cart-item__product">
 									<div class="wc-block-cart-item__product-name"></div>
+<<<<<<< HEAD
 									<div class="wc-block-cart-item__product-metadata"></div>
 								</td>
 								<td class="wc-block-cart-item__quantity">
@@ -205,6 +230,15 @@ class Cart extends AbstractBlock {
 									<button class="wc-block-components-quantity-selector__button wc-block-components-quantity-selector__button--minus">－</button>
 									<button class="wc-block-components-quantity-selector__button wc-block-components-quantity-selector__button--plus">＋</button>
 								</div>
+=======
+									<div class="wc-block-cart-item__individual-price"></div>
+									<div class="wc-block-cart-item__product-metadata"></div>
+									<div class="wc-block-components-quantity-selector">
+										<input class="wc-block-components-quantity-selector__input" type="number" step="1" min="0" value="1" />
+										<button class="wc-block-components-quantity-selector__button wc-block-components-quantity-selector__button--minus">－</button>
+										<button class="wc-block-components-quantity-selector__button wc-block-components-quantity-selector__button--plus">＋</button>
+									</div>
+>>>>>>> staging
 								</td>
 								<td class="wc-block-cart-item__total">
 									<div class="wc-block-cart-item__price"></div>

@@ -130,6 +130,7 @@ class Plugins extends \WC_REST_Data_Controller {
 
 		register_rest_route(
 			$this->namespace,
+<<<<<<< HEAD
 			'/' . $this->rest_base . '/connect-paypal',
 			array(
 				array(
@@ -143,6 +144,8 @@ class Plugins extends \WC_REST_Data_Controller {
 
 		register_rest_route(
 			$this->namespace,
+=======
+>>>>>>> staging
 			'/' . $this->rest_base . '/connect-wcpay',
 			array(
 				array(
@@ -391,6 +394,12 @@ class Plugins extends \WC_REST_Data_Controller {
 
 		require_once ABSPATH . 'wp-admin/includes/plugin.php';
 
+<<<<<<< HEAD
+=======
+		// the mollie-payments-for-woocommerce plugin calls `WP_Filesystem()` during it's activation hook, which crashes without this include.
+		require_once ABSPATH . 'wp-admin/includes/file.php';
+
+>>>>>>> staging
 		foreach ( $plugins as $plugin ) {
 			$slug = $plugin;
 			$path = isset( $allowed_plugins[ $slug ] ) ? $allowed_plugins[ $slug ] : false;
@@ -586,6 +595,7 @@ class Plugins extends \WC_REST_Data_Controller {
 		);
 	}
 
+<<<<<<< HEAD
 	/**
 	 * Returns a URL that can be used to connect to PayPal.
 	 *
@@ -616,6 +626,8 @@ class Plugins extends \WC_REST_Data_Controller {
 			'connectUrl' => $connect_url,
 		) );
 	}
+=======
+>>>>>>> staging
 
 	/**
 	 * Returns a URL that can be used to connect to Square.
