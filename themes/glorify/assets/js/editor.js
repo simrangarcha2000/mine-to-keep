@@ -8,9 +8,6 @@ wp.blocks.registerBlockStyle( 'core/quote', {
 
 
 
-
-
-
 //Registering another Text block style - Paragraph
 wp.blocks.registerBlockStyle( 'core/paragraph', {
     name: 'paragraph-glorify',
@@ -30,7 +27,7 @@ wp.blocks.registerBlockStyle( 'core/paragraph', {
 } );
 
 
-//Registering another Text block style - Paragraph
+//Registering another Text block style - Image
 wp.blocks.registerBlockStyle( 'core/image', {
     name: 'image-glorify',
     label: 'Glorify Image'

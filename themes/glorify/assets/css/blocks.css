@@ -137,7 +137,7 @@
     height: 10px;
 }
 
-/*  Styling Gallery */
+/*-----------------------------------------------STYLING GALLERY ---------------------------------------*/
 .wp-block-gallery.is-style-gallery-select{
     margin: 0px 13%;
     padding: 0% 13%;
@@ -155,8 +155,7 @@
     font-family: 'Permanent Marker', cursive;
 }
 
-
-/*  Styling the table */
+/*-----------------------------------------------ADDING CUSTOM TABLE ---------------------------------------*/
 
 .wp-block-table.is-style-glorify-table{
     text-align: center;
@@ -171,11 +170,10 @@
 
 .is-style-glorify-table tr{
     border: #F0DBDB solid 3px;
-
 }
 
 
-/* Styling the list */
+/*-----------------------------------------------STYLING LIST ---------------------------------------*/
 .is-style-glorify-list {
     list-style-type: armenian;
     margin-top: -65px;
@@ -188,18 +186,20 @@ margin-left: -30px;
 
 
 
-/*Mobile View*/
+/*-----------------------------------------------MOBILE VIEW ---------------------------------------*/
 
 
 @media only screen and (max-width: 900px) {
     
+
+    /*-----------------------------------------------SETTING FONT SIZE OF PARAGRAPH  ---------------------------------------*/
     .is-style-paragraph-glorify.rich-text.block-editor-rich-text__editable,.wp-block-paragraph.is-style-default, .is-style-paragraph-glorify{
         font-size: 0.85rem;
     }
 
 
 
-    text__editable.wp-block-quote, .is-style-pink-quote, .is-style-pink-quote {
+    .text__editable.wp-block-quote, .is-style-pink-quote, .is-style-pink-quote {
         margin: 0;
         width: 100%;
         margin-top: -20px;
@@ -209,6 +209,7 @@ margin-left: -30px;
         margin: 2% 5%;
     }
 
+    /*-----------------------------------------------STYLING TABLE ---------------------------------------*/
     .wp-block-table.is-style-glorify-table{
         text-align: center;
         margin-left: 0%;
@@ -216,6 +217,7 @@ margin-left: -30px;
         float: left;
     }
     
+    /*-----------------------------------------------STYLING LIST ---------------------------------------*/
     .is-style-glorify-list ul{
         list-style-type: armenian;
         margin-top: -65px;
