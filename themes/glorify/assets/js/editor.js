@@ -1,6 +1,8 @@
 console.log("Functioning correctly");
 
 //Prefer method js as we can unregister default style in js which cannot be done in php
+
+/* BLock to Create a Pink Quote*/
 wp.blocks.registerBlockStyle( 'core/quote', {
     name: 'pink-quote',
     label: 'Pink Quote'
@@ -9,6 +11,8 @@ wp.blocks.registerBlockStyle( 'core/quote', {
 
 
 //Registering another Text block style - Paragraph
+
+/* Block to Create a Pink Paragraph*/
 wp.blocks.registerBlockStyle( 'core/paragraph', {
     name: 'paragraph-glorify',
     label: 'Glorify Paragraph'
@@ -33,7 +37,7 @@ wp.blocks.registerBlockStyle( 'core/image', {
     label: 'Glorify Image'
 } );
 
-
+//Registering another Text block style - Heading
 wp.blocks.registerBlockStyle( 'core/heading', {
     name: 'pink-heading',
     label: 'Pink Heading'
