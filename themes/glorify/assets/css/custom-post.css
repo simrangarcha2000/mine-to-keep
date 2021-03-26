@@ -23,8 +23,49 @@
     text-transform: uppercase;
 }
 
+/* --------------------------------------CUSTOM POST --------------------------------*/
+
+/*Setting Featured IMage to be 100%*/
+.img-fluid.img-thumbnail {
+    width: 100%;
+}
+
+/*  Styling the Left container of the post */
+
+.large-6.contentLeft {
+    padding: 2rem;
+    border: solid 1px #D8A1A2;
+}
+
+
+/* Styling the Right container of the post */
+
+.large-5.contentRight {
+    margin-left: 5rem;
+}
+
+/* ----------------------------------------  REVIEW FORM    ----------------------------*/
+
+.widget-title {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 30px;
+    color: black;
+}
+
+
+.glsr-field-error.invalid-feedback, .gl-star-rating--stars.s0 {
+    color: #e47173;
+}
+
+.glsr-form-wrap {
+    background-color: #F5E6E6;
+    padding: 40px;
+}
+
+
 /* ----------------------------------------  BUTTON    ----------------------------*/
-.button.success {
+.button.success, .glsr-button.button.btn.btn-primary {
+
     background-color: black;
     color: #F5E6E6;
 }

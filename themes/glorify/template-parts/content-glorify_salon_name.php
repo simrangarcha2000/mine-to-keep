@@ -24,7 +24,9 @@
 	<section class="grid-x grid-margin-x">
 				
 	<div class="entry-content grid-x">
-	<div class="large-6 ">
+
+	<!--Content Left of Custom Post-->
+	<div class="large-6 contentLeft">
 
 	<!-- The Content will be posted here -->
 		<?php
@@ -59,7 +61,9 @@
 		);
 		?>
 		</div> <!--End of large 6 -->
-		<div class="large-5">
+
+		<!--Content Right  of Custom Post  which includes a widget-->
+		<div class="large-5 contentRight">
 			<?php get_sidebar(); ?>
 		
 		</div> <!--End of large 5 -->
