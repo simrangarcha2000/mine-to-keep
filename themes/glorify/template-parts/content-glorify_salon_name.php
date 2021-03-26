@@ -12,29 +12,17 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<?php
-		if ( is_singular() ) :
-			the_title( '<h1 class="custom-entry-salon-title">', '</h1>' );
-		else :
-			the_title( '<h2 class="custom-entry-salon-title><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		endif;
+
 
 		if ( 'post' === get_post_type() ) :
 			?>
-			<h2 class="">
 
-		<div class="featuredImage"><?php glorify_post_thumbnail(); ?></div>
-		<div class="entry-meta">
-				<?php
-				glorify_posted_by();
-				glorify_posted_on();
-				
-				?>
 						<?php endif; ?>
-			</div><!-- .entry-meta -->
 	</header><!-- .entry-header -->
 
 	
-
+	<section class="grid-x grid-margin-x">
+				<div class="large-4 offset-1">
 	<div class="entry-content">
 		<?php
 		the_content(
@@ -59,7 +47,9 @@
 			)
 		);
 		?>
+		</div>
 	</div><!-- .entry-content -->
+	</section>
 
 	<footer class="entry-footer">
 		<?php glorify_entry_footer(); ?>
