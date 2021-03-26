@@ -9,14 +9,14 @@
 
 ?>
 
-<?php glorify_post_thumbnail(); ?>
+
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 
 
 	
-
+	<?php glorify_post_thumbnail(); ?>
 	<div class="entry-content">
 		<?php
 		the_content(

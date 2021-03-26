@@ -103,11 +103,34 @@ margin: 1rem 6rem;
 
 @media only screen and (min-width: 700px) and (max-width: 1200px ) {
 
+    /* CUSTOM POST */
+    .large-5.contentRight {
+        margin-left: 5rem;
+        margin-top: 2rem;
+    }
+
+    /* ----------------------------------------  BUTTON    ----------------------------*/
+.button.success, .glsr-button.button.btn.btn-primary {
+
+    margin-top: 0rem;
+}
+
 
 }
 
 /*  Mobile View    */
 
 @media only screen and (max-width: 699px) {
+
+    /* CUSTOM POST */
+    .large-5.contentRight {
+        margin-left: 0rem;
+        margin-top: 2rem;
+    }
+
+    /* ----------------------------------------  BUTTON    ----------------------------*/
+.button.success, .glsr-button.button.btn.btn-primary {
+    margin-top: 0rem;
+}
 
 }
