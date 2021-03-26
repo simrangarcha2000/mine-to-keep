@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying archive pages
+ * The template for displaying archive pages for Custom Post - Salon 
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
@@ -11,41 +11,17 @@ get_header();
 ?>
 
 	<main id="primary" class="site-main">
+		<div class="grid-container grid-x grid-margin-x">
+			
+			<!-- Creating a Loop for Archieve page to print the content-->
+			<?php get_template_part('template-parts/archive-content', 'archive-content');?>
+			<?php previous_post_link()?>
+			<?php previous_next_link()?>
+		</div>
 
-		<?php if ( have_posts() ) : ?>
-
-			<header class="page-header">
-				<?php
-				the_archive_title( '<h1 class="page-title">', '</h1>' );
-				the_archive_description( '<div class="archive-description">', '</div>' );
-				?>
-			</header><!-- .page-header -->
-
-			<?php
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
-
-				/*
-				 * Include the Post-Type-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/archieve_content', get_post_type() );
-
-			endwhile;
-
-			the_posts_navigation();
-
-		else :
-
-			get_template_part( 'template-parts/archieve_content', 'none' );
-
-		endif;
-		?>
+		
 
 	</main><!-- #main -->
 
 <?php
-get_sidebar();
 get_footer();

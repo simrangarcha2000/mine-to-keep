@@ -1,0 +1,136 @@
+/* CSS for styling custom post */
+/*
+*  Custom Post - Salons
+* Custom Post Name - Glorify Salon Name
+*/
+
+
+/* Setting the width and margin for custom page*/
+#salon_page {
+    max-width: 95rem;
+    margin: auto;
+}
+
+#salon_page .entry-content {
+    margin: 2rem;
+}
+
+/* ----------------------------------------  HEADING 01     ----------------------------*/
+.custom-entry-salon-title, .archiveTitle {
+    background: black;
+    padding: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 0rem;
+}
+
+/* --------------------------------------CUSTOM POST --------------------------------*/
+
+/*Setting Featured IMage to be 100%*/
+.img-fluid.img-thumbnail {
+    width: 100%;
+}
+
+/*  Styling the Left container of the post */
+
+.large-6.contentLeft {
+    padding: 2rem;
+    border: solid 1px #D8A1A2;
+}
+
+
+/* Styling the Right container of the post */
+
+.large-5.contentRight {
+    margin-left: 5rem;
+}
+
+/* ----------------------------------------  REVIEW FORM    ----------------------------*/
+
+.widget-title {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 30px;
+    color: black;
+}
+
+
+.glsr-field-error.invalid-feedback, .gl-star-rating--stars.s0 {
+    color: #e47173;
+}
+
+.glsr-form-wrap {
+    background-color: #F5E6E6;
+    padding: 40px;
+}
+
+
+/* ----------------------------------------  BUTTON    ----------------------------*/
+.button.success, .glsr-button.button.btn.btn-primary {
+
+    background-color: #D8A1A2;
+    color: black;
+    margin-top: -2rem;
+}
+
+.button.success:hover{
+    opacity: 0.8;
+    background-color: #F5E6E6;
+    color: black;
+}
+
+/* ---------------------------------------- ------------------------ CUSTOM ARCHIVE ----------------   ----------------------------*/
+
+.grid-container.grid-x.archiveBox {
+    background-color: #F5E6E6;
+}
+
+/* ----------------------------------------  IMAGE OF CUSTOM ARCHIVE    ----------------------------*/
+.archiveImage img{
+    width: 80%;
+margin: auto;
+margin: 1rem 6rem;
+}
+
+
+/* ---------------------------------------- ------------------------ CUSTOM ARCHIVE P tag  ----------------   ----------------------------*/
+
+.archiveLeft p{
+    padding-top: 2rem;
+}
+
+
+/*  Tablet View    */
+
+@media only screen and (min-width: 700px) and (max-width: 1200px ) {
+
+    /* CUSTOM POST */
+    .large-5.contentRight {
+        margin-left: 5rem;
+        margin-top: 2rem;
+    }
+
+    /* ----------------------------------------  BUTTON    ----------------------------*/
+.button.success, .glsr-button.button.btn.btn-primary {
+
+    margin-top: 0rem;
+}
+
+
+}
+
+/*  Mobile View    */
+
+@media only screen and (max-width: 699px) {
+
+    /* CUSTOM POST */
+    .large-5.contentRight {
+        margin-left: 0rem;
+        margin-top: 2rem;
+    }
+
+    /* ----------------------------------------  BUTTON    ----------------------------*/
+.button.success, .glsr-button.button.btn.btn-primary {
+    margin-top: 0rem;
+}
+
+}

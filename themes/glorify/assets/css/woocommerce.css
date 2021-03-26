@@ -1,7 +1,6 @@
-/* WooCommerce */
+/* Coding for the pages og woocommerce and woocommerce plugin is done over here */
 
-/* Product Archieve*/
-
+/*----------------------------------------------   POST ARCHIVE  -------------------------------------------------------*/
 
 .woocommerce .woocommerce-ordering {
     margin: 2rem 17.3em;
@@ -35,7 +34,7 @@
     color: #F5E6E6;
 }
 
-/* Cart Page*/
+/*----------------------------------------------  CART PAGE   -------------------------------------------------------*/
 
 .woocommerce-cart-form {
     margin-left: 20%;
@@ -119,8 +118,7 @@ tbody tr:nth-child(2n) {
 }
 
 
-
-/* Checkout Page*/
+/*----------------------------------------------   CHECKOUT PAGE  -------------------------------------------------------*/
 
 .woocommerce .col2-set .col-1, .woocommerce-page .col2-set .col-1 {
     float: none;
@@ -156,7 +154,7 @@ tbody tr:nth-child(2n) {
 }
 
 .woocommerce form.checkout_coupon, .woocommerce form.login, .woocommerce form.register {
-    border: 1px solid #d3ced2;
+    border: 1px solid #F5E6E6;
     padding: 20px;
     margin: 2em 35rem;
     text-align: left;
@@ -174,7 +172,35 @@ tbody tr:nth-child(2n) {
 
 }
 
-/* Product Page*/
+/*----------------------------------------------   DASHBOARD  -------------------------------------------------------*/
+
+#post-67 .entry-content {
+    background-color: #F5E6E6;
+    padding-top: 1rem;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+}
+
+#post-67 a{
+    color: black;
+}
+
+#post-67 a:hover{
+    color: #D8A1A2;
+    
+}
+
+#post-67 a.woocommerce-Button.button {
+    color: #F5E6E6;
+}
+
+#password,#username {
+    background-color: #F5E6E6;
+}
+
+
+
+/*----------------------------------------------   SINGLE PRODUCT PAGE  -------------------------------------------------------*/
 
 .woocommerce div.product div.images .woocommerce-product-gallery__wrapper {
     -webkit-transition: all cubic-bezier(.795,-.035,0,1) .5s;
@@ -218,7 +244,7 @@ tbody tr:nth-child(2n) {
     border-radius: 5px;
 }
 
-/* Contact Form*/
+/*----------------------------------------------   CONTACT FORM  -------------------------------------------------------*/
 div.wpforms-container-full {
     margin-bottom: 24px;
     margin: 0% 20%;
@@ -234,4 +260,114 @@ div.wpforms-container-full .wpforms-form .wpforms-field-label {
     color:  #D8A1A2;
     background-color:  #000000;
 	font-family: 'Permanent Marker', cursive;
+}
+
+/*----------------------------------------------   LOGIN PAGE  -------------------------------------------------------*/
+
+.woocommerce form.login, .woocommerce form.register {
+    margin: 2em 20rem;
+}
+
+
+/*  Tablet View    */
+
+@media only screen and (min-width: 700px) and (max-width: 1200px ) {
+
+    /*----------------------------------------------   LOGIN PAGE  -------------------------------------------------------*/
+
+.woocommerce form.login, .woocommerce form.register {
+    margin: 0rem;
+}
+
+/*----------------------------------------------   CART PAGE  -------------------------------------------------------*/
+.woocommerce .woocommerce-ordering {
+    margin: 1rem auto;
+}
+
+.woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
+    transform: translateX(0%);
+}
+
+.woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
+    height: 30rem;
+}
+
+
+
+/*----------------------------------------------   CHECKOUT -------------------------------------------------------*/
+.woocommerce .cart-collaterals .cart_totals, .woocommerce-page .cart-collaterals .cart_totals {
+    width: 80%;
+    margin: 0% 10%;
+}
+
+.woocommerce .col2-set .col-1, .woocommerce-page .col2-set .col-1 {
+    float: none;
+    width: 100%;
+    margin: 0% 0%;
+}
+
+.woocommerce-additional-fields {
+    /* margin-left: -57%; */
+    margin-top: 5%;
+    width: 100%;
+    margin-left: 0px;
+}
+
+
+}
+
+/*  Mobile View    */
+
+@media only screen and (max-width: 699px) {
+
+        /*----------------------------------------------   LOGIN PAGE  -------------------------------------------------------*/
+
+.woocommerce form.login, .woocommerce form.register {
+    margin: 0rem;
+}
+
+/*----------------------------------------------   DASHBOARD  -------------------------------------------------------*/
+
+#post-67 ul {
+    margin-left: -2rem;
+    list-style-type: disc;
+}
+
+/*----------------------------------------------   CART PAGE  -------------------------------------------------------*/
+.woocommerce .woocommerce-ordering {
+    margin: 1rem auto;
+}
+
+.woocommerce ul.products[class*=columns-] li.product, .woocommerce-page ul.products[class*=columns-] li.product {
+    width: 45%;
+}
+
+.woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
+    transform: translateX(0%);
+}
+
+.woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
+    height: 22rem;
+}
+
+/*----------------------------------------------   CHECKOUT -------------------------------------------------------*/
+.woocommerce .cart-collaterals .cart_totals, .woocommerce-page .cart-collaterals .cart_totals {
+    width: 80%;
+    margin: 0% 10%;
+}
+
+.woocommerce .col2-set .col-1, .woocommerce-page .col2-set .col-1 {
+    float: none;
+    width: 100%;
+    margin: 0% 0%;
+}
+
+.woocommerce-additional-fields {
+    margin-top: 5%;
+    width: 100%;
+    margin-left: 0px;
+}
+#order_review {
+    margin: 0% 0%; 
+}
 }

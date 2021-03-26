@@ -12,30 +12,23 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<?php
-		if ( is_singular() ) :
-			the_title( '<h1 class="custom-entry-salon-title">', '</h1>' );
-		else :
-			the_title( '<h2 class="custom-entry-salon-title><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		endif;
+
 
 		if ( 'post' === get_post_type() ) :
 			?>
-			<h2 class="">
 
-		<div class="featuredImage"><?php glorify_post_thumbnail(); ?></div>
-		<div class="entry-meta">
-				<?php
-				glorify_posted_by();
-				glorify_posted_on();
-				
-				?>
 						<?php endif; ?>
-			</div><!-- .entry-meta -->
 	</header><!-- .entry-header -->
 
 	
+	<section class="grid-x grid-margin-x">
+				
+	<div class="entry-content grid-x">
 
-	<div class="entry-content">
+	<!--Content Left of Custom Post-->
+	<div class="large-6 contentLeft">
+
+	<!-- The Content will be posted here -->
 		<?php
 		the_content(
 			sprintf(
@@ -51,7 +44,15 @@
 				wp_kses_post( get_the_title() )
 			)
 		);
+		?>
 
+		<!-- Registering a author -->
+        <?php if ( is_author() ) { ?>
+            <li class="glorify-item active" aria-current="page"> here <?php echo get_the_author(); ?></li>
+        <?php } ?>
+		
+		
+		<?php
 		wp_link_pages(
 			array(
 				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'glorify' ),
@@ -59,7 +60,17 @@
 			)
 		);
 		?>
+		</div> <!--End of large 6 -->
+
+		<!--Content Right  of Custom Post  which includes a widget-->
+		<div class="large-5 contentRight">
+			<?php get_sidebar(); ?>
+		
+		</div> <!--End of large 5 -->
+		
 	</div><!-- .entry-content -->
+
+	</section>
 
 	<footer class="entry-footer">
 		<?php glorify_entry_footer(); ?>

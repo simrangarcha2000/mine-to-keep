@@ -16,18 +16,9 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
-	<link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Tangerine:wght@700&display=swap" rel="stylesheet"> 
-	<link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet"> 
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&family=Montserrat:wght@300;400&display=swap" rel="stylesheet"> 
-<link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
 <<<<<<< HEAD
 	
@@ -66,6 +57,7 @@
                 <div class="cell small-9 large-5">
 					<div class="site-branding">
 			<?php
+			#Logo customizing
 			the_custom_logo();
 			if ( is_front_page() && is_home() ) :
 				?>
@@ -83,9 +75,12 @@
 			</div><!-- .site-branding -->
 				</div>
                 <div class="cell small-3 large-7">
+					<!--Nav Added-->
 				<nav id="site-navigation" class="main-navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'glorify' ); ?></button>
 			<?php
+
+			#Location of default nav selected for wordpress
 			wp_nav_menu(
 				array(
 					'theme_location' => 'menu-primary',
