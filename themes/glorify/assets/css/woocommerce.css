@@ -233,3 +233,36 @@ div.wpforms-container-full .wpforms-form .wpforms-field-label {
     background-color:  #000000;
 	font-family: 'Permanent Marker', cursive;
 }
+
+/*----------------------------------------------   LOGIN PAGE  -------------------------------------------------------*/
+
+.woocommerce form.login, .woocommerce form.register {
+    margin: 2em 20rem;
+}
+
+
+/*  Tablet View    */
+
+@media only screen and (min-width: 700px) and (max-width: 1200px ) {
+
+    /*----------------------------------------------   LOGIN PAGE  -------------------------------------------------------*/
+
+.woocommerce form.login, .woocommerce form.register {
+    margin: 0rem;
+}
+
+
+
+}
+
+/*  Mobile View    */
+
+@media only screen and (max-width: 699px) {
+
+        /*----------------------------------------------   LOGIN PAGE  -------------------------------------------------------*/
+
+.woocommerce form.login, .woocommerce form.register {
+    margin: 0rem;
+}
+
+}

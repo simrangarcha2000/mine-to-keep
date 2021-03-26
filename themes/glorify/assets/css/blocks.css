@@ -212,6 +212,16 @@ margin-left: -30px;
 
 
 @media only screen and (max-width: 900px) {
+
+
+    /* Font size of heading */
+    h2.is-style-pink-heading {
+        font-size: 20px !important ;
+    }
+
+ 
+
+
     
 
     /*-----------------------------------------------SETTING FONT SIZE OF PARAGRAPH  ---------------------------------------*/

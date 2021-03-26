@@ -16,7 +16,7 @@
 
 		<div class="grid-container">
             <div class="grid-x grid-margin-x">
-                <div class="cell small-12 large-6 large-offset-2">
+                <div class="cell small-12 large-6 large-offset-1">
 					<h1>Recent Posts :</h1>
 
 					<!--Creating a WP_Query to get the posts of the custom post type and print its information in the footer-->
@@ -33,7 +33,7 @@
 							$salon_query -> the_post();
 						}
 						?>
-						<div class = "leftFooterSide">
+						<div class = "leftFooterSide small-offset-1 large-offset-0">
 							<!-- Displaying the title of the post  -->
 							<h3><?php the_title(); ?></h3>
 							<!-- Displaying the  excerpt of the post  -->
@@ -44,7 +44,7 @@
 
                     
 				</div>
-				<div class = "rightFooterSide small-12 large-3">
+				<div class = "rightFooterSide small-10 small-offset-1 large-offset-0 large-3">
 					<img <?php the_post_thumbnail(); ?> >
 
 				</div>
@@ -67,7 +67,7 @@
             <div class="grid-x grid-margin-x large-offset-1">
 				
 				<!--Menu Under the About Heading-->
-                <div class="cell small-6 large-2 large-offset-0 menuPlaceOne">
+                <div class="cell small-6 medium-6 large-2 large-offset-0 menuPlaceOne">
 					<h2>ABOUT</h2>
 					<?php wp_nav_menu( array
 						( 'theme_location' => 'footer-menu-about', 'container_class' => 'footer_menu_class' ) //Defining the location of a already created menu
@@ -75,7 +75,7 @@
 				</div>
 
 				<!--Menu Under the Help Heading-->
-				<div class="cell small-6 large-2 large-offset-1 menuPlaceOne">
+				<div class="cell small-6 large-2 medium-6 large-offset-1 menuPlaceOne">
 					<h2>HELP</h2>
 					<?php wp_nav_menu( array
 						( 'theme_location' => 'footer-menu-help', 'container_class' => 'footer_menu_class' ) //Defining the location of a already created menu
@@ -83,7 +83,7 @@
 				</div>
 
 				<!--Menu Under the Shop Heading-->
-				<div class="cell small-6 large-2 large-offset-1 menuPlaceOne">
+				<div class="cell small-6 large-2 medium-6 large-offset-1 menuPlaceOne">
 					<h2>SHOP</h2>
 					<?php wp_nav_menu( array
 						( 'theme_location' => 'footer-menu-shop', 'container_class' => 'footer_menu_class' ) //Defining the location of a already created menu
@@ -91,7 +91,7 @@
 				</div>
 
 				<!--Menu Under the Contact Heading-->
-				<div class="cell small-6 large-2 large-offset-1 menuPlaceOne">
+				<div class="cell small-6 large-2  large-offset-1 menuPlaceOne">
 					<h2>CONTACT</h2>
 					<?php wp_nav_menu( array
 						( 'theme_location' => 'footer-menu-contact', 'container_class' => 'footer_menu_class' ) //Defining the location of a already created menu

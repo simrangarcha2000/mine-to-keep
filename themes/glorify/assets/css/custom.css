@@ -140,6 +140,10 @@ div#primary-menu a {
     font-size: 40px;
 }
 
+.page-id-19 footer p {
+    margin: 20px;
+}
+
 /* Setting the Links of the footer and giving them a hover */
 
 .menuPlaceOne .menu a{
@@ -214,10 +218,126 @@ div#primary-menu a {
 
 /*  Tablet View    */
 
+@media only screen and (min-width: 700px) and (max-width: 1200px ) {
+
+       /* Screen overall setting*/
+       .custom-logo{
+        width: 100%;
+    }
+
+    /* Setting the Header */
+    #colophon h1 {
+        margin-left: 10%;
+        font-size: 22px;
+    }
+
+    .cat{
+        margin-left: 10%;
+    }
+
+    #cosmo{
+        margin-left: 10%;
+    }
+
+
+    /* Setting the Footer  */
+    .fillform{
+        width: 80%;
+    }
+
+    #colophon h2{
+        margin-left: 20%;
+    }
+
+    .entry-header .featuredImage img {
+        margin: 0rem 0rem;
+        width: 100%;
+        z-index: 999;
+    }
+    
+    .entry-title{
+        margin: 0rem 0rem;
+        width: 100%;
+        transform: translateX(0rem);
+        position: relative;
+        font-size: 30px;
+    }
+
+    .entry-meta{
+        margin: 0rem 0rem;
+        width: 100%;
+        transform: translateX(0rem);
+        position: relative;
+        background-color: black;
+        font-size: 10px;
+        z-index: 1000;
+    }
+
+    .footer_menu_class {
+        text-align: center;
+        width: 60%;
+        margin-left: 10%;
+    }
+
+
+    .entry-posted-on{
+        color: #F0DBDB;
+        text-align: center;
+        font-size: 15px;
+    }
+    
+    a:visited{
+        color: #F0DBDB;
+        
+    }
+
+    /* Giving Dimensions to Wp-Column  */
+    .wp-block-columns {
+        margin: 2rem 0% 0% 2%;
+    }
+
+    /* Giving Margins to Images and Gallery  */
+    .wp-block-image {
+        margin-bottom: 1em;
+        width: 100%;
+        margin-left: 4rem;
+    }
+
+    .wp-block-gallery.is-style-gallery-select {
+        margin: 0%;
+    }
+
+    /*----------------------------------------------   HOME PAGE  -------------------------------------------------------*/
+    img.wp-image-104 {
+        width: 60%;
+    }
+
+    .wp-block-image {
+        width: 40%;
+        margin: auto;
+    }
+    
+    #one, #two, #three{
+        flex-basis: calc(30% - 1em) !important;
+        margin: 0px;
+        margin-left: 1rem
+    }
+
+        /*----------------------------------------------  ABOUT PAGE  -------------------------------------------------------*/
+
+        .wp-block-image.size-large.is-resized.is-style-image-glorify {
+            width: 100%;
+            margin: 0;
+        }
+
+        .page-id-19 p {
+            margin: 20px;
+        }
+}
 
 /*  Mobile View    */
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 699px) {
     /* Screen overall setting*/
     .custom-logo{
         width: 100%;
@@ -225,8 +345,8 @@ div#primary-menu a {
 
     /* Setting the Header in mobile view */
     #colophon h1{
-        margin-left: 30%;
-        font-size: 30px;
+        margin-left: 10%;
+        font-size: 22px;
     }
 
     .cat{
@@ -299,6 +419,24 @@ div#primary-menu a {
         margin: 0%;
     }
 
+    /*----------------------------------------------   HOME PAGE  -------------------------------------------------------*/
+    img.wp-image-104 {
+        width: 60%;
+    }
 
+    .wp-block-image {
+        width: 40%;
+        margin: auto;
+    }
 
+    /*----------------------------------------------  ABOUT PAGE  -------------------------------------------------------*/
+
+    .wp-block-image.size-large.is-resized.is-style-image-glorify {
+        width: 100%;
+        margin: 0;
+    }
+
+    .page-id-19 p {
+        margin: 20px;
+    }
 }
