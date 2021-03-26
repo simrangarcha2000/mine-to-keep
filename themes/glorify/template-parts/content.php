@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Glorify
+ * @package glorify
  */
 
 ?>
@@ -20,20 +20,16 @@
 
 		if ( 'post' === get_post_type() ) :
 			?>
-			<h2 class="">
-
-		<div class="featuredImage"><?php glorify_post_thumbnail(); ?></div>
-		<div class="entry-meta">
+			<div class="entry-meta">
 				<?php
-				glorify_posted_by();
 				glorify_posted_on();
-				
+				glorify_posted_by();
 				?>
-						<?php endif; ?>
 			</div><!-- .entry-meta -->
+		<?php endif; ?>
 	</header><!-- .entry-header -->
 
-	
+	<?php glorify_post_thumbnail(); ?>
 
 	<div class="entry-content">
 		<?php
@@ -41,7 +37,7 @@
 			sprintf(
 				wp_kses(
 					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'glorify' ),
+					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', '' ),
 					array(
 						'span' => array(
 							'class' => array(),
@@ -54,7 +50,7 @@
 
 		wp_link_pages(
 			array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'glorify' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', '' ),
 				'after'  => '</div>',
 			)
 		);

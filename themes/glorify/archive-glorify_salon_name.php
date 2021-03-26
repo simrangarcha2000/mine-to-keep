@@ -15,8 +15,10 @@ get_header();
 			
 			<!-- Creating a Loop for Archieve page to print the content-->
 			<?php get_template_part('template-parts/archive-content', 'archive-content');?>
-			<?php previous_post_link()?>
-			<?php previous_next_link()?>
+
+            <!--Creating Next and Previous button-->
+            <?php previous_posts_link();?>
+            <php next_posts_link();?>
 		</div>
 
 		

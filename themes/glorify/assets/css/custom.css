@@ -11,6 +11,13 @@ body{
 }
 
 
+#primary {
+
+    max-width: 80rem;
+    margin: auto;
+
+}
+
 /*SEtting the widths of the blocks */
 .wp-block{
     width: 1200px;
@@ -167,58 +174,7 @@ div#primary-menu a {
 /*----------------------------------------------   SINGLE POST  -------------------------------------------------------*/
 /* Styling a single post for the website */
 
-.entry-title{
-    background-color: #D8A1A2;
-    width: 25%;
-    font-size: 2.8rem;
-    padding: 12px;
-    transform: translateX(68rem);
-    position: absolute;
-    min-height: 38%;
-    height: auto;
-    margin-top: 1.5rem;
-    margin-right: 15rem;
-    text-align: center;
-}
 
-.entry-header .featuredImage img{
-    
-    margin: 0rem 15rem;
-    margin-top: 1.5rem;
-    width: 47%;
-}
-
-.entry-meta{
-    background-color: #F0DBDB;
-    color: black;
-    width: 25%;
-    font-size: 1.5rem;
-    padding: 12px;
-    position: absolute;
-    min-height: 15%;
-    margin-right: 15rem;
-    transform: translate(68rem ,-9.8rem);
-}
-
-
-.entry-posted-on{
-    color: black;
-}
-
-a:visited{
-    color: black;
-}
-
-.byline{
-    margin-top: 20%;
-    font-size: 27px;
-}
-
-.posted-on{
-    font-size: 20px;
-    margin-top: 20%;
-    margin-left: 2rem;
-}
 
 
 

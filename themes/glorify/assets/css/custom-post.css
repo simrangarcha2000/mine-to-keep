@@ -15,10 +15,21 @@
     margin: 2rem;
 }
 
-/* ----------------------------------------  HEADING 01    ----------------------------*/
-.custom-entry-salon-title {
+/* ----------------------------------------  HEADING 01     ----------------------------*/
+.custom-entry-salon-title, .archiveTitle {
     background: black;
     padding: 2rem;
     text-align: center;
     text-transform: uppercase;
+}
+
+/* ----------------------------------------  BUTTON    ----------------------------*/
+.button.success {
+    background-color: black;
+    color: #F5E6E6;
+}
+
+.button.success:hover{
+    background-color: #D8A1A2;
+    color: black;
 }
