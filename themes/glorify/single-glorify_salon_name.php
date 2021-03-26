@@ -8,8 +8,15 @@
 get_header();
 ?>
 
+	<!--Setting a different main id and targets for a custom post  -->
+	<main id="salon_page" class="site-custom-post">
+		<div class = "container">
+			<?php if(has_post_thumbnail()): ?>
+				<!--Setting a featured Image for a Custom Post-->
+				<img src ="<?php the_post_thumbnail_url('blog-large');?>" alt="<?php the_title();?>" class="img-fluid img-thumbnail">
+			<?php endif;?>
 
-	<main id="primary" class="site-main">
+		</div>
 
 		<?php
 		while ( have_posts() ) :
