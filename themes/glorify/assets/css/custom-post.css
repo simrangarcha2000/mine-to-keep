@@ -21,6 +21,7 @@
     padding: 2rem;
     text-align: center;
     text-transform: uppercase;
+    margin-bottom: 0rem;
 }
 
 /* --------------------------------------CUSTOM POST --------------------------------*/
@@ -73,4 +74,24 @@
 .button.success:hover{
     background-color: #D8A1A2;
     color: black;
+}
+
+/* ---------------------------------------- ------------------------ CUSTOM ARCHIVE ----------------   ----------------------------*/
+
+.grid-container.grid-x.archiveBox {
+    background-color: #F5E6E6;
+}
+
+/* ----------------------------------------  IMAGE OF CUSTOM ARCHIVE    ----------------------------*/
+.archiveImage img{
+    width: 80%;
+margin: auto;
+margin: 1rem 6rem;
+}
+
+
+/* ---------------------------------------- ------------------------ CUSTOM ARCHIVE P tag  ----------------   ----------------------------*/
+
+.archiveLeft p{
+    padding-top: 2rem;
 }
