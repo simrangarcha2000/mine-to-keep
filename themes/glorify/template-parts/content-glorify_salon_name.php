@@ -22,7 +22,7 @@
 
 	
 	<section class="grid-x grid-margin-x">
-				<div class="large-4 offset-1">
+				<div class="large-6 ">
 	<div class="entry-content">
 		<?php
 		the_content(

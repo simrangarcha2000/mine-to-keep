@@ -34,8 +34,7 @@ get_header();
 		
 
 		<!------------------------CUSTOM PAGE CONTENT  --------------------------->
-			<section class="row">
-				<div class="large-4 offset-1">
+			<section class="grid-x grid-margin-x">
 					<?php
 						while ( have_posts() ) :
 						the_post();
@@ -52,7 +51,6 @@ get_header();
 						endif;
 						endwhile; // End of the loop.
 					?>
-				</div>
 			</section>
 		</div>
 	</main><!-- #main -->

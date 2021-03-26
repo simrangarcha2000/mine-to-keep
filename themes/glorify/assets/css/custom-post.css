@@ -1,6 +1,24 @@
 /* CSS for styling custom post */
+/*
+*  Custom Post - Salons
+* Custom Post Name - Glorify Salon Name
+*/
 
+
+/* Setting the width and margin for custom page*/
 #salon_page {
     max-width: 95rem;
     margin: auto;
+}
+
+#salon_page .entry-content {
+    margin: 2rem;
+}
+
+/* ----------------------------------------  HEADING 01    ----------------------------*/
+.custom-entry-salon-title {
+    background: black;
+    padding: 2rem;
+    text-align: center;
+    text-transform: uppercase;
 }
