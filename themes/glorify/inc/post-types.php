@@ -47,6 +47,7 @@ function salon_init() {
         'menu_position'      => 20,
         'supports'           => array( 'title', 'editor', 'author', 'thumbnail' ),
         'taxonomies'         => array( 'category', 'post_tag' ),
+        'menu_icon'          => 'dashicons-format-quote',
         'show_in_rest'       => true
     );
     //Registered the post type by a unique name and then give permalink on top accordingly
