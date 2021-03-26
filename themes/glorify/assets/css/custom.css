@@ -11,9 +11,10 @@ body{
 }
 
 
+
 #primary {
 
-    max-width: 80rem;
+    max-width: 100rem;
     margin: auto;
 
 }
@@ -102,7 +103,14 @@ div#primary-menu a {
     margin: 0px;
 }
 
+.home #primary {
+    max-width: 155rem;
+    margin: auto;
+}
+
 /*----------------------------------------------   ABOUT PAGE  -------------------------------------------------------*/
+
+
 
 .page-id-19 p {
     margin: 20px;
@@ -150,6 +158,11 @@ div#primary-menu a {
     opacity: 0.8;
 }
 
+/* Setting the WP_Query in footer*/
+.leftFooterSide{
+    color: #D8A1A2;
+}
+
 /* Giving the signup form a different colour 
  --- Right now it is static and needs to be made dynamic */
 
@@ -168,6 +181,11 @@ div#primary-menu a {
 .grid-container.footerNav {
     margin-bottom: 2rem;
 }
+
+.rightFooterSide{
+    margin-top: 4rem;
+}
+
 
 
 

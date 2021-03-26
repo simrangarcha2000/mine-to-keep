@@ -67,12 +67,14 @@
 /* ----------------------------------------  BUTTON    ----------------------------*/
 .button.success, .glsr-button.button.btn.btn-primary {
 
-    background-color: black;
-    color: #F5E6E6;
+    background-color: #D8A1A2;
+    color: black;
+    margin-top: -2rem;
 }
 
 .button.success:hover{
-    background-color: #D8A1A2;
+    opacity: 0.8;
+    background-color: #F5E6E6;
     color: black;
 }
 

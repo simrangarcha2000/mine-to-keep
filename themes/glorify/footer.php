@@ -16,16 +16,15 @@
 
 		<div class="grid-container">
             <div class="grid-x grid-margin-x">
-                <div class="cell small-12 large-4 large-offset-2">
+                <div class="cell small-12 large-6 large-offset-2">
 					<h1>Recent Posts :</h1>
 
 					<!--Creating a WP_Query to get the posts of the custom post type and print its information in the footer-->
-					<ul>
 						<?php
 						//Creating the argument
 						$salon_args = array(
 							'post_type' => 'glorify_salon_name', //Refering to the Custom post type name
-							'posts_per_page' => 4, //The info of 4 recent posts will be printed in the footer
+							'posts_per_page' => 1, //The info of 4 recent posts will be printed in the footer
 						);
 
 						//A loop which will print info of the post if it exists the post if it 
@@ -34,13 +33,20 @@
 							$salon_query -> the_post();
 						}
 						?>
-						<!-- Displaying the title of the post  -->
-						<li><?php the_title(); ?></li>
-						<!-- Displaying the  excerpt of the post  -->
-						<li><?php the_excerpt(); ?></li>
-						<!-- Displaying the featured Image of the post  -->
-						<li><a href="<?php the_permalink();?>" class="button button success">Read More</a></li>
-                    </ul>
+						<div class = "leftFooterSide">
+							<!-- Displaying the title of the post  -->
+							<h3><?php the_title(); ?></h3>
+							<!-- Displaying the  excerpt of the post  -->
+							<p><?php the_excerpt(); ?></p>
+							<!-- Displaying the link of the post  -->
+							<li><a href="<?php the_permalink();?>" class="button button success">Read More</a></li>
+						</div>
+
+                    
+				</div>
+				<div class = "rightFooterSide small-12 large-3">
+					<img <?php the_post_thumbnail(); ?> >
+
 				</div>
             </div>
         </div>
