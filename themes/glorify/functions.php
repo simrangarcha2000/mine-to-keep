@@ -54,6 +54,7 @@ if ( ! function_exists( 'glorify_setup' ) ) :
 			)
 		);
         
+		// New Menu registered
 		function register_my_menus() {
 			register_nav_menus(
 			array(
@@ -200,6 +201,9 @@ function glorify_scripts() {
 
 	//Custom WooCommerce Stylesheet Referred
 	wp_enqueue_style('woocommerce-style', get_template_directory_uri().'/assets/css/woocommerce.css');
+
+	//Custom CSS for Custom Post
+	wp_enqueue_style('woocommerce-style', get_template_directory_uri().'/assets/css/custom-post.css.css');
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
