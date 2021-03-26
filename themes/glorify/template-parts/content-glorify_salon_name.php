@@ -22,8 +22,11 @@
 
 	
 	<section class="grid-x grid-margin-x">
-				<div class="large-6 ">
-	<div class="entry-content">
+				
+	<div class="entry-content grid-x">
+	<div class="large-6 ">
+
+	<!-- The Content will be posted here -->
 		<?php
 		the_content(
 			sprintf(
@@ -39,7 +42,15 @@
 				wp_kses_post( get_the_title() )
 			)
 		);
+		?>
 
+		<!-- Registering a author -->
+        <?php if ( is_author() ) { ?>
+            <li class="glorify-item active" aria-current="page"> here <?php echo get_the_author(); ?></li>
+        <?php } ?>
+		
+		
+		<?php
 		wp_link_pages(
 			array(
 				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'glorify' ),
@@ -47,8 +58,14 @@
 			)
 		);
 		?>
-		</div>
+		</div> <!--End of large 6 -->
+		<div class="large-5">
+			<?php get_sidebar(); ?>
+		
+		</div> <!--End of large 5 -->
+		
 	</div><!-- .entry-content -->
+
 	</section>
 
 	<footer class="entry-footer">

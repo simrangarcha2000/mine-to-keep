@@ -31,6 +31,7 @@ get_header();
 			<?php endif;?>
 			<?php wp_link_pages();?>
 
+
 		
 
 		<!------------------------CUSTOM PAGE CONTENT  --------------------------->
@@ -39,6 +40,18 @@ get_header();
 						while ( have_posts() ) :
 						the_post();
 						get_template_part( 'template-parts/content-glorify_salon_name', get_post_type() );
+						?>
+
+						<?php 
+						$fname = get_the_author_meta('first_name');
+						echo $fname;
+						
+						?>
+						<h2><?php echo $fname ?> </h2>
+						
+						
+						<?php
+						#Adding the navigation at the end of the post
 						the_post_navigation(
 						array(
 							'prev_text' => '<span class="nav-subtitle">' . esc_html__( 'Previous:', 'glorify' ) . '</span> <span class="nav-title">%title</span>',
@@ -51,10 +64,10 @@ get_header();
 						endif;
 						endwhile; // End of the loop.
 					?>
+
 			</section>
 		</div>
 	</main><!-- #main -->
 
 <?php
-get_sidebar();
 get_footer();

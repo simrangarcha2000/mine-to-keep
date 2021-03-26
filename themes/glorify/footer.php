@@ -36,9 +36,10 @@
 						?>
 						<!-- Displaying the title of the post  -->
 						<li><?php the_title(); ?></li>
-						<!-- Displaying the  featured image of the post  -->
-						<li><?php the_title(); ?></li>
-						<!-- Displaying the image of the post  -->
+						<!-- Displaying the  excerpt of the post  -->
+						<li><?php the_excerpt(); ?></li>
+						<!-- Displaying the featured Image of the post  -->
+						<li><a href="<?php the_permalink();?>" class="button button success">Read More</a></li>
                     </ul>
 				</div>
             </div>
